@@ -31,26 +31,42 @@
           <li class="nav-menu__item">
             <a href="./contact.html" class="nav-menu__item__link">Contact</a>
           </li>
-          <li class="nav-menu__item">
+          <!-- <li class="nav-menu__item">
             <a
               href="./cart.html"
               class="nav-menu__item__link nav-menu__item__link--account"
-              >Cart</a
+              >Your Account</a
             >
-          </li>
+          </li> -->
         </ul>
-        <button class="button nav-menu-button">
-          <img
-            src="./images/icon-hamburger.svg"
-            alt="A icon of a hamburger navigation menu."
-            class="nav-menu-button-icon nav-menu-button-icon--hamburger nav-menu-button-icon--hamburger--active"
-          />
-          <img
-            src="./images/icon-close.svg"
-            alt="A icon of an x that represents closing the navigation menu."
-            class="nav-menu-button-icon nav-menu-button-icon--close"
-          />
-        </button>
+        <div class="nav-special-icons">
+          <a href="./cart.html" class="button button--cart">
+            <div class="icon-wrapper--cart">
+              <img
+                src="./images/cart.svg"
+                alt="An icon of a shopping cart."
+                class="nav-menu-button-icon shopping-cart-icon"
+              />
+            </div>
+            <div
+              class="text-wrapper text-wrapper--cart text-wrapper--cart--active"
+            >
+              <span>9+</span>
+            </div>
+          </a>
+          <button class="button nav-menu-button">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="A icon of a hamburger navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--hamburger nav-menu-button-icon--hamburger--active"
+            />
+            <img
+              src="./images/icon-close.svg"
+              alt="A icon of an x that represents closing the navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--close"
+            />
+          </button>
+        </div>
       </nav>
     </header>
     <main class="main-wrapper">
@@ -61,7 +77,7 @@
             alt="A graphic of a white ballpoint pen on a desk."
           />
         </div>
-        <article class="section__text">
+        <article class="section__text section__text--home">
           <h1 class="h1 heading">Great Pens for Great People</h1>
           <p>
             Join the glorious pen master race today. Show other writing tools

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 6" />
+    <meta name="description" content="Penzaar" />
+    <meta
+      name="keywords"
+      content="apache,web,server,ecommerce,online,shop,storefront,pens,writing,utensils,ink,handwritten,buy"
+    />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Penzaar | About</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo-wrapper">
+          <a href="./index.html" class="logo__link">
+            <h1 class="logo uppercase">Penzaar</h1>
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a href="./products.html" class="nav-menu__item__link">Products</a>
+          </li>
+          <li class="nav-menu__item">
+            <a
+              href="./about.html"
+              class="nav-menu__item__link  nav-menu__item__link--current-page"
+              >About</a
+            >
+          </li>
+          <li class="nav-menu__item">
+            <a href="./contact.html" class="nav-menu__item__link">Contact</a>
+          </li>
+          <!-- <li class="nav-menu__item">
+            <a
+              href="./cart.html"
+              class="nav-menu__item__link nav-menu__item__link--account"
+              >Your Account</a
+            >
+          </li> -->
+        </ul>
+        <div class="nav-special-icons">
+          <a href="./cart.html" class="button button--cart">
+            <div class="icon-wrapper--cart">
+              <img
+                src="./images/cart.svg"
+                alt="An icon of a shopping cart."
+                class="nav-menu-button-icon shopping-cart-icon"
+              />
+            </div>
+            <div
+              class="text-wrapper text-wrapper--cart text-wrapper--cart--active"
+            >
+              <span>9+</span>
+            </div>
+          </a>
+          <button class="button nav-menu-button">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="A icon of a hamburger navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--hamburger nav-menu-button-icon--hamburger--active"
+            />
+            <img
+              src="./images/icon-close.svg"
+              alt="A icon of an x that represents closing the navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--close"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="main-wrapper">
+      <section class="section section--about">
+        <h1 class="h1 heading heading--main">About</h1>
+        <div class="section__img-wrapper section__img-wrapper--about">
+          <img
+            src="./images/about-splash-image.jpg"
+            alt="A graphic of a man sitting on a bed besides an open window in a room."
+          />
+        </div>
+        <article class="section__text section__text--about">
+          <h2 class="h2 heading">Our Story</h2>
+          <p>
+            Eight years ago, we started our pen-distributing business in a
+            college dorm in Richmond, British Columbia. At the time, it was only
+            a fun side project we worked on in our spare time when we weren't
+            working part-time at a local restaurant.
+          </p>
+          <p>
+            It wasn't much, but eventually a couple of local artists and
+            illustrators caught wind of our specialty pen "shop" and then the
+            project expanded into what we are now: Penzaar, a local Canadian
+            business, dedicated to distributing the most high quality and
+            durable pens to professionals who need them.
+          </p>
+
+          <p>
+            We are confident that we can help make you a success, one quality
+            pen at a time.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__text-wrapper">
+        <p class="footer__text">
+          &copy;&nbsp;<span class="footer__text--currentYear"></span
+          >&nbsp;Penzaar
+        </p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
