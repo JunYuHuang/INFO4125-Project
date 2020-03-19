@@ -10,7 +10,7 @@
       content="apache,web,server,ecommerce,online,shop,storefront,pens,writing,utensils,ink,handwritten,buy"
     />
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./stylesheet.css" />
     <title>Penzaar</title>
   </head>
   <body>
@@ -40,8 +40,27 @@
           </li> -->
         </ul>
         <div class="nav-special-icons">
-          <a href="./cart.html" class="button button--cart">
-            <div class="icon-wrapper--cart">
+          <a
+            href="./account.html"
+            class="button button--account"
+            role="button"
+            aria-label="View your account"
+          >
+            <div class="icon-wrapper--nav">
+              <img
+                src="./images/person.svg"
+                alt="An icon of a person."
+                class="nav-menu-button-icon person-icon"
+              />
+            </div>
+          </a>
+          <a
+            href="./cart.html"
+            class="button button--cart"
+            role="button"
+            aria-label="View your online shopping cart"
+          >
+            <div class="icon-wrapper--nav">
               <img
                 src="./images/cart.svg"
                 alt="An icon of a shopping cart."
@@ -54,7 +73,11 @@
               <span>9+</span>
             </div>
           </a>
-          <button class="button nav-menu-button">
+          <button
+            class="button nav-menu-button"
+            role="navigation"
+            aria-label="Navigation Menu"
+          >
             <img
               src="./images/icon-hamburger.svg"
               alt="A icon of a hamburger navigation menu."
