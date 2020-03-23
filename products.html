@@ -37,13 +37,21 @@
           <li class="nav-menu__item">
             <a href="./contact.html" class="nav-menu__item__link">Contact</a>
           </li>
-          <!-- <li class="nav-menu__item">
+          <li class="nav-menu__item">
             <a
-              href="./cart.html"
-              class="nav-menu__item__link nav-menu__item__link--account"
-              >Your Account</a
+              href="./login.html"
+              class="nav-menu__item__link nav-menu__item__link--special nav-menu__item__link--login button button--blue--ghost button--min-width"
+              >Log In</a
             >
-          </li> -->
+          </li>
+          <li class="nav-menu__item">
+            <a
+              href="./register.html"
+              class="nav-menu__item__link nav-menu__item__link--special
+              nav-menu__item__link--register button button button--blue button--min-width"
+              >Register</a
+            >
+          </li>
         </ul>
         <div class="nav-special-icons">
           <a
@@ -90,7 +98,7 @@
       </nav>
     </header>
     <main class="main-wrapper">
-      <section class="section section--contact">
+      <section class="section section--products">
         <h1 class="h1 heading heading--main">Products</h1>
         <article class="section__text section__text--products">
           <form action="" class="search-form">
@@ -102,7 +110,7 @@
                 placeholder="Search for a product..."
               />
               <!-- onkeyup={e => updateCountryNameFilter(e.target.value)} -->
-              <label class="label" for="input--search">
+              <label class="label label--hidden" for="input--search">
                 Country Search
               </label>
               <div class="icon-wrapper icon-wrapper--search">

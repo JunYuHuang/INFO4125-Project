@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Group 6" />
+    <meta name="description" content="Penzaar" />
+    <meta
+      name="keywords"
+      content="apache,web,server,ecommerce,online,shop,storefront,pens,writing,utensils,ink,handwritten,buy"
+    />
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <title>Penzaar | Register</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo-wrapper">
+          <a href="./index.html" class="logo__link">
+            <h1 class="logo uppercase">Penzaar</h1>
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a href="./products.html" class="nav-menu__item__link">Products</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="./about.html" class="nav-menu__item__link">
+              About
+            </a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="./contact.html" class="nav-menu__item__link">Contact</a>
+          </li>
+          <li class="nav-menu__item">
+            <a
+              href="./login.html"
+              class="nav-menu__item__link nav-menu__item__link--special nav-menu__item__link--login button button--blue--ghost"
+              >Log In</a
+            >
+          </li>
+          <li class="nav-menu__item">
+            <a
+              href="./register.html"
+              class="nav-menu__item__link nav-menu__item__link--special
+              nav-menu__item__link--register button button button--blue button--min-width nav-menu__item__link--current-page"
+              >Register</a
+            >
+          </li>
+        </ul>
+        <div class="nav-special-icons">
+          <a
+            href="./account.html"
+            class="button button--account"
+            role="button"
+            aria-label="View your account"
+          >
+            <div class="icon-wrapper--nav">
+              <img
+                src="./images/person.svg"
+                alt="An icon of a person."
+                class="nav-menu-button-icon person-icon"
+              />
+            </div>
+          </a>
+          <a href="./cart.html" class="button button--cart">
+            <div class="icon-wrapper--nav">
+              <img
+                src="./images/cart.svg"
+                alt="An icon of a shopping cart."
+                class="nav-menu-button-icon shopping-cart-icon"
+              />
+            </div>
+            <div
+              class="text-wrapper text-wrapper--cart text-wrapper--cart--active"
+            >
+              <span>9+</span>
+            </div>
+          </a>
+          <button class="button nav-menu-button">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="A icon of a hamburger navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--hamburger nav-menu-button-icon--hamburger--active"
+            />
+            <img
+              src="./images/icon-close.svg"
+              alt="A icon of an x that represents closing the navigation menu."
+              class="nav-menu-button-icon nav-menu-button-icon--close"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="main-wrapper">
+      <section class="section section--register">
+        <h1 class="h1 heading heading--main">Register</h1>
+        <article class="section__text section__text--register">
+          <form action="" class="register-form">
+            <h4 class="register-form__sub-heading full-width">Basic Info</h4>
+            <div class="input-group input-group--text half-width">
+              <input
+                class="input input--text"
+                id="input--register__first-name"
+                type="text"
+                required
+                placeholder="First Name"
+              />
+              <label class="label" for="input--register__first-name">
+                First Name
+              </label>
+            </div>
+            <div class="input-group input-group--text half-width">
+              <input
+                class="input input--text"
+                id="input--register__last-name"
+                type="text"
+                required
+                placeholder="Last Name"
+              />
+              <label class="label" for="input--register__last-name">
+                Last Name
+              </label>
+            </div>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text input--text--email"
+                id="input--register__email-address"
+                type="email"
+                required
+                placeholder="Email Address"
+              />
+              <label class="label" for="input--register__email-address">
+                Email Address
+              </label>
+            </div>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text"
+                id="input--register__password"
+                type="password"
+                required
+                placeholder="Password"
+              />
+              <label class="label" for="input--register__password">
+                Password
+              </label>
+            </div>
+            <h4 class="register-form__sub-heading full-width">Contact Info</h4>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text input--text"
+                id="input--register__contact-info"
+                type="email"
+                required
+                placeholder="Email Address or Mobile Phone Number"
+              />
+              <label class="label" for="input--register__contact-info">
+                Email Address or Mobile Phone Number
+              </label>
+            </div>
+            <h4 class="register-form__sub-heading full-width">Shipping Info</h4>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text"
+                id="input--register__street-adress"
+                type="text"
+                required
+                placeholder="Street Address"
+              />
+              <label class="label" for="input--register__street-address">
+                Street Address
+              </label>
+            </div>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text"
+                id="input--register__street-address-unit"
+                type="text"
+                placeholder="Unit e.g. apartment, suite, etc. (optional)"
+              />
+              <label class="label" for="input--register__street-address-unit">
+                Unit e.g. apartment, suite, etc. (optional)
+              </label>
+            </div>
+            <div class="input-group input-group--text full-width">
+              <input
+                class="input input--text input--text"
+                id="input--register__city"
+                type="text"
+                required
+                placeholder="City"
+              />
+              <label class="label" for="input--register__city">
+                City
+              </label>
+            </div>
+            <div class="input-group input-group--text one-third-width">
+              <input
+                class="input input--text"
+                id="input--register__province"
+                type="text"
+                required
+                placeholder="Province / State"
+              />
+              <label class="label" for="input--register__province">
+                Province / State
+              </label>
+            </div>
+            <div class="input-group input-group--text one-third-width">
+              <input
+                class="input input--text"
+                id="input--register__postal-code"
+                type="text"
+                required
+                placeholder="Postal / ZIP Code"
+              />
+              <label class="label" for="input--register__postal-code">
+                Postal / ZIP Code
+              </label>
+            </div>
+            <div class="input-group input-group--text one-third-width">
+              <input
+                class="input input--text"
+                id="input--register__country"
+                type="text"
+                required
+                placeholder="Country / Region"
+              />
+              <label class="label" for="input--register__country">
+                Country / Region
+              </label>
+            </div>
+            <h4
+              class="register-form__sub-heading register-form__sub-heading--last full-width"
+            >
+              &nbsp;
+            </h4>
+            <div class="input-group input-group--submit full-width">
+              <input
+                class="input input--button button button--blue one-third-width"
+                id="input--register__submit"
+                type="submit"
+                value="Register"
+              />
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__text-wrapper">
+        <p class="footer__text">
+          &copy;&nbsp;<span class="footer__text--currentYear"></span
+          >&nbsp;Penzaar
+        </p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
