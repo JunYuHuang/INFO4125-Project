@@ -50,7 +50,7 @@ function toggleNavButton() {
   navMenu.classList.toggle("nav-menu--active");
 }
 
-// products page
+// PRODUCTS PAGE //
 
 // front-end mockup products (use until database connection is good)
 const pensArray = [
@@ -59,7 +59,8 @@ const pensArray = [
     name: "Ballpoint Pen",
     price: 4.99,
     description: "The classic choice for students since 1950.",
-    imageURL: "./images/products/ballpoint-1_no_logo.jpg"
+    imageURL: "../assets/images/products/ballpoint-1_no_logo.jpg"
+    // imageURL: "../assets/images/home-splash-image.jpg"
     // inkColours: ["black", "blue", "red"],
   },
   {
@@ -68,14 +69,14 @@ const pensArray = [
     price: 4.99,
     description:
       "Great for writing big and bold letters. Also great for smelling.",
-    imageURL: "./images/products/marker-1_no_logo.jpg"
+    imageURL: "../assets/images/products/marker-1_no_logo.jpg"
   },
   {
     id: "3",
     name: "Gel Pen",
     price: 1.99,
     description: "An applicator for highly viscous and coloured fluids.",
-    imageURL: "./images/products/gel-1.jpg"
+    imageURL: "../assets/images/products/gel-1.jpg"
   },
   {
     id: "4",
@@ -83,7 +84,7 @@ const pensArray = [
     price: 1.99,
     description:
       "The best tool for both writing and annoying your colleagues at the same time",
-    imageURL: "./images/products/retractable-1.jpg"
+    imageURL: "../assets/images/products/retractable-1.jpg"
   },
   {
     id: "5",
@@ -91,14 +92,14 @@ const pensArray = [
     price: 14.99,
     description:
       "Excellent pen with a comfortable silicon rubber grip that allows for precise ink strokes.",
-    imageURL: "./images/products/stylus-1.jpg"
+    imageURL: "../assets/images/products/stylus-1.jpg"
   },
   {
     id: "6",
     name: "Coming Soon TM",
     price: 9999.99,
     description: "Top secret pen coming next century.",
-    imageURL: "./images/products/unknown-product.svg"
+    imageURL: "../assets/images/products/unknown-product.svg"
   }
 ];
 
@@ -141,7 +142,7 @@ if (isProductPage) {
       // // onClick={() => setCurrentCountry(country)}
       let card = `
       <a
-        href="#"
+        href="./product_detail.php"
         class="card"
       >
         <div class="card__img-container">
@@ -163,3 +164,9 @@ if (isProductPage) {
 
   displayProductItems();
 }
+
+// PRODUCT_DETAIL PAGE
+
+// CART PAGE
+
+// CHECKOUT PAGE

@@ -1,37 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Group 6" />
-    <meta name="description" content="Penzaar" />
-    <meta
-      name="keywords"
-      content="apache,web,server,ecommerce,online,shop,storefront,pens,writing,utensils,ink,handwritten,buy"
-    />
-    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./stylesheet.css" />
-    <title>Penzaar</title>
-  </head>
-  <body>
     <header class="header">
       <nav class="navbar">
         <div class="logo-wrapper">
-          <a href="./index.html" class="logo__link">
+          <a href="./index.php" class="logo__link">
             <h1 class="logo uppercase">Penzaar</h1>
           </a>
         </div>
         <ul class="nav-menu">
           <li class="nav-menu__item">
-            <a href="./products.html" class="nav-menu__item__link">Products</a>
+            <a href="./products.php" class="nav-menu__item__link">Products</a>
           </li>
           <li class="nav-menu__item">
-            <a href="./about.html" class="nav-menu__item__link">About</a>
+            <a href="./about.php" class="nav-menu__item__link">About</a>
           </li>
           <li class="nav-menu__item">
-            <a href="./contact.html" class="nav-menu__item__link">Contact</a>
+            <a href="./contact.php" class="nav-menu__item__link">Contact</a>
           </li>
-          <li class="nav-menu__item">
+          <!-- <li class="nav-menu__item">
             <a
               href="./login.html"
               class="nav-menu__item__link nav-menu__item__link--special nav-menu__item__link--login button button--blue--ghost button--min-width"
@@ -45,10 +29,10 @@
               nav-menu__item__link--register button button button--blue button--min-width"
               >Register</a
             >
-          </li>
+          </li> -->
         </ul>
         <div class="nav-special-icons">
-          <a
+          <!-- <a
             href="./account.html"
             class="button button--account"
             role="button"
@@ -56,21 +40,21 @@
           >
             <div class="icon-wrapper--nav">
               <img
-                src="./images/person.svg"
+                src="./assets/images/person.svg"
                 alt="An icon of a person."
                 class="nav-menu-button-icon person-icon"
               />
             </div>
-          </a>
+          </a> -->
           <a
-            href="./cart.html"
+            href="./cart.php"
             class="button button--cart"
             role="button"
             aria-label="View your online shopping cart"
           >
             <div class="icon-wrapper--nav">
               <img
-                src="./images/cart.svg"
+                src="../assets/images/cart.svg"
                 alt="An icon of a shopping cart."
                 class="nav-menu-button-icon shopping-cart-icon"
               />
@@ -87,12 +71,12 @@
             aria-label="Navigation Menu"
           >
             <img
-              src="./images/icon-hamburger.svg"
+              src="../assets/images/icon-hamburger.svg"
               alt="A icon of a hamburger navigation menu."
               class="nav-menu-button-icon nav-menu-button-icon--hamburger nav-menu-button-icon--hamburger--active"
             />
             <img
-              src="./images/icon-close.svg"
+              src="../assets/images/icon-close.svg"
               alt="A icon of an x that represents closing the navigation menu."
               class="nav-menu-button-icon nav-menu-button-icon--close"
             />
@@ -100,36 +84,3 @@
         </div>
       </nav>
     </header>
-    <main class="main-wrapper">
-      <section class="section section--home">
-        <div class="section__img-wrapper section__img-wrapper--home">
-          <img
-            src="./images/home-splash-image.jpg"
-            alt="A graphic of a white ballpoint pen on a desk."
-          />
-        </div>
-        <article class="section__text section__text--home">
-          <h1 class="h1 heading">Great Pens for Great People</h1>
-          <p>
-            Join the glorious pen master race today. Show other writing tools
-            who's king.
-          </p>
-          <div class="button-container button-container--home">
-            <a href="./products.html" class="button button--blue"
-              >Buy Pens Now</a
-            >
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__text-wrapper">
-        <p class="footer__text">
-          &copy;&nbsp;<span class="footer__text--currentYear"></span
-          >&nbsp;Penzaar
-        </p>
-      </div>
-    </footer>
-    <script src="./app.js"></script>
-  </body>
-</html>
