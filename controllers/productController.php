@@ -1,7 +1,7 @@
 <?php
 require '../projectRoot.php';
-require '../model/database.php';
-require '../model/product_db.php';
+require '../model/databaseModel.php';
+require '../model/productDBModel.php';
 
 $action = filter_input(INPUT_GET, 'action');
 if ($action == NULL) {
@@ -26,7 +26,7 @@ switch($action) {
             $productPrice = $product['productPrice'];
             $productDescription = $product['productDescription'];
             // display the product detail page
-            include "../views/product_detail.php";
+            include "../views/productDetail.php";
         } else {
             // display error page
             $errorMessage = 'The product was not found.';

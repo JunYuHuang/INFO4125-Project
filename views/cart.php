@@ -83,9 +83,7 @@
           <div class="cart__summary">
             <div class="cart__item cart__item--subtotal ellipsis hidden-in-mobile">
                 <p class="cart__item__price cart__item__price--subtotal ellipsis">
-                  Subtotal: 
-                  <!-- <br> -->
-                  CAD &#36;9999.99
+                  Subtotal: CAD &#36;9999.99
                 </p>
             </div>
             <div class="button-container button-container--cart">
