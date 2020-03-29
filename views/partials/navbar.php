@@ -1,53 +1,24 @@
     <header class="header">
       <nav class="navbar">
         <div class="logo-wrapper">
-          <a href="./index.php" class="logo__link">
+          <a href="/INFO4125-Project/" class="logo__link">
             <h1 class="logo uppercase">Penzaar</h1>
           </a>
         </div>
         <ul class="nav-menu">
           <li class="nav-menu__item">
-            <a href="./products.php" class="nav-menu__item__link">Products</a>
+            <a href="/INFO4125-Project/products" class="nav-menu__item__link">Products</a>
           </li>
           <li class="nav-menu__item">
-            <a href="./about.php" class="nav-menu__item__link">About</a>
+            <a href="/INFO4125-Project/views/about.php" class="nav-menu__item__link">About</a>
           </li>
           <li class="nav-menu__item">
-            <a href="./contact.php" class="nav-menu__item__link">Contact</a>
+            <a href="/INFO4125-Project/views/contact.php" class="nav-menu__item__link">Contact</a>
           </li>
-          <!-- <li class="nav-menu__item">
-            <a
-              href="./login.html"
-              class="nav-menu__item__link nav-menu__item__link--special nav-menu__item__link--login button button--blue--ghost button--min-width"
-              >Log In</a
-            >
-          </li>
-          <li class="nav-menu__item">
-            <a
-              href="./register.html"
-              class="nav-menu__item__link nav-menu__item__link--special
-              nav-menu__item__link--register button button button--blue button--min-width"
-              >Register</a
-            >
-          </li> -->
         </ul>
         <div class="nav-special-icons">
-          <!-- <a
-            href="./account.html"
-            class="button button--account"
-            role="button"
-            aria-label="View your account"
-          >
-            <div class="icon-wrapper--nav">
-              <img
-                src="./assets/images/person.svg"
-                alt="An icon of a person."
-                class="nav-menu-button-icon person-icon"
-              />
-            </div>
-          </a> -->
           <a
-            href="./cart.php"
+            href="/INFO4125-Project/cart"
             class="button button--cart"
             role="button"
             aria-label="View your online shopping cart"

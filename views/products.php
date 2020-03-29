@@ -1,5 +1,5 @@
-<?php require_once './partials/header.php'; ?>
-<?php require_once './partials/navbar.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/header.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
       <section class="section section--products">
         <h1 class="h1 heading heading--main">Products</h1>
@@ -24,8 +24,35 @@
               </div>
             </div>
           </form>
-          <div class="card-grid-container"></div>
+          <!-- debugging -->
+          <?php if (count($productsArray) == 0) : ?>
+              <p>There are no products.</p>
+          <?php else: ?>
+          <div class="card-grid-container">
+            <?php foreach ($productsArray as $product): ?>
+              <a
+                href="?action=viewProduct&amp;productID=<?php echo htmlspecialchars($product['productID']); ?>"
+                class="card"
+              >
+                <div class="card__img-container">
+                  <img 
+                    src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
+                    alt="An image of a <?php echo htmlspecialchars($product['productName']); ?>" 
+                  />
+                </div>
+                <section class="card__text ellipsis">
+                  <h3 class="card__text__title ellipsis">
+                    <?php echo htmlspecialchars($product['productName']); ?>
+                  </h3>
+                  <p class="card__text__price">
+                    &#36;<?php echo htmlspecialchars($product['productPrice']); ?>
+                  </p>
+                </section>
+              </a>
+            <?php endforeach; ?>
+          </div>
+          <?php endif; ?>
         </article>
       </section>
     </main>
-<?php require_once './partials/footer.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/footer.php'; ?>

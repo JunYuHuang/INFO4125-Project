@@ -13,6 +13,7 @@
                 type="text"
                 required
                 placeholder="First Name"
+                minlength="1"
               />
               <label class="label" for="input--checkout__first-name">
                 First Name
@@ -25,6 +26,7 @@
                 type="text"
                 required
                 placeholder="Last Name"
+                minlength="1"
               />
               <label class="label" for="input--checkout__last-name">
                 Last Name
@@ -37,6 +39,7 @@
                 type="email"
                 required
                 placeholder="Email Address"
+                minlength="4"
               />
               <label class="label" for="input--checkout__email-address">
                 Email Address
@@ -49,6 +52,7 @@
                 type="text"
                 required
                 placeholder="Mobile Phone Number"
+                minlength="10"
               />
               <label class="label" for="input--checkout__contact-info">
                  Mobile Phone Number
@@ -97,6 +101,8 @@
                 type="text"
                 required
                 placeholder="Province / State e.g. BC"
+                minlength="1"
+                maxlength="2"
               />
               <label class="label" for="input--checkout__province">
                 Province / State e.g. BC
@@ -121,6 +127,7 @@
                 type="text"
                 required
                 placeholder="Country / Region e.g. Canada"
+                minlength="1"
               />
               <label class="label" for="input--checkout__country">
                 Country / Region e.g. Canada
@@ -184,6 +191,8 @@
                 type="text"
                 required
                 placeholder="Expires (MMYY)"
+                minlength="4"
+                maxlength="4"
               />
               <label class="label" for="input--checkout__card-expiry-date">
                 Expires (MMYY)
@@ -196,6 +205,8 @@
                 type="number"
                 required
                 placeholder="3 or 4 digit Security Code"
+                min="3"
+                max="4"
               />
               <label class="label" for="input--checkout__security-code">
                 3 or 4 digit Security Code

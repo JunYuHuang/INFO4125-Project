@@ -15,7 +15,7 @@
             who's king.
           </p>
           <div class="button-container button-container--home">
-            <a href="./products.php" class="button button--blue"
+            <a href="/INFO4125-Project/products" class="button button--blue"
               >Buy Pens Now</a
             >
           </div>

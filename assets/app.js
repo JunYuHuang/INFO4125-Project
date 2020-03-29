@@ -52,68 +52,18 @@ function toggleNavButton() {
 
 // PRODUCTS PAGE //
 
-// front-end mockup products (use until database connection is good)
-const pensArray = [
-  {
-    id: "1",
-    name: "Ballpoint Pen",
-    price: 4.99,
-    description: "The classic choice for students since 1950.",
-    imageURL: "../assets/images/products/ballpoint-1_no_logo.jpg"
-    // imageURL: "../assets/images/home-splash-image.jpg"
-    // inkColours: ["black", "blue", "red"],
-  },
-  {
-    id: "2",
-    name: "Marker Pen",
-    price: 4.99,
-    description:
-      "Great for writing big and bold letters. Also great for smelling.",
-    imageURL: "../assets/images/products/marker-1_no_logo.jpg"
-  },
-  {
-    id: "3",
-    name: "Gel Pen",
-    price: 1.99,
-    description: "An applicator for highly viscous and coloured fluids.",
-    imageURL: "../assets/images/products/gel-1.jpg"
-  },
-  {
-    id: "4",
-    name: "Retractable Pen",
-    price: 1.99,
-    description:
-      "The best tool for both writing and annoying your colleagues at the same time",
-    imageURL: "../assets/images/products/retractable-1.jpg"
-  },
-  {
-    id: "5",
-    name: "Stylus Pen",
-    price: 14.99,
-    description:
-      "Excellent pen with a comfortable silicon rubber grip that allows for precise ink strokes.",
-    imageURL: "../assets/images/products/stylus-1.jpg"
-  },
-  {
-    id: "6",
-    name: "Coming Soon TM",
-    price: 9999.99,
-    description: "Top secret pen coming next century.",
-    imageURL: "../assets/images/products/unknown-product.svg"
-  }
-];
+// important var for products page and product-page page
+let currentProductItemID = "";
 
 // only display and filter the products if the user is on the products page
 let productSearchForm = document.querySelector(".search-form");
 let productSearchInput = document.querySelector(".input--search");
 let productCardGrid = document.querySelector(".card-grid-container");
 
+const errorMessage = "not applicable";
+
 let isProductPage = productSearchForm && productSearchInput && productCardGrid;
 if (isProductPage) {
-  console.log(isProductPage);
-
-  const errorMessage = "not applicable";
-
   productSearchForm.addEventListener("submit", e => {
     e.preventDefault(); // stop form from submitting or refreshing
   });
@@ -136,36 +86,7 @@ if (isProductPage) {
       }
     });
   }
-
-  function displayProductItems() {
-    pensArray.map(pen => {
-      // // onClick={() => setCurrentCountry(country)}
-      let card = `
-      <a
-        href="./product_detail.php"
-        class="card"
-      >
-        <div class="card__img-container">
-          <img src="${pen.imageURL}" alt="An image of a ${pen.name}"} />
-        </div>
-        <section class="card__text ellipsis">
-          <h3 class="card__text__title ellipsis">
-            ${pen.name ? pen.name : errorMessage}
-          </h3>
-          <p class="card__text__price">
-            &#36;${pen.price ? pen.price : errorMessage}
-          </p>
-        </section>
-      </a>
-  `;
-      productCardGrid.insertAdjacentHTML("beforeend", card);
-    });
-  }
-
-  displayProductItems();
 }
-
-// PRODUCT_DETAIL PAGE
 
 // CART PAGE
 

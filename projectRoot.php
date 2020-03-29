@@ -1,0 +1,1 @@
+<?php define('PROJECT_DIR_ROOT', __DIR__); ?>
