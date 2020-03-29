@@ -13,7 +13,7 @@
             <?php echo htmlspecialchars($productName); ?>
           </h1>
           <p class="product-detail__price">
-			&#36;<?php echo htmlspecialchars($productPrice); ?>
+			CAD &#36;<?php echo htmlspecialchars($productPrice); ?>
 		  </p>
 			<form action="" class="add-to-cart-form">
 				<div class="input-group input-group--text--no-hover full-width">

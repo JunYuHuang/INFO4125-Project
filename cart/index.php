@@ -1,1 +1,1 @@
-<?php require_once "../controllers/product_controller.php"; ?>
+<?php require_once "../controllers/cart_controller.php"; ?>

@@ -24,7 +24,6 @@
               </div>
             </div>
           </form>
-          <!-- debugging -->
           <?php if (count($productsArray) == 0) : ?>
               <p>There are no products.</p>
           <?php else: ?>
@@ -45,7 +44,7 @@
                     <?php echo htmlspecialchars($product['productName']); ?>
                   </h3>
                   <p class="card__text__price">
-                    &#36;<?php echo htmlspecialchars($product['productPrice']); ?>
+                    CAD &#36;<?php echo htmlspecialchars($product['productPrice']); ?>
                   </p>
                 </section>
               </a>

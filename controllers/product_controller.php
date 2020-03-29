@@ -1,7 +1,7 @@
 <?php
-require('../projectRoot.php');
-require('../model/database.php');
-require('../model/product_db.php');
+require '../projectRoot.php';
+require '../model/database.php';
+require '../model/product_db.php';
 
 $action = filter_input(INPUT_GET, 'action');
 if ($action == NULL) {
@@ -26,16 +26,16 @@ switch($action) {
             $productPrice = $product['productPrice'];
             $productDescription = $product['productDescription'];
             // display the product detail page
-            include("../views/product_detail.php");
+            include "../views/product_detail.php";
         } else {
             // display error page
             $errorMessage = 'The product was not found.';
-            include("../views/error.php");
+            include "../views/error.php";
         }
         break;
     default:
         $errorMessage = 'Unknown product action: ' . $action;
-        include('../views/error.php');
+        include '../views/error.php';
         break;
 }
 
