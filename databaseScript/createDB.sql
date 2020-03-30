@@ -25,7 +25,11 @@ VALUES
     ("3", "Gel Pen", 1.99, "An applicator for highly viscous and coloured fluids.", "gel.jpg"),
     ("4", "Retractable Pen", 1.99, "The best tool for both writing and annoying your colleagues at the same time.", "retractable.jpg"),
     ("5", "Stylus Pen", 14.99, "Excellent pen with a comfortable silicon rubber grip that allows for precise ink strokes.", "stylus.jpg"),
-    ("6", "Coming Soon TM", 9999.99, "Top secret pen coming next century.", "unknown.svg");
+    ("6", "Calligraphy Pen", 12.99, "The best option for an aspiring artist to practice calligraphy with accuracy.", "calligraphy.jpg"),
+    ("7", "Spy Pen", 28.99, "Perfect for fulfilling your plagaristic desires in style (Mini Camera Built-in).", "spy.jpg" ),
+    ("8", "Worlds Smallest Pen", 2.99, "You wouldn't even know it was there.", "tiny.jpg"),
+    ("9", "Quill Pen", 14.99, "Made specially for those who want to time-travel backwards without being noticed with a classic pen.", "quill.jpg"),
+    ("10", "Coming Soon TM", 9999.99, "Top secret pen coming next century.", "unknown.svg");
 
 -- omit creating a user if user account below has already been created
 DROP USER IF EXISTS 'websecgp6';
