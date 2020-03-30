@@ -1,5 +1,5 @@
     <header class="header">
-      <nav class="navbar">
+      <nav role="navigation" class="navbar">
         <div class="logo-wrapper">
           <a href="/INFO4125-Project/" class="logo__link">
             <h1 class="logo uppercase">Penzaar</h1>
@@ -38,7 +38,7 @@
           </a>
           <button
             class="button nav-menu-button"
-            role="navigation"
+            role="button"
             aria-label="Navigation Menu"
           >
             <img

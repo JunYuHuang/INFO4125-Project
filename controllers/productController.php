@@ -1,4 +1,5 @@
 <?php
+
 require '../projectRoot.php';
 require '../model/databaseModel.php';
 require '../model/productDBModel.php';

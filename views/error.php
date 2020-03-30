@@ -4,7 +4,7 @@
       <section class="section section--error">
         <h1 class="h1 heading heading--main">Error</h1>
         <p>Something went wrong :(</p>
-        <p>Error: <?php echo $errorMessage; ?></p>
+        <p>Error: <span class="error-message-text"><?php echo $errorMessage; ?></span></p>
         <div class="button-container button-container--error">
             <a href="/INFO4125-Project/" class="button button--blue--ghost">
                 Back to Home

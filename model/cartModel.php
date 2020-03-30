@@ -1,110 +1,88 @@
 <?php
-// Create an empty cart if it doesn't exist
+
+// create cart (if non-existent)
 if (!isset($_SESSION['cart']) ) {
     $_SESSION['cart'] = array();
 }
 
-// Add an item to the cart
-function cart_add_item($product_id, $quantity) {
-    $_SESSION['cart'][$product_id] = round($quantity, 0);
-
-    // Set last category added to cart
-    $product = get_product($product_id);
-    $_SESSION['last_category_id'] = $product['categoryID'];
-    $_SESSION['last_category_name'] = $product['categoryName'];
+// helper integer converter and formatter function
+function convertToInteger($number) {
+    return round(intval($number), 0);
 }
 
-// Update an item in the cart
-function cart_update_item($product_id, $quantity) {
-    if (isset($_SESSION['cart'][$product_id])) {
-        $_SESSION['cart'][$product_id] = round($quantity, 0);
+// cart CRUD functions //
+
+function addProductToCart($productID, $productQuantity) {
+    // round quantity to 0 decimal places
+    // $formattedProductQuantity = round($productQuantity, 0);
+    $_SESSION['cart'][$productID] = convertToInteger($productQuantity);
+}
+
+function updateProductInCart($productID, $productQuantity) {
+    // check if cart has at least 1 product
+    if (isset($_SESSION['cart'][$productID])) {
+        $_SESSION['cart'][$productID] = convertToInteger($productQuantity);
     }
 }
 
-// Remove an item from the cart
-function cart_remove_item($product_id) {
-    if (isset($_SESSION['cart'][$product_id])) {
-        unset($_SESSION['cart'][$product_id]);
+function deleteProductFromCart($productID) {
+    // check if cart has at least 1 product
+    if (isset($_SESSION['cart'][$productID])) {
+        unset($_SESSION['cart'][$productID]);
     }
 }
 
-// Get an array of items for the cart
-function cart_get_items() {
-    $items = array();
-    foreach ($_SESSION['cart'] as $product_id => $quantity ) {
-        // Get product data from db
-        $product = get_product($product_id);
-        $list_price = $product['listPrice'];
-        $discount_percent = $product['discountPercent'];
-        $quantity = intval($quantity);
+function getAllProductsInCart() {
+    $allProductsInCart = array();
+    foreach($_SESSION['cart'] as $productID => $productQuantity ) {
+        // get product data from database & calculate costs
+        $product = getProductByID($productID);
+        $productImageFileName = $product['productImageFileName'];
+        $productName = $product['productName'];
+        $productPrice = $product['productPrice'];
+        $totalProductPrice = convertToInteger($productPrice * $productQuantity);
 
-        // Calculate discount
-        $discount_amount = round($list_price * ($discount_percent / 100.0), 2);
-        $unit_price = $list_price - $discount_amount;
-        $line_price = round($unit_price * $quantity, 2);
-
-        // Store data in items array
-        $items[$product_id]['name'] = $product['productName'];
-        $items[$product_id]['description'] = $product['description'];
-        $items[$product_id]['list_price'] = $list_price;
-        $items[$product_id]['discount_percent'] = $discount_percent;
-        $items[$product_id]['discount_amount'] = $discount_amount;
-        $items[$product_id]['unit_price'] = $unit_price;
-        $items[$product_id]['quantity'] = $quantity;
-        $items[$product_id]['line_price'] = $line_price;
+        // store data in an array
+        $allProductsInCart[$productID]['productImageFileName'] = $productImageFileName;
+        $allProductsInCart[$productID]['productName'] = $productName;
+        $allProductsInCart[$productID]['productDescription'] = $product['productDescription'];
+        $allProductsInCart[$productID]['productPrice'] = $productPrice;
+        $allProductsInCart[$productID]['totalProductPrice'] = $totalProductPrice;
+        $allProductsInCart[$productID]['productQuantity'] = $productQuantity;
     }
-    return $items;
+
+    return $allProductsInCart;
 }
 
-// Get the number of products in the cart
-function cart_product_count() {
-    return count($_SESSION['cart']);
-}
+// cart auxilliary functions that depend on the main cart CRUD functions //
 
-// Get the number of items in the cart
-function cart_item_count () {
-    $count = 0;
-    $cart = cart_get_items();
-    foreach ($cart as $item) {
-        $count += $item['quantity'];
+function getCountOfTotalProductItemsInCart() {
+    $totalProductItemCount = 0;
+    $cart = getAllProductsInCart();
+
+    foreach($cart as $cartItem) {
+        $totalProductItemCount += $cartItem['productQuantity'];
     }
-    return $count;
+
+    return $totalProductItemCount;
 }
 
-// Get the subtotal for the cart
-function cart_subtotal () {
-    $subtotal = 0;
-    $cart = cart_get_items();
-    foreach ($cart as $item) {
-        $subtotal += $item['unit_price'] * $item['quantity'];
+function getCartSubtotal() {
+    $cartSubtotal = 0;
+    $cart = getAllProductsInCart();
+    foreach($cart as $cartItem) {
+        $cartSubtotal += $cartItem['productPrice'] * $cartItem['productQuantity'];
     }
-    return $subtotal;
+    return $cartSubtotal;
 }
 
-// Remove all items from the cart
-function clear_cart() {
+function emptyCart() {
     $_SESSION['cart'] = array();
 }
 
-// Set the category for the last item added to the cart
-function set_last_category($category_id, $category_name) {
-    $_SESSION['last_category_id'] = $category_id;
-    $_SESSION['last_category_name'] = $category_name;
+function getCorrectQuantifierForCartItems() {
+    $cartItemQuantifier = (getCountOfTotalProductItemsInCart() == 1) ? 'item' : 'items';
+    return $cartItemQuantifier;
 }
 
-// Set the product for the last item added to the cart
-function set_last_product($product_id, $product_name) {
-    $_SESSION['last_product_id'] = $product_id;
-    $_SESSION['last_product_name'] = $product_name;
-}
-
-// Get the correct word for the number of items
-function cart_get_item_word() {
-    if (cart_product_count() == 1) {
-        $item_word =  'Item';
-    } else {
-        $item_word =  'Items';
-    }
-    return $item_word;
-}
 ?>

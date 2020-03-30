@@ -5,6 +5,7 @@
 :root {
   /* colors */
   --color-soft-red: hsl(0, 94%, 66%);
+  --color-soft-red--original: hsl(0, 94%, 66%);
   --color-primary: #1f5384;
   /* --color-link: #2d73b6; */
   --color-dark: #03080d;
@@ -137,6 +138,10 @@ h3,
 
 .text-align-center {
   text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 /* COMPONENT CLASSES */
@@ -896,6 +901,7 @@ h3,
 /* cart page */
 .cart {
   overflow: hidden;
+  /* background-color: gray; */
 }
 
 .cart__item {
@@ -986,24 +992,40 @@ h3,
 
 .button-container--cart {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-top: calc(88px / 4);
-  height: 160px;
   max-width: 100%;
 }
 
-.button-container--cart > .button {
+.button-container--cart > * {
   display: block;
   box-shadow: none;
   font-weight: 400;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
-.button-container--cart > .button--blue {
+.button-container--cart > *:last-child {
+  margin-bottom: 0;
+}
+
+.button-container--cart .button--blue {
   font-weight: 500;
+}
+
+.empty-cart-form > .button {
+  width: 100%;
+  box-shadow: none;
+  font-weight: 400;
+}
+
+.button-container--cart--error {
+  width: 100%;
+}
+
+.button-container--cart--error > .button {
+  display: block;
+  max-width: max-content;
+  margin: 0 auto;
 }
 
 /* error page */
@@ -1011,6 +1033,11 @@ h3,
   max-width: 1300px;
   margin: 0 auto;
   text-align: center;
+}
+
+.error-message-text {
+  color: var(--color-soft-red);
+  filter: brightness(0.75);
 }
 
 .button-container--error {
@@ -1183,7 +1210,7 @@ h3,
 
   /* cart page */
   .cart__item {
-    max-width: calc(100% - 200px);
+    max-width: calc(100% - 150px);
   }
 
   .cart__item > * {
@@ -1205,8 +1232,8 @@ h3,
 
   .cart__item__price {
     font-size: 1.1rem;
-    right: -200px;
-    max-width: 200px;
+    right: -150px;
+    max-width: 150px;
   }
 
   .hr--cart__item {
@@ -1429,7 +1456,8 @@ h3,
   }
 
   .cart {
-    max-width: 70%;
+    max-width: 60%;
+    width: 100%;
   }
 
   .cart__item__img-wrapper {
@@ -1455,16 +1483,14 @@ h3,
   }
 
   .cart__summary {
-    width: 25%;
-    /* margin-right: 2rem; */
-    flex-direction: column;
+    width: 35%;
   }
 
   .button-container--cart {
     display: block;
   }
 
-  .button-container--cart > .button {
+  .button-container--cart > * {
     margin-bottom: 0.5rem;
   }
 }
