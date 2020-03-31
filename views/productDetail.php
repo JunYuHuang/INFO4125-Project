@@ -15,7 +15,17 @@
           <p class="product-detail__price">
 			CAD &#36;<?php echo htmlspecialchars($productPrice); ?>
 		  </p>
-			<form action="" class="add-to-cart-form">
+			<form 
+				action="/INFO4125-Project/cart" 
+				method="GET"
+				class="add-to-cart-form"
+			>
+				<input type="hidden" name="action" value="addItemToCart">
+				<input 
+					type="hidden" 
+					name="productID" 
+					value="<?php echo $productID;?>"
+				>
 				<div class="input-group input-group--text--no-hover full-width">
 					<input
 						class="input input--text--no-hover half-width half-max-width"
@@ -25,6 +35,7 @@
 						value="1"
 						min="1"
 						step="1"
+						name="productQuantity"
 					/>
 					<label class="label" for="input--add-to-cart--quantity">
 						Quantity
@@ -45,7 +56,7 @@
 			</article>
 			<div class="button-container button-container--product-detail">
 				<a href="/INFO4125-Project/products" class="button button--blue--ghost">
-					<&nbsp;&nbsp;&nbsp;Back to Products
+					&lt;&nbsp;&nbsp;&nbsp;Back to Products
 				</a>
 			</div>
       </section>

@@ -2,6 +2,7 @@
       <nav role="navigation" class="navbar">
         <div class="logo-wrapper">
           <a href="/INFO4125-Project/" class="logo__link">
+            <img class="logo-icon" src="/INFO4125-Project/assets/images/favicon.png" alt="gay">
             <h1 class="logo uppercase">Penzaar</h1>
           </a>
         </div>

@@ -6,15 +6,40 @@ require '../model/databaseModel.php';
 require '../model/productDBModel.php';
 require '../model/cartModel.php';
 
-$action = null;
-$POSTAction = filter_input(INPUT_POST, 'action');
-$GETAction = filter_input(INPUT_GET, 'action');
+// $action;
+// $isPOSTAction = filter_input(INPUT_POST, 'action');
+// $isGETAction = filter_input(INPUT_GET, 'action');
 
-if ($POSTAction == null || $GETAction == null) {
-    $action = 'viewItemsInCart';
+// if (!$isPOSTAction) {
+//     if (!$isGETAction) {
+//         $action = 'viewItemsInCart';
+//     } else {
+//         $action = $isGETAction;
+//     }
+// } else {
+//     $action = $isPOSTAction;
+// }
+
+$action = filter_input(INPUT_POST, 'action');
+
+// echo filter_input(INPUT_POST, 'action');
+// echo filter_input(INPUT_POST, 'productID');
+// echo filter_input(INPUT_POST, 'productQuantity');
+
+// echo $action;
+
+if ($action == null) {
+    $action = filter_input(INPUT_GET, 'action');
+    if ($action == null) {
+        $action = 'viewItemsInCart';
+    }
 }
 
 $errorMessage = null;
+
+// echo $action;
+// echo $isPOSTAction;
+// echo $isGETAction;
 
 switch($action) {
     case 'viewItemsInCart':
@@ -22,17 +47,17 @@ switch($action) {
         break;
     case 'addItemToCart':
         // get user input
-        $productID = filter_input(INPUT_POST, 'productID', FILTER_VALIDATE_INT);
-        $productQuantity = filter_input(INPUT_POST, 'productQuantity');
+        $productID = filter_input(INPUT_GET, 'productID', FILTER_VALIDATE_INT);
+        $productQuantity = filter_input(INPUT_GET, 'productQuantity');
 
         // add product(s) and visually update cart
         addProductToCart($productID, $productQuantity);
         $currentCart = getAllProductsInCart();
         break;
     case 'updateItemInCart':
-        $allProductsInCart = filter_input(INPUT_POST, 'allProductsInCart', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+        $currentCartItems = filter_input(INPUT_POST, 'currentCartItems', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
         
-        foreach($allProductsInCart as $productID => $productQuantity) {
+        foreach($currentCartItems as $productID => $productQuantity) {
             if ($productQuantity == 0) {
                 deleteProductFromCart($productID);
             } else {

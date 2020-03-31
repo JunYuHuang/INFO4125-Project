@@ -40,14 +40,14 @@ function getAllProductsInCart() {
         $productImageFileName = $product['productImageFileName'];
         $productName = $product['productName'];
         $productPrice = $product['productPrice'];
-        $totalProductPrice = convertToInteger($productPrice * $productQuantity);
+        $totalProductPrice = $productPrice * $productQuantity;
 
         // store data in an array
         $allProductsInCart[$productID]['productImageFileName'] = $productImageFileName;
         $allProductsInCart[$productID]['productName'] = $productName;
         $allProductsInCart[$productID]['productDescription'] = $product['productDescription'];
         $allProductsInCart[$productID]['productPrice'] = $productPrice;
-        $allProductsInCart[$productID]['totalProductPrice'] = $totalProductPrice;
+        $allProductsInCart[$productID]['totalProductPrice'] = round($totalProductPrice, 2);
         $allProductsInCart[$productID]['productQuantity'] = $productQuantity;
     }
 

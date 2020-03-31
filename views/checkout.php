@@ -1,5 +1,5 @@
-<?php require_once './partials/header.php'; ?>
-<?php require_once './partials/navbar.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/header.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
       <section class="section section--checkout">
         <h1 class="h1 heading heading--main">Checkout</h1>
@@ -62,7 +62,7 @@
             <div class="input-group input-group--text full-width">
               <input
                 class="input input--text"
-                id="input--checkout__street-adress"
+                id="input--checkout__street-address"
                 type="text"
                 required
                 placeholder="Street Address"
@@ -226,25 +226,7 @@
               />
             </div>
           </form>
-          <!-- <table class="table">
-              <thead>
-                  <tr>
-                      <th>Product</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Product Thumbnail and Product Name</td>
-                      <td>Price</td>
-                      <td>Quantity</td>
-                      <td>Total</td>
-                  </tr>
-              </tbody>
-          </table> -->
         </article>
       </section>
     </main>
-<?php require_once './partials/footer.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/footer.php'; ?>

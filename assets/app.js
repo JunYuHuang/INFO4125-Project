@@ -89,5 +89,11 @@ if (isProductPage) {
 }
 
 // CART PAGE
+let allProductQuantityInputs = document.querySelectorAll(
+  ".input--number--product-quantity"
+);
+if (allProductQuantityInputs) {
+  // something
+}
 
 // CHECKOUT PAGE

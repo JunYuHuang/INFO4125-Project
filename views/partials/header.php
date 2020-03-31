@@ -9,7 +9,7 @@
       name="keywords"
       content="apache,web,server,ecommerce,online,shop,storefront,pens,writing,utensils,ink,handwritten,buy"
     />
-    <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="/INFO4125-Project/assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/stylesheet.css" />
     <title>Penzaar</title>
   </head>
