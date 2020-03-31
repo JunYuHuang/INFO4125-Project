@@ -2,7 +2,7 @@
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
       <section class="section section--products">
-        <h1 class="h1 heading heading--main">Products</h1>
+        <h1 class="h1 heading heading--main heading--main--products">Products</h1>
         <article class="section__text section__text--products">
           <form action="" class="search-form">
             <div class="input-group input-group--search">
