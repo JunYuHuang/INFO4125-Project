@@ -679,7 +679,7 @@ h3,
 }
 
 .section__img-wrapper--product-detail > img:hover {
-  scale: 150%;
+  transform: scale(1.5);
 }
 
 .product-detail__title {

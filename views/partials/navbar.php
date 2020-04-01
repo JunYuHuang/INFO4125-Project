@@ -6,8 +6,6 @@
   require_once(__DIR__ . '/../../model/cartModel.php');
 
   $numberOfCurrentCartItems = getCountOfTotalProductItemsInCart();
-  
-  // <?php echo ($currentCartItems > 9) ? '9+' : $currentCartItems; 
 ?>
     <header class="header">
       <nav role="navigation" class="navbar">

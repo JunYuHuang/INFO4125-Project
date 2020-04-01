@@ -3,13 +3,14 @@ CREATE DATABASE webdevgp6;
 USE webdevgp6;
 
 
-
-
 CREATE TABLE Product
 (
-    productID BIGINT NOT NULL UNIQUE,
-    productName VARCHAR(255) NOT NULL,
-    productPrice DECIMAL(6,2)
+    productID BIGINT NOT NULL
+    AUTO_INCREMENT,
+    productName VARCHAR
+    (255) NOT NULL,
+    productPrice DECIMAL
+    (6,2)
     UNSIGNED NOT NULL,
     productDescription VARCHAR
     (255) NOT NULL,
@@ -108,7 +109,10 @@ CREATE TABLE Product
                 ("7", "Spy Pen", 28.99, "Perfect for fulfilling your plagaristic desires in style (Mini Camera Built-in).", "spy.jpg" ),
                 ("8", "Worlds Smallest Pen", 2.99, "You wouldn't even know it was there.", "tiny.jpg"),
                 ("9", "Quill Pen", 14.99, "Made specially for those who want to time-travel backwards without being noticed with a classic pen. Ink reservoir not included.", "quill.jpg"),
-                ("10", "Coming Soon TM", 9999.99, "Top secret pen coming next century.", "unknown.svg");
+                ("10", "Coming Soon TM", 9999.99, "Top secret pen coming next century.", "unknown.svg"),
+                ("11", "Dual Tip Brush Pen", 4.99, "Create beautiful brush strokes perfect for calligraphy", "brushpen.jpg"),
+                ("12", "Fine Liner", 3.79, "Artists, crafters, hobbyists, draftsmen, engineers and even scientists consider this pen a necessary tool for any handwritten or hand-drawn project", "fineliner.jpg"),
+                ("13", "Mildliner Highlighter", 2.79, "Mild hues are just the right shade to stand out and add colour to your notes.", "mildliner.jpg");
 
 
 
