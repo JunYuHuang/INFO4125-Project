@@ -1,8 +1,8 @@
 <?php
 
-require '../projectRoot.php';
-require '../model/databaseModel.php';
-require '../model/productDBModel.php';
+require_once '../projectRoot.php';
+require_once '../model/databaseModel.php';
+require_once '../model/productDBModel.php';
 
 $action = filter_input(INPUT_GET, 'action');
 if ($action == NULL) {

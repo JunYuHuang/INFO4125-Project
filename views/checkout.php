@@ -268,9 +268,9 @@
             >
               &nbsp;
             </h4>
-            <div class="input-group input-group--submit full-width">
+            <div class="input-group input-group--submit one-third-width">
               <input
-                class="input input--button button button--blue one-third-width"
+                class="input input--button button button--blue full-width"
                 id="input--checkout__submit"
                 type="submit"
                 value="Submit Your Order"

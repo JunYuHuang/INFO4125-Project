@@ -34,7 +34,6 @@
                           </a>
                         </p>
                         <div class="input-group input-group--text--no-hover input-group--text--no-hover--fixed-max-width">
-                          <!-- id="input--add-to-cart--quantity" -->
                           <input
                             class="input input--text--no-hover full-width input--number--product-quantity"
                             id="currentCartItems[<?php echo $productID?>]"
@@ -75,7 +74,6 @@
                   Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
                 </div>
               </div>
-              <!-- temp -->
               <div class="cart__summary">
                 <!-- make this subtotal a flex container that divides "subtotal" and the "$MONEY" part -->
                 <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
@@ -102,7 +100,7 @@
                   <!-- incomplete part below -->
                   <a 
                     href="/INFO4125-Project/checkout" class="button button--blue button--checkout">
-                    Checkout
+                    Checkout&nbsp;&nbsp;&nbsp;&gt;
                   </a>
                 </div>
               </div>
@@ -111,7 +109,8 @@
       </section>
     </main>
     <script type="text/javascript">
-      // below code doesn't work when used put in app.js
+      // below code makes the "Update Cart" function work
+      // doesn't work when used put in app.js
       let productQuantityInputs = document.querySelectorAll(
         ".input--number--product-quantity"
       );

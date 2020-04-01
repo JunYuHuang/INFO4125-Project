@@ -56,7 +56,7 @@
 			</article>
 			<div class="button-container button-container--product-detail">
 				<a href="/INFO4125-Project/products" class="button button--blue--ghost">
-					&lt;&nbsp;&nbsp;&nbsp;Back to Products
+					&lt;&nbsp;&nbsp;&nbsp;Continue Shopping
 				</a>
 			</div>
       </section>
