@@ -21,8 +21,6 @@ No other third party libraries, frameworks, templating engines, or dependencies 
 ## TODO (Incomplete features)
 
 - Session-based shopping cart (Cart, ProductDetail, and Checkout pages)
-- ProductDetail page
-  - add items to the cart with a POST request
 - Cart Page
   - "Checkout" button (send data to checkout page)
 - Checkout Page
@@ -52,14 +50,14 @@ No other third party libraries, frameworks, templating engines, or dependencies 
   - shopping cart count indicator in navbar (updates whenever user adds/edits/removes a cart item)
   - backend/server-side validation
 
-## Known Bugs & Issues
+## Known Issues
 
-- Cannot delete or update an item if it is the only item in the cart
-- Cannot add items to the cart with POST requests (cartController does not receive the data sent in the \$\_POST array)
+- ~~Cannot delete or update an item if it is the only item in the cart~~ FIXED
+- ~~Cannot add items to the cart with POST requests (cartController does not receive data sent in \$\_POST)~~ FIXED
+- ~~Clicking on a product link in the cart does not go to the product's product detail page~~ FIXED
 - Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s.
 - No router for the app.
 - Favicon icon does not load on certain pages occasionally. May be a cache problem.
-- clicking on a product link in the cart does not go to the product's product detail page
 
 ## How to install (in a local environment)
 

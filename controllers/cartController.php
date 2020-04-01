@@ -1,10 +1,10 @@
 <?php
 
-require '../utilities/session.php';
-require '../projectRoot.php';
-require '../model/databaseModel.php';
-require '../model/productDBModel.php';
-require '../model/cartModel.php';
+require_once '../utilities/session.php';
+require_once '../projectRoot.php';
+require_once '../model/databaseModel.php';
+require_once '../model/productDBModel.php';
+require_once '../model/cartModel.php';
 
 $action = filter_input(INPUT_POST, 'action');
 
@@ -23,8 +23,8 @@ switch($action) {
         break;
     case 'addItemToCart':
         // get user input
-        $productID = filter_input(INPUT_GET, 'productID', FILTER_VALIDATE_INT);
-        $productQuantity = filter_input(INPUT_GET, 'productQuantity');
+        $productID = filter_input(INPUT_POST, 'productID', FILTER_VALIDATE_INT);
+        $productQuantity = filter_input(INPUT_POST, 'productQuantity', FILTER_VALIDATE_INT);
 
         // add product(s) and visually update cart
         addProductToCart($productID, $productQuantity);

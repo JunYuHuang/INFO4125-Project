@@ -17,7 +17,7 @@ if ($action == null) {
 
 switch($action) {
     case 'viewCheckout':
-        $currentCartItemsArray = getAllProductsInCart();
+        $currentCart = getAllProductsInCart();
         // show summary cart
         // show checkout form
         // - complete validation

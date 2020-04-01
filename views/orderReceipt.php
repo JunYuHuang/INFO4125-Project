@@ -29,24 +29,6 @@
               <p>gay</p>
               <p>gay</p>
           </div>
-          <!-- <table class="table">
-              <thead>
-                  <tr>
-                      <th>Product</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Product Thumbnail and Product Name</td>
-                      <td>Price</td>
-                      <td>Quantity</td>
-                      <td>Total</td>
-                  </tr>
-              </tbody>
-          </table> -->
         </article>
       </section>
     </main>

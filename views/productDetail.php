@@ -15,10 +15,9 @@
           <p class="product-detail__price">
 			CAD &#36;<?php echo htmlspecialchars($productPrice); ?>
 		  </p>
-		  	<!-- bug: form cannot send data with POST request -->
 			<form 
-				action="/INFO4125-Project/cart" 
-				method="GET"
+				action="/INFO4125-Project/cart/" 
+				method="POST"
 				class="add-to-cart-form"
 			>
 				<input type="hidden" name="action" value="addItemToCart">
@@ -28,24 +27,24 @@
 					value="<?php echo $productID;?>"
 				>
 				<div class="input-group input-group--text--no-hover full-width">
+					<!-- id="input--add-to-cart--quantity" -->
 					<input
 						class="input input--text--no-hover half-width half-max-width"
-						id="input--add-to-cart--quantity"
 						type="number"
 						required
 						value="1"
 						min="1"
 						step="1"
+						id="productQuantity"
 						name="productQuantity"
 					/>
-					<label class="label" for="input--add-to-cart--quantity">
+					<label class="label" for="productQuantity">
 						Quantity
 					</label>
 				</div>
 				<div class="input-group input-group--submit full-width">
 					<input
 						class="input input--button button button--blue button--add-to-cart half-max-width"
-						id="input--add-to-cart--submit"
 						type="submit"
 						value="Add to Cart"
 					/>

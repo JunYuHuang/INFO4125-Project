@@ -548,7 +548,7 @@ h3,
 }
 
 .input-group--search {
-  position: relative;
+  /* position: sticky; */
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;

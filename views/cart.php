@@ -97,9 +97,6 @@
                   </form>
                   <form action="." method="POST" class="update-cart-form full-width">
                     <input type="hidden" name="action" value="updateItemsInCart">
-                    <!-- <button type="submit" class="button button--orange--ghost full-width">
-                      Update Cart
-                    </button> -->
                     <input value="Update Cart" type="submit" class="button button--orange--ghost full-width">
                   </form> 
                   <!-- incomplete part below -->
