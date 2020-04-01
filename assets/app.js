@@ -63,6 +63,7 @@ let productCardGrid = document.querySelector(".card-grid-container");
 const errorMessage = "not applicable";
 
 let isProductPage = productSearchForm && productSearchInput && productCardGrid;
+
 if (isProductPage) {
   productSearchForm.addEventListener("submit", e => {
     e.preventDefault(); // stop form from submitting or refreshing
@@ -86,14 +87,6 @@ if (isProductPage) {
       }
     });
   }
-}
-
-// CART PAGE
-let allProductQuantityInputs = document.querySelectorAll(
-  ".input--number--product-quantity"
-);
-if (allProductQuantityInputs) {
-  // something
 }
 
 // CHECKOUT PAGE

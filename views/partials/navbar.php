@@ -1,8 +1,19 @@
+<?php
+  // for displaying the number of current items in the cart
+  require_once(__DIR__ . '/../../utilities/session.php');
+  require_once(__DIR__ . '/../../model/databaseModel.php');
+  require_once(__DIR__ . '/../../model/productDBModel.php');
+  require_once(__DIR__ . '/../../model/cartModel.php');
+
+  $numberOfCurrentCartItems = getCountOfTotalProductItemsInCart();
+  
+  // <?php echo ($currentCartItems > 9) ? '9+' : $currentCartItems; 
+?>
     <header class="header">
       <nav role="navigation" class="navbar">
         <div class="logo-wrapper">
           <a href="/INFO4125-Project/" class="logo__link">
-            <img class="logo-icon" src="/INFO4125-Project/assets/images/favicon.png" alt="gay">
+            <img class="logo-icon" src="/INFO4125-Project/assets/images/favicon.png" alt="An thumbnail image of the Penzaar brand.">
             <h1 class="logo uppercase">Penzaar</h1>
           </a>
         </div>
@@ -31,11 +42,15 @@
                 class="nav-menu-button-icon shopping-cart-icon"
               />
             </div>
-            <div
-              class="text-wrapper text-wrapper--cart text-wrapper--cart--active"
-            >
-              <span>9+</span>
-            </div>
+            <?php if ($numberOfCurrentCartItems > 0) : ?>
+              <div
+                class="text-wrapper text-wrapper--cart text-wrapper--cart--active"
+              >
+                <span>
+                  <?php echo ($numberOfCurrentCartItems > 9) ? '9+' : $numberOfCurrentCartItems; ?>
+                </span>
+              </div>
+            <?php endif; ?>
           </a>
           <button
             class="button nav-menu-button"

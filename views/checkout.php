@@ -4,7 +4,70 @@
       <section class="section section--checkout">
         <h1 class="h1 heading heading--main">Checkout</h1>
         <article class="section__text section__text--checkout">
-        <form action="" class="register-form">
+        <div class="cart">
+          <?php foreach ($currentCart as $productID => $currentCartItem) : ?>
+            <div class="cart__item">
+              <div class="cart__item__img-wrapper">
+                <img
+                  src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
+                  alt="An image of a(n) <?php echo htmlspecialchars($currentCartItem['productName']); ?>"
+                />
+              </div>
+              <div class="cart__item__brief">
+                <p class="cart__item__brief__product-name ellipsis">
+                  <a 
+                    href="/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($productID); ?>" 
+                    class="url-link"
+                  >
+                    <?php echo htmlspecialchars($currentCartItem['productName']); ?>
+                  </a>
+                </p>
+                <div class="input-group input-group--text--no-hover input-group--text--no-hover--fixed-max-width">
+                  <input
+                    class="input input--text--no-hover full-width input--number--product-quantity"
+                    id="input--add-to-cart--quantity"
+                    type="number"
+                    required
+                    name="currentCartItems[<?php echo $productID?>]"
+                    value="<?php echo htmlspecialchars($currentCartItem['productQuantity']); ?>"
+                    min="0"
+                    step="1"
+                  />
+                  <label class="label" for="input--add-to-cart--quantity">
+                    Quantity
+                  </label>
+                  <form 
+                    class="delete-cart-item-form" 
+                    action="." 
+                    method="POST"
+                  >
+                    <input 
+                      type="hidden" 
+                      name="action" 
+                      value="deleteItemFromCart"
+                    />
+                    <input 
+                      type="hidden" 
+                      name="productID" 
+                      value="<?php echo htmlspecialchars($productID); ?>"
+                    />
+                    <button type="submit" class="button button--red--ghost">
+                      Remove
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <p class="cart__item__price ellipsis">
+                &#36;<?php echo htmlspecialChars($currentCartItem['totalProductPrice']); ?>
+              </p>
+            </div>
+            <hr class="hr hr--cart__item">
+          <?php endforeach; ?>
+          <div class="cart-subtotal-container ellipsis">
+            Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
+          </div>
+        </div>
+        <form action="." method="POST" class="register-form">
             <h4 class="checkout-form__sub-heading full-width">Contact Info</h4>
             <div class="input-group input-group--text half-width">
               <input
@@ -100,12 +163,12 @@
                 id="input--checkout__province"
                 type="text"
                 required
-                placeholder="Province / State e.g. BC"
+                placeholder="Province / State e.g. Alberta"
                 minlength="1"
-                maxlength="2"
+                maxlength="255"
               />
               <label class="label" for="input--checkout__province">
-                Province / State e.g. BC
+                Province / State e.g. Alberta
               </label>
             </div>
             <div class="input-group input-group--text one-third-width">
@@ -157,18 +220,6 @@
                 Credit Card Number (no spaces or dashes)
               </label>
             </div>
-            <!-- <div class="input-group input-group--text one-third-width">
-              <input
-                class="input input--text"
-                id="input--checkout__card-type"
-                type="text"
-                required
-                placeholder="Credit Card Type e.g. VISA"
-              />
-              <label class="label" for="input--checkout__card-type">
-                Credit Card Type e.g. VISA
-              </label>
-            </div> -->
             <div class="input-group input-group--text one-third-width">
               <select
                 class="input input--text"

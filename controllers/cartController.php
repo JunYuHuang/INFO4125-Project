@@ -6,27 +6,7 @@ require '../model/databaseModel.php';
 require '../model/productDBModel.php';
 require '../model/cartModel.php';
 
-// $action;
-// $isPOSTAction = filter_input(INPUT_POST, 'action');
-// $isGETAction = filter_input(INPUT_GET, 'action');
-
-// if (!$isPOSTAction) {
-//     if (!$isGETAction) {
-//         $action = 'viewItemsInCart';
-//     } else {
-//         $action = $isGETAction;
-//     }
-// } else {
-//     $action = $isPOSTAction;
-// }
-
 $action = filter_input(INPUT_POST, 'action');
-
-// echo filter_input(INPUT_POST, 'action');
-// echo filter_input(INPUT_POST, 'productID');
-// echo filter_input(INPUT_POST, 'productQuantity');
-
-// echo $action;
 
 if ($action == null) {
     $action = filter_input(INPUT_GET, 'action');
@@ -36,10 +16,6 @@ if ($action == null) {
 }
 
 $errorMessage = null;
-
-// echo $action;
-// echo $isPOSTAction;
-// echo $isGETAction;
 
 switch($action) {
     case 'viewItemsInCart':
@@ -54,7 +30,7 @@ switch($action) {
         addProductToCart($productID, $productQuantity);
         $currentCart = getAllProductsInCart();
         break;
-    case 'updateItemInCart':
+    case 'updateItemsInCart':
         $currentCartItems = filter_input(INPUT_POST, 'currentCartItems', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
         
         foreach($currentCartItems as $productID => $productQuantity) {
@@ -66,13 +42,14 @@ switch($action) {
         }
 
         $currentCart = getAllProductsInCart();
-        // header('Location: .');
+        header('Location: .');
         break;
     case 'deleteItemFromCart':
         $productID = filter_input(INPUT_POST, 'productID', FILTER_VALIDATE_INT);
         deleteProductFromCart($productID);
+
+        // refresh cart
         $currentCart = getAllProductsInCart();
-        // header('Location: ./');
         break;
     case 'deleteAllItemsFromCart':
         emptyCart();

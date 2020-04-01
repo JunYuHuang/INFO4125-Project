@@ -1,5 +1,5 @@
-<?php require_once './partials/header.php'; ?>
-<?php require_once './partials/navbar.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/header.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
       <section class="section section--order-receipt">
         <h1 class="h1 heading heading--main">Your Order Receipt</h1>
@@ -50,4 +50,4 @@
         </article>
       </section>
     </main>
-<?php require_once './partials/footer.php'; ?>
+<?php require_once PROJECT_DIR_ROOT . '/views/partials/footer.php'; ?>

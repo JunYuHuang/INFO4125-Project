@@ -7,13 +7,13 @@ if (!isset($_SESSION['cart']) ) {
 
 // helper integer converter and formatter function
 function convertToInteger($number) {
+    // round quantity to 0 decimal places
     return round(intval($number), 0);
 }
 
 // cart CRUD functions //
 
 function addProductToCart($productID, $productQuantity) {
-    // round quantity to 0 decimal places
     // $formattedProductQuantity = round($productQuantity, 0);
     $_SESSION['cart'][$productID] = convertToInteger($productQuantity);
 }
@@ -30,6 +30,7 @@ function deleteProductFromCart($productID) {
     if (isset($_SESSION['cart'][$productID])) {
         unset($_SESSION['cart'][$productID]);
     }
+    unset($_SESSION['cart'][$productID]);
 }
 
 function getAllProductsInCart() {

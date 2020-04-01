@@ -15,6 +15,7 @@
           <p class="product-detail__price">
 			CAD &#36;<?php echo htmlspecialchars($productPrice); ?>
 		  </p>
+		  	<!-- bug: form cannot send data with POST request -->
 			<form 
 				action="/INFO4125-Project/cart" 
 				method="GET"

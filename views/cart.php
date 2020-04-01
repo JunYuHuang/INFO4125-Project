@@ -1,7 +1,7 @@
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/header.php'; ?>
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
-      <form action="." method="POST" class="section section--cart">
+      <section class="section section--cart">
         <h1 class="h1 heading heading--main">Your Cart</h1>
         <article class="section__text section__text--cart">
           <?php if (getCountOfTotalProductItemsInCart() == 0) : ?>
@@ -17,54 +17,52 @@
               <div class="cart">
                 <?php foreach ($currentCart as $productID => $currentCartItem) : ?>
                   <div class="cart__item">
-                    <div class="cart__item__img-wrapper">
-                      <img
-                        src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
-                        alt="An image of a(n) <?php echo htmlspecialchars($currentCartItem['productName']); ?>"
-                      />
-                    </div>
-                    <div class="cart__item__brief">
-                      <p class="cart__item__brief__product-name ellipsis">
-                        <a 
-                          href="/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($currentCartItem['productID']); ?>" 
-                          class="url-link"
-                        >
-                          <?php echo htmlspecialchars($currentCartItem['productName']); ?>
-                        </a>
-                      </p>
-                      <div class="input-group input-group--text--no-hover input-group--text--no-hover--fixed-max-width">
-                        <input
-                          class="input input--text--no-hover full-width input--number--product-quantity"
-                          id="input--add-to-cart--quantity"
-                          type="number"
-                          required
-                          name="currentCartItems[<?php echo $productID?>]"
-                          value="<?php echo htmlspecialchars($currentCartItem['productQuantity']); ?>"
-                          min="0"
-                          step="1"
+                    <div class="cart__item__left">
+                      <div class="cart__item__img-wrapper">
+                        <img
+                          src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
+                          alt="An image of a(n) <?php echo htmlspecialchars($currentCartItem['productName']); ?>"
                         />
-                        <label class="label" for="input--add-to-cart--quantity">
-                          Quantity
-                        </label>
-                        <form 
-                          class="delete-cart-item-form" 
-                          action="." 
-                          method="POST"
-                        >
-                          <input 
-                            type="hidden" 
-                            name="action" 
-                            value="deleteItemFromCart"
+                      </div>
+                      <div class="cart__item__brief">
+                        <p class="cart__item__brief__product-name ellipsis">
+                          <a 
+                            href="/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($productID); ?>" 
+                            class="url-link"
+                          >
+                            <?php echo htmlspecialchars($currentCartItem['productName']); ?>
+                          </a>
+                        </p>
+                        <div class="input-group input-group--text--no-hover input-group--text--no-hover--fixed-max-width">
+                          <!-- id="input--add-to-cart--quantity" -->
+                          <input
+                            class="input input--text--no-hover full-width input--number--product-quantity"
+                            id="currentCartItems[<?php echo $productID?>]"
+                            type="number"
+                            required
+                            name="currentCartItems[<?php echo $productID?>]"
+                            value="<?php echo htmlspecialchars($currentCartItem['productQuantity']); ?>"
+                            min="0"
+                            max="9999"
+                            step="1"
                           />
-                          <input 
-                            type="hidden" 
-                            name="productID" 
-                            value="<?php echo htmlspecialchars($productID); ?>"
-                          />
-                          <button type="submit" class="button button--red--ghost">
-                            Remove
-                          </button>
-                        </form>
+                          <label class="label" for="currentCartItems[<?php echo $productID?>]">
+                            Quantity
+                          </label>
+                        </div>
+                        <div class="input-group input-group--text--no-hover input-group--text--no-hover--fixed-max-width">
+                          <form 
+                            class="delete-cart-item-form" 
+                            action="." 
+                            method="POST"
+                          >
+                            <input type="hidden" name="action" value="deleteItemFromCart">
+                            <input type="hidden" name="productID" value="<?php echo $productID; ?>">
+                            <button type="submit" class="button button--red--ghost">
+                              Remove
+                            </button>
+                          </form>
+                        </div>
                       </div>
                     </div>
                     <p class="cart__item__price ellipsis">
@@ -77,9 +75,11 @@
                   Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
                 </div>
               </div>
+              <!-- temp -->
               <div class="cart__summary">
+                <!-- make this subtotal a flex container that divides "subtotal" and the "$MONEY" part -->
                 <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
-                  Subtotal: CAD &#36;<?php echo getCartSubtotal(); ?>
+                  Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
                 </div>
                 <div class="button-container button-container--cart">
                   <a href="/INFO4125-Project/products" class="button button--blue--ghost">
@@ -91,22 +91,49 @@
                       name="action" 
                       value="deleteAllItemsFromCart"
                     />
-                    <button type="submit" class="button button--blue--ghost button--empty-cart">
+                    <button type="submit" class="button button--red--ghost button--empty-cart">
                       Empty Cart
                     </button>
                   </form>
-                    <input type="hidden" name="action" value="updateItemInCart">
-                    <button type="submit" class="button button--blue--ghost">
+                  <form action="." method="POST" class="update-cart-form full-width">
+                    <input type="hidden" name="action" value="updateItemsInCart">
+                    <!-- <button type="submit" class="button button--orange--ghost full-width">
                       Update Cart
-                    </button>
+                    </button> -->
+                    <input value="Update Cart" type="submit" class="button button--orange--ghost full-width">
+                  </form> 
                   <!-- incomplete part below -->
-                  <a href="/INFO4125-Project/checkout" class="button button--blue button--checkout">
+                  <a 
+                    href="/INFO4125-Project/checkout" class="button button--blue button--checkout">
                     Checkout
                   </a>
                 </div>
               </div>
           <?php endif; ?>
         </article>
-      </form>
+      </section>
     </main>
+    <script type="text/javascript">
+      // below code doesn't work when used put in app.js
+      let productQuantityInputs = document.querySelectorAll(
+        ".input--number--product-quantity"
+      );
+      let updateCartForm = document.querySelector(".update-cart-form");
+
+      function cloneProductQuantityInputsAndSubmit() {
+        productQuantityInputs.forEach(productQuantityInput => {
+            var productQuantityInputClone = productQuantityInput.cloneNode(false);
+            productQuantityInputClone.setAttribute("type", "hidden");
+            productQuantityInputClone.removeAttribute("class");
+            updateCartForm.appendChild(productQuantityInputClone);
+          });
+          updateCartForm.submit();
+      }
+
+      if (updateCartForm && productQuantityInputs) {
+        updateCartForm.addEventListener("submit", () => {
+          cloneProductQuantityInputsAndSubmit()
+        });
+      }
+    </script>
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/footer.php'; ?>

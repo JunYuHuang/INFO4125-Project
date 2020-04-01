@@ -4,7 +4,7 @@ Penzaar is the course project for the class INFO 4125: Website and Cloud Securit
 This is an ecommerce web application created with HTML, CSS, JavaScript, PHP, and MariaDB.
 On completion, it will feature the following:
 
-- Mobile-first, fully responsive web design (supports mobile, tablet, and destkop views)
+- Mobile-first, fully responsive web design (supports mobile, tablet, and desktop views)
 - Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
 - Basic instant search (Products page)
 - Products (READ functionality)
@@ -13,7 +13,7 @@ On completion, it will feature the following:
 - 3 static pages (Home, About, and Contact pages)
 - 5 dynamic pages (Products, ProductDetail, Checkout, and OrderReceipt pages)
 
-SVGs graphics from the Ionicons icon library were used.
+SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, or dependencies were used.
 
 ### NOTE: Currently, the project is a WIP and is highly volatile to changes and bugs.
@@ -32,9 +32,10 @@ No other third party libraries, frameworks, templating engines, or dependencies 
   - controller (/controllers/checkoutController.php)
     - sanitize form input from view
     - use model functions to submit data
-  - model (/controllers/checkoutModel.php)
-    - implement functions for INSERT (and maybe SELECT) SQL statements
-  - submit/INSERT new record to `ProductOrders` table in database
+  - model (/controllers/purchaseOrderModel.php)
+    - create controllers
+    - implement functions for INSERT SQL statements
+  - submit/INSERT new record to `ProductOrders` and `ProductOrderItem` tables in database
 - Order Receipt Page
   - view (/views/orderReceipt.php)
     - print summary of info entered in the checkout page
@@ -43,17 +44,22 @@ No other third party libraries, frameworks, templating engines, or dependencies 
 - ProductOrders (CREATE functionality)
   - On the Checkout page,
 - Frontend form validation (ProductDetail and Checkout pages)
-- Deploy the web app live to the professor's web server with FileZilla
+- Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
   - Edit files as necessary (e.g. relative and absolute path/URL links) to ensure the web app works
   - Test
+- optional (nice things to have)
+  - shopping cart count indicator in navbar (updates whenever user adds/edits/removes a cart item)
+  - backend/server-side validation
 
 ## Known Bugs & Issues
 
+- Cannot delete or update an item if it is the only item in the cart
 - Cannot add items to the cart with POST requests (cartController does not receive the data sent in the \$\_POST array)
 - Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s.
 - No router for the app.
 - Favicon icon does not load on certain pages occasionally. May be a cache problem.
+- clicking on a product link in the cart does not go to the product's product detail page
 
 ## How to install (in a local environment)
 
@@ -70,7 +76,7 @@ No other third party libraries, frameworks, templating engines, or dependencies 
 
 ### NOTES: There is no option to add new products to the database. Also, this web app does not support Internet Explorer or Microsoft Edge; please use the latest versions of Chrome, Firefox, Safari, or any other modern web browser.
 
-### You must manually update The database script `createDB.sql` must be manually updated and run (copied and pasted to the database's "SQL" tab and then click "GO") in PHPMyAdmin to add new products.
+### The database script `createDB.sql` must be manually updated and run (copied and pasted to the database's "SQL" tab and then click "GO") in PHPMyAdmin to add new products.
 
 <!-- ## Screenshots -->
 <!-- ### Home Page -->
