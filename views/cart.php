@@ -79,7 +79,7 @@
               </div>
               <div class="cart__summary">
                 <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
-                Subtotal: 
+                Subtotal (<?php echo(getCountOfTotalProductItemsInCart());?>):&nbsp;
                   <span class="text-color--red">
                     <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
                   </span>
@@ -103,8 +103,7 @@
                     <button type="submit" class="button button--blue--ghost button full-width font-weight--normal">
                       Update Cart
                     </button>
-                  </form> 
-                  <!-- incomplete part below -->
+                  </form>
                   <a 
                     href="/INFO4125-Project/checkout" class="button button--blue button--checkout">
                     Checkout&nbsp;&nbsp;&nbsp;&gt;

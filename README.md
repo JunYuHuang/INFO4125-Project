@@ -11,18 +11,15 @@ On completion, it will feature the following:
 - ProductOrders (CREATE functionality)
 - Frontend form validation (ProductDetail and Checkout pages)
 - 3 static pages (Home, About, and Contact pages)
-- 5 dynamic pages (Products, ProductDetail, Checkout, and OrderReceipt pages)
+- 5 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
 
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
-No other third party libraries, frameworks, templating engines, or dependencies were used.
+No other third party libraries, frameworks, templating engines, etc. were used.
 
-### NOTE: Currently, the project is a WIP and is highly volatile to changes and bugs.
+### NOTE: The project is currently a WIP and is highly volatile to changes and bugs.
 
 ## TODO (Incomplete features)
 
-- Session-based shopping cart (Cart, ProductDetail, and Checkout pages)
-- Cart Page
-  - "Checkout" button (send data to checkout page)
 - Checkout Page
   - view (/views/checkout.php)
     - implement frontend (HTML/CSS/JS) validation
@@ -40,14 +37,12 @@ No other third party libraries, frameworks, templating engines, or dependencies 
 - Database
   - add new `ProductOrders` table
 - ProductOrders (CREATE functionality)
-  - On the Checkout page,
 - Frontend form validation (ProductDetail and Checkout pages)
 - Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
   - Edit files as necessary (e.g. relative and absolute path/URL links) to ensure the web app works
   - Test
-- optional (nice things to have)
-  - shopping cart count indicator in navbar (updates whenever user adds/edits/removes a cart item)
+- optional
   - backend/server-side validation
 
 ## Known Issues
@@ -56,7 +51,6 @@ No other third party libraries, frameworks, templating engines, or dependencies 
 - ~~Cannot add items to the cart with POST requests (cartController does not receive data sent in \$\_POST)~~ FIXED
 - ~~Clicking on a product link in the cart does not go to the product's product detail page~~ FIXED
 - Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s.
-- No router for the app.
 - Favicon icon does not load on certain pages occasionally. May be a cache problem.
 
 ## How to install (in a local environment)

@@ -22,7 +22,6 @@
                     </div>
                     <!--   -->
                     <div class="cart__item__brief flex-vertically-centered full-height">
-                      <!-- cart__item__brief__product-name -->
                       <p class="cart__item__brief__product-name ellipsis no-margin">
                         <span class="text-color--dark ellipsis">
                           <?php echo htmlspecialchars($currentCartItem['productQuantity']) . ' &Cross; '; ?>
@@ -33,22 +32,18 @@
                       </p>
                     </div>
                   </div>
-                  <!-- cart__item__price  -->
                   <p class="ellipsis text-color--red full-height flex-vertically-centered">
                     &#36;<?php echo htmlspecialChars($currentCartItem['totalProductPrice']); ?>
                   </p>
                 </div>
               <?php endforeach; ?>
               <div class="cart__item cart__item--other-fees">
-                <!-- cart__item__brief__product-name -->
                 <div class="text-color--blue text-align-left ">
                   Shipping and Handling
                 </div> 
-                <!-- cart__item__price -->
                 <div class="text-color--green">FREE</div>
               </div>
               <hr class="hr hr--cart__item">
-              <!-- cart-subtotal-container -->
               <div class="cart-subtotal-container ellipsis">
                 Total: 
                 <span class="text-color--red text-align-right font-weight-bold">
@@ -58,56 +53,62 @@
             </div>
           </div> 
           <form action="." method="POST" class="register-form">
+            <input type="hidden" name="action" value="submitOrder">
             <h4 class="checkout-form__sub-heading full-width">Contact Info</h4>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__first-name"
+                id="customerFirstName"
+                name="customerFirstName"
                 type="text"
                 required
                 placeholder="First Name"
                 minlength="1"
               />
-              <label class="label" for="input--checkout__first-name">
+              <label class="label" for="customerFirstName">
                 First Name
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__last-name"
+                id="customerLastName"
+                name="customerLastName"
                 type="text"
                 required
                 placeholder="Last Name"
                 minlength="1"
               />
-              <label class="label" for="input--checkout__last-name">
+              <label class="label" for="customerLastName">
                 Last Name
               </label>
             </div>
             <div class="input-group input-group--text full-width">
               <input
                 class="input input--text input--text--email"
-                id="input--checkout__email-address"
-                type="email"
+                id="emailAddress"
+                name="customerEmailAddress"
+                type="customerEmailAddress"
                 required
                 placeholder="Email Address"
                 minlength="4"
               />
-              <label class="label" for="input--checkout__email-address">
+              <label class="label" for="customerEmailAddress">
                 Email Address
               </label>
             </div>
             <div class="input-group input-group--text full-width">
               <input
                 class="input input--text input--text"
-                id="input--checkout__contact-info"
+                id="customerPhoneNumber"
+                name="customerPhoneNumber"
                 type="text"
                 required
                 placeholder="Mobile Phone Number"
                 minlength="10"
+                maxlength="11"
               />
-              <label class="label" for="input--checkout__contact-info">
+              <label class="label" for="customerPhoneNumber">
                  Mobile Phone Number
               </label>
             </div>
@@ -115,74 +116,80 @@
             <div class="input-group input-group--text two-thirds-width">
               <input
                 class="input input--text"
-                id="input--checkout__street-address"
+                id="addressStreet"
+                name="addressStreet"
                 type="text"
                 required
                 placeholder="Street Address"
               />
-              <label class="label" for="input--checkout__street-address">
+              <label class="label" for="addressStreet">
                 Street Address
               </label>
             </div>
             <div class="input-group input-group--text one-third-width">
               <input
                 class="input input--text"
-                id="input--checkout__street-address-unit"
+                id="addressUnitNumber"
+                name="addressUnitNumber"
                 type="text"
                 placeholder="Unit (if applicable)"
               />
-              <label class="label" for="input--checkout__street-address-unit">
+              <label class="label" for="addressUnitNumber">
                 Unit (if applicable)
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text input--text"
-                id="input--checkout__city"
+                id="addressCity"
+                name="addressCity"
                 type="text"
                 required
                 placeholder="City"
               />
-              <label class="label" for="input--checkout__city">
+              <label class="label" for="city">
                 City
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__province"
+                id="addressProvince"
+                name="addressProvince"
                 type="text"
                 required
                 placeholder="Province / State e.g. Alberta"
                 minlength="1"
                 maxlength="255"
               />
-              <label class="label" for="input--checkout__province">
+              <label class="label" for="addressProvince">
                 Province / State e.g. Alberta
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__postal-code"
+                id="addressPostalCode"
+                name="addressPostalCode"
                 type="text"
                 required
                 placeholder="Postal Code e.g. V7X9M1"
               />
-              <label class="label" for="input--checkout__postal-code">
+              <label class="label" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__country"
+                id="addressCountry"
+                name="addressCountry"
                 type="text"
                 required
                 placeholder="Country / Region e.g. Canada"
                 minlength="1"
               />
-              <label class="label" for="input--checkout__country">
+              <label class="label" for="addressCountry">
                 Country / Region e.g. Canada
               </label>
             </div>
@@ -190,7 +197,8 @@
             <div class="input-group input-group--text full-width">
               <select
                 class="input input--text"
-                id="input--checkout__card-type"
+                id="creditCardType"
+                name="creditCardType"
                 required
               >
                 <option value="">Choose Credit Card Type</option>
@@ -198,58 +206,62 @@
                 <option value="MASTERCARD">MASTERCARD</option>
                 <option value="AMEX">AMEX</option>
               </select>
-              <label class="label" for="input--checkout__card-type">
+              <label class="label" for="creditCardType">
                 Credit Card Type
               </label>
             </div>
             <div class="input-group input-group--text full-width">
               <input
                 class="input input--text"
-                id="input--checkout__card-number"
+                id="creditCardNumber"
+                name="creditCardNumber"
                 type="text"
                 placeholder="Credit Card Number (no spaces or dashes)"
               />
-              <label class="label" for="input--checkout__card-number">
+              <label class="label" for="creditCardNumber">
                 Credit Card Number (no spaces or dashes)
               </label>
             </div>
             <div class="input-group input-group--text full-width">
               <input
                 class="input input--text"
-                id="input--checkout__card-name"
+                id="creditCardName"
+                name="creditCardName"
                 type="text"
                 required
                 placeholder="Name on Card"
               />
-              <label class="label" for="input--checkout__card-name">
+              <label class="label" for="creditCardName">
               Name on Card
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__card-expiry-date"
+                id="creditCardExpiryDate"
+                name="creditCardExpiryDate"
                 type="text"
                 required
                 placeholder="Expires (MMYY)"
                 minlength="4"
                 maxlength="4"
               />
-              <label class="label" for="input--checkout__card-expiry-date">
+              <label class="label" for="creditCardExpiryDate">
                 Expires (MMYY)
               </label>
             </div>
             <div class="input-group input-group--text half-width">
               <input
                 class="input input--text"
-                id="input--checkout__security-code"
-                type="number"
+                id="creditCardSecurityCode"
+                name="creditCardSecurityCode"
+                type="text"
                 required
                 placeholder="3 or 4 digit Security Code"
-                min="3"
-                max="4"
+                minlength="3"
+                maxlength="4"
               />
-              <label class="label" for="input--checkout__security-code">
+              <label class="label" for="creditCardSecurityCode">
                 3 or 4 digit Security Code
               </label>
             </div>

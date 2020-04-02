@@ -744,7 +744,7 @@ h3,
 }
 
 .register-form__sub-heading:first-child {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .register-form__sub-heading--last {
@@ -1090,7 +1090,7 @@ h3,
 }
 
 .checkout-form__sub-heading:first-child {
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .checkout-form__sub-heading--last {

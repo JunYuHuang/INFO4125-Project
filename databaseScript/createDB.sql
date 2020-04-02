@@ -18,39 +18,28 @@ CREATE TABLE PurchaseOrder (
     customerFirstName VARCHAR (255) NOT NULL,
     customerLastName VARCHAR (255) NOT NULL,
     customerEmailAddress VARCHAR (255) NOT NULL,
-    customerPhoneNumber VARCHAR (255) NOT NULL,
+    customerPhoneNumber VARCHAR (100) NOT NULL,
     addressStreet VARCHAR (255) NOT NULL,
     addressUnit VARCHAR (255),
     addressCity VARCHAR (255) NOT NULL,
     addressProvince CHAR (255) NOT NULL,
     addressPostalCode CHAR (6) NOT NULL,
     addressCountry VARCHAR (255) NOT NULL,
+    creditCardType ENUM('MASTERCARD', 'VISA', 'AMEX'),
+    creditCardNumber VARCHAR (19) NOT NULL,
     creditCardName VARCHAR (255) NOT NULL,
-    creditCardNumber CHAR (19) NOT NULL,
-    creditCardType CHAR (64) NOT NULL,
-    creditCardExpiryDate CHAR (4) NOT NULL,
-    creditCardSecurityCode CHAR (4) NOT NULL,
-    purchaseOrderID CHAR (30) NOT NULL,
-    purchaseOrder CHAR (30) NOT NULL,
-    postName VARCHAR (255) NOT NULL,
-    postDesc VARCHAR (255) NOT NULL,
-    postImageExt VARCHAR (4),
-    datePosted DATETIME NOT NULL,
+    creditCardExpiryDate VARCHAR(4) NOT NULL,
+    creditCardSecurityCode VARCHAR(4) NOT NULL,
     PRIMARY KEY (purchaseOrderID)
 );
 
 CREATE TABLE PurchaseOrderItem (
-    productID BIGINT NOT NULL UNIQUE,
-    purchaseOrderID CHAR(30) NOT NULL,
-    purchaseOrderItemID CHAR(30) NOT NULL,
+    purchaseOrderID BIGINT NOT NULL,
+    productID BIGINT NOT NULL,
     purchaseOrderItemQuantity SMALLINT UNSIGNED NOT NULL DEFAULT 1,
-    PRIMARY KEY (purchaseOrderItemID),
-    FOREIGN KEY (purchaseOrderID) REFERENCES PurchaseOrder (purchaseOrderID) ON
-            DELETE CASCADE ON
-            UPDATE CASCADE,
-    FOREIGN KEY (productID) REFERENCES Product (productID) ON
-            DELETE CASCADE ON
-            UPDATE CASCADE
+    FOREIGN KEY (purchaseOrderID) REFERENCES PurchaseOrder (purchaseOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (productID) REFERENCES Product (productID) ON UPDATE CASCADE ON DELETE CASCADE,
+    PRIMARY KEY (purchaseOrderID, productID)
 );
 
 INSERT INTO
@@ -166,10 +155,10 @@ GRANT
 SELECT
 ,
 INSERT
-    on webdevgp6.purchaseOrder TO 'websecgp6' @'localhost';
+    on webdevgp6.PurchaseOrder TO 'websecgp6' @'localhost';
 
 GRANT
 SELECT
 ,
 INSERT
-    on webdevgp6.purchaseOrderItem TO 'websecgp6' @'localhost';
+    on webdevgp6.PurchaseOrderItem TO 'websecgp6' @'localhost';
