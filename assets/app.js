@@ -90,3 +90,30 @@ if (isProductPage) {
 }
 
 // CHECKOUT PAGE
+let checkoutViewOrderSummaryButton = document.querySelector(
+  ".button--toggle-order-summary"
+);
+let checkoutCartSummaryAccordionList = document.querySelector(
+  ".cart__summary--accordion"
+);
+let accordionStatePhrase = document.querySelector(".accordion-state");
+
+if (
+  checkoutCartSummaryAccordionList &&
+  checkoutViewOrderSummaryButton &&
+  accordionStatePhrase
+) {
+  accordionStatePhrase.textContent = "Show";
+
+  checkoutViewOrderSummaryButton.addEventListener("click", () => {
+    checkoutCartSummaryAccordionList.classList.toggle(
+      "cart__summary--accordion--active"
+    );
+    // toggle the verb phrase of the accordion
+    if (accordionStatePhrase.textContent == "Show") {
+      accordionStatePhrase.textContent = "Hide";
+    } else {
+      accordionStatePhrase.textContent = "Show";
+    }
+  });
+}

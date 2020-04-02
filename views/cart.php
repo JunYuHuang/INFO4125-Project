@@ -57,28 +57,30 @@
                           >
                             <input type="hidden" name="action" value="deleteItemFromCart">
                             <input type="hidden" name="productID" value="<?php echo $productID; ?>">
-                            <button type="submit" class="button button--red--ghost">
+                            <button type="submit" class="button button--blue--ghost font-weight--normal">
                               Remove
                             </button>
                           </form>
                         </div>
                       </div>
                     </div>
-                    <p class="cart__item__price ellipsis">
+                    <p class="cart__item__price ellipsis text-color--red">
                       &#36;<?php echo htmlspecialChars($currentCartItem['totalProductPrice']); ?>
                     </p>
                   </div>
                   <hr class="hr hr--cart__item">
                 <?php endforeach; ?>
                 <div class="cart-subtotal-container ellipsis">
-                  Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
+                  Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): 
+                    <span class="text-color--red">
+                      <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+                  </span>
                 </div>
               </div>
               <div class="cart__summary">
-                <!-- make this subtotal a flex container that divides "subtotal" and the "$MONEY" part -->
-                <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
-                  Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): CAD &#36;<?php echo htmlspecialChars(getCartSubtotal()); ?>
-                </div>
+                <!-- <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center"> -->
+                  <!-- subtotal php echo was here -->
+                <!-- </div> -->
                 <div class="button-container button-container--cart">
                   <a href="/INFO4125-Project/products" class="button button--blue--ghost">
                     Continue Shopping
@@ -89,13 +91,15 @@
                       name="action" 
                       value="deleteAllItemsFromCart"
                     />
-                    <button type="submit" class="button button--red--ghost button--empty-cart">
+                    <button type="submit" class="button button--blue--ghost button--empty-cart">
                       Empty Cart
                     </button>
                   </form>
                   <form action="." method="POST" class="update-cart-form full-width">
                     <input type="hidden" name="action" value="updateItemsInCart">
-                    <input value="Update Cart" type="submit" class="button button--orange--ghost full-width">
+                    <button type="submit" class="button button--blue--ghost button full-width font-weight--normal">
+                      Update Cart
+                    </button>
                   </form> 
                   <!-- incomplete part below -->
                   <a 
