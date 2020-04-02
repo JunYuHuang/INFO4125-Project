@@ -78,9 +78,12 @@
                 </div>
               </div>
               <div class="cart__summary">
-                <!-- <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center"> -->
-                  <!-- subtotal php echo was here -->
-                <!-- </div> -->
+                <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
+                Subtotal: 
+                  <span class="text-color--red">
+                    <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+                  </span>
+                </div>
                 <div class="button-container button-container--cart">
                   <a href="/INFO4125-Project/products" class="button button--blue--ghost">
                     Continue Shopping
