@@ -150,31 +150,10 @@ if (
   const MASTERCARDCardRegex = "^(?:5[1-5][0-9]{14})$";
   const AMEXCardRegex = "^(?:3[47][0-9]{13})$";
 
-  // console.log(`initial regex: ${currentRegex}`);
-  creditCardNumberInput.value = "";
-
   // event listeners
   creditCardProviderSelectInput.addEventListener("input", e => {
-    console.log(`${e.target.value} selected`);
-    // debug;
-    console.log(`initial regex: ${currentRegex}`);
     setCreditCardProvider(currentCreditCardProvider, e.target.value);
-    console.log(`middle regex: ${currentRegex}`);
     setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
-    console.log(`final regex: ${currentRegex}`);
-  });
-
-  creditCardNumberInput.addEventListener("input", e => {
-    // validate CC # against selected card provider's format
-    // PSEUDOCODE
-    // get input value (number)
-    // update or set current card provider regex if needed
-    // check against appropriate card provider's format regex
-    // if input value matches regex, set input's validity to true
-    // if input value fails regex, set input's validity to false
-    let inputCreditCardNumber = e.target.value;
-    console.log(inputCreditCardNumber);
-    // set credit card input's validity to false if input is empty
   });
 
   // additional validation for credit card expiry month and year

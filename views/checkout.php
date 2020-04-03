@@ -69,7 +69,6 @@
                 maxlength="255"
                 pattern=".+"
                 autocomplete="given-name"
-                value="Don"
               />
               <label class="label label--validation" for="customerFirstName">
                 First Name
@@ -90,7 +89,6 @@
                 maxlength="255"
                 pattern=".+"
                 autocomplete="family-name"
-                value="Cheeto"
               />
               <label class="label label--validation" for="customerLastName">
                 Last Name
@@ -111,7 +109,6 @@
                 maxlength="1000"
                 pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                 autocomplete="email"
-                value="doncheeto@aol.net"
               />
               <label class="label label--validation" for="customerEmailAddress">
                 Email Address
@@ -122,18 +119,18 @@
               <div class="input-requirements">Invalid email.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
+              <!-- maxlength="19" -->
               <input
                 class="input input--text input--text--validation input--text"
                 id="customerPhoneNumber"
                 name="customerPhoneNumber"
-                type="text"
+                type="tel"
                 required
                 placeholder=" "
                 minlength="10"
-                maxlength="19"
-                pattern="^\d{10,}$"
+                maxlength="11"
+                pattern="^\d{10,11}$"
                 autocomplete="tel"
-                value="0123456789"
               />
               <label class="label label--validation" for="customerPhoneNumber">
                 Phone Number (no spaces, dashes, brackets, or +)
@@ -141,7 +138,7 @@
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
-              <div class="input-requirements">Your mobile phone number can only contain digits 0 to 9 and must be at least 10 characters long.</div>
+              <div class="input-requirements">Your mobile phone number can only contain digits 0 to 9 and must be 10 or 11 characters long.</div>
             </div>
             <h4 class="checkout-form__sub-heading full-width">Shipping Info</h4>
             <div class="input-group input-group--text input-group-validation two-thirds-width">
@@ -155,7 +152,6 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
-                value="123 Columbia Ave"
               />
               <label class="label label--validation" for="addressStreet">
                 Street Address
@@ -174,7 +170,6 @@
                 minlength="0"
                 maxlength="255"
                 pattern=".*"
-                value="4"
               />
               <label class="label label--validation" for="addressUnit">
                 Unit (if applicable)
@@ -194,7 +189,6 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
-                value="Castlegar"
               />
               <label class="label label--validation" for="addressCity">
                 City
@@ -204,24 +198,32 @@
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
-              <input
+              <select
                 class="input input--text input--text--validation"
                 id="addressProvince"
                 name="addressProvince"
-                type="text"
                 required
-                placeholder=" "
-                minlength="1"
-                maxlength="255"
-                pattern=".+"
-                value="British Columbia"
-              />
+                autocomplete="cc-type"
+              >
+                <option value="" selected>Choose a province</option>
+                <option value="ALBERTA">ALBERTA</option>
+                <option value="BRITISH COLUMBIA">BRITISH COLUMBIA</option>
+                <option value="MANITOBA">MANITOBA</option>
+                <option value="NEW BRUNSWICK">NEW BRUNSWICK</option>
+                <option value="NEWFOUNDLAND AND LABRADO">NEWFOUNDLAND AND LABRADOR</option>
+                <option value="NOVA SCOTIA">NOVA SCOTIA</option>
+                <option value="ONTARIO">ONTARIO</option>
+                <option value="PRINCE EDWARD ISLAND">PRINCE EDWARD ISLAND</option>
+                <option value="QUEBEC">QUEBEC</option>
+                <option value="SASKATCHEWAN">SASKATCHEWAN</option>
+              </select>
               <label class="label label--validation" for="addressProvince">
-                Province / State e.g. Alberta
+                Province e.g. Alberta
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
+              <div class="input-requirements">Invalid province.</div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
               <input
@@ -235,7 +237,6 @@
                 maxlength="6"
                 pattern="^([ABCEGHJKLMNPRSTVXY]|[abceghjklmnprstvxy])\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])[ ]?\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])\d$"
                 autocomplete="postal-code"
-                value="V1N1H1"
               />
               <label class="label label--validation" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
@@ -257,6 +258,7 @@
                 maxlength="255"
                 pattern=".+"
                 value="Canada"
+                readonly
               />
               <label class="label label--validation" for="addressCountry">
                 Country / Region e.g. Canada
@@ -320,7 +322,6 @@
                 maxlength="255"
                 pattern=".+"
                 autocomplete="cc-name"
-                value="Don Cheeto"
               />
               <label class="label label--validation" for="creditCardName">
                 Name on Card
@@ -342,7 +343,6 @@
                 maxlength="6"
                 pattern="^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
                 autocomplete="cc-exp"
-                value="042020"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
                 Expires (MMYYYY)
@@ -366,7 +366,6 @@
                 maxlength="4"
                 pattern="^\d{3,4}$"
                 autocomplete="cc-csc"
-                value="961"
               />
               <label class="label label--validation" for="creditCardSecurityCode">
                 3 or 4 digit Security Code

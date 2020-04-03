@@ -126,7 +126,7 @@
                 class="input input--text input--text--validation input--text"
                 id="customerPhoneNumber"
                 name="customerPhoneNumber"
-                type="text"
+                type="tel"
                 required
                 placeholder=" "
                 minlength="10"
@@ -217,7 +217,7 @@
                 value="British Columbia"
               />
               <label class="label label--validation" for="addressProvince">
-                Province / State e.g. Alberta
+                Province e.g. Alberta
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
