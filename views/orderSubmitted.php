@@ -4,7 +4,7 @@
       <section class="section section--order-submitted">
         <h1 class="h1 heading heading--main">Thank You!</h1>
         <article class="section__text section__text--order-submitted text-align-left">
-          <h2 class="h2 heading full-width">Hi 
+          <h2 class="h2 heading">Hi 
             <span class="capitalize">
               <?php echo htmlspecialchars($customerFirstName . ','); ?>
             </span>

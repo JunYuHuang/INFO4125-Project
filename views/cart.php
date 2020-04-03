@@ -42,7 +42,7 @@
                             name="currentCartItems[<?php echo $productID?>]"
                             value="<?php echo htmlspecialchars($currentCartItem['productQuantity']); ?>"
                             min="0"
-                            max="9999"
+                            max="99"
                             step="1"
                           />
                           <label class="label" for="currentCartItems[<?php echo $productID?>]">
@@ -65,7 +65,7 @@
                       </div>
                     </div>
                     <p class="cart__item__price ellipsis text-color--red">
-                      &#36;<?php echo htmlspecialChars($currentCartItem['totalProductPrice']); ?>
+                      <?php echo sprintf('$%.2f', $currentCartItem['totalProductPrice']); ?>
                     </p>
                   </div>
                   <hr class="hr hr--cart__item">
@@ -73,7 +73,7 @@
                 <div class="cart-subtotal-container ellipsis">
                   Subtotal (<?php echo(getCountOfTotalProductItemsInCart() . " " . getCorrectQuantifierForCartItems());?>): 
                     <span class="text-color--red">
-                      <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+                      <?php echo 'CAD ' . sprintf('$%.2f', getCartSubtotal()); ?>
                   </span>
                 </div>
               </div>
@@ -81,7 +81,7 @@
                 <div class="cart-subtotal-container ellipsis hidden-in-mobile text-align-center">
                 Subtotal (<?php echo(getCountOfTotalProductItemsInCart());?>):&nbsp;
                   <span class="text-color--red">
-                    <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+                    <?php echo 'CAD ' . sprintf('$%.2f', getCartSubtotal()); ?>
                   </span>
                 </div>
                 <div class="button-container button-container--cart">

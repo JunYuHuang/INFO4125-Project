@@ -28,7 +28,7 @@ CREATE TABLE PurchaseOrder (
     creditCardProvider ENUM('MASTERCARD', 'VISA', 'AMEX'),
     creditCardNumber VARCHAR (19) NOT NULL,
     creditCardName VARCHAR (255) NOT NULL,
-    creditCardExpiryDate VARCHAR(4) NOT NULL,
+    creditCardExpiryDate VARCHAR(7) NOT NULL,
     creditCardSecurityCode VARCHAR(4) NOT NULL,
     PRIMARY KEY (purchaseOrderID)
 );

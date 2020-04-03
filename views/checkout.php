@@ -8,7 +8,7 @@
             <h4 class="checkout-form__sub-heading full-width hidden-in-mobile">Order Summary</h4>
             <button class="button button--dark-transparent button--toggle-order-summary ellipsis full-width hidden-in-desktop">
               <span class="accordion-state">Show</span>
-              <?php echo 'Summary: CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+              <?php echo 'Summary: CAD ' . sprintf('$%.2f', getCartSubtotal()); ?>
             </button>
             <div class="cart__summary cart__summary--accordion">
               <?php foreach ($currentCart as $productID => $currentCartItem) : ?>
@@ -32,12 +32,12 @@
                     </div>
                   </div>
                   <p class="ellipsis text-color--red full-height flex-vertically-centered">
-                    &#36;<?php echo htmlspecialChars($currentCartItem['totalProductPrice']); ?>
+                    <?php echo sprintf('$%.2f', $currentCartItem['totalProductPrice']); ?>
                   </p>
                 </div>
               <?php endforeach; ?>
               <div class="cart__item cart__item--other-fees">
-                <div class="text-color--blue text-align-left ">
+                <div class="text-color--medium-dark text-align-left ">
                   Shipping and Handling
                 </div> 
                 <div class="text-color--green">FREE</div>
@@ -46,7 +46,7 @@
               <div class="cart-subtotal-container ellipsis">
                 Total: 
                 <span class="text-color--red text-align-right font-weight-bold">
-                  <?php echo 'CAD &#36;' . htmlspecialChars(getCartSubtotal()); ?>
+                  <?php echo 'CAD ' . sprintf('$%.2f', getCartSubtotal()); ?>
                 </span>
               </div>
             </div>
@@ -285,7 +285,7 @@
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
-              <div class="input-requirements">Invalid credit card number. Please check your card number again.</div>
+              <div class="input-requirements">Invalid credit card number. Please check your card number again and/or check if you chose the correct card provider.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
               <input
@@ -305,7 +305,6 @@
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
-              <div class="input-requirements">Invalid name.</div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
               <input
@@ -314,13 +313,13 @@
                 name="creditCardExpiryDate"
                 type="text"
                 required
-                placeholder="Expires (MMYY)"
-                minlength="4"
-                maxlength="4"
-                pattern="^(0[1-9]|10|11|12)[0-9]{2}$"
+                placeholder="Expires (MMYYYY)"
+                minlength="6"
+                maxlength="6"
+                pattern="^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
-                Expires (MMYY)
+                Expires (MMYYYY)
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">

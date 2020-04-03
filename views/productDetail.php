@@ -34,6 +34,7 @@
 						required
 						value="1"
 						min="1"
+						max="99"
 						step="1"
 						id="productQuantity"
 						name="productQuantity"

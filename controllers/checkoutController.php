@@ -26,8 +26,10 @@ switch($action) {
             die();
         } else {
             $currentCart = getAllProductsInCart();
-            // - complete validation
-            include "../views/checkout.php";
+            // test
+            // include "../views/checkout.php";
+            include "../views/checkoutWITHTESTVALUES.php";
+
         }
 
         break;
@@ -67,6 +69,7 @@ switch($action) {
             // debug
             // emptyCart();
             include "../views/orderSubmitted.php";
+
 
             // $isSuccessfulOrder = true;
 

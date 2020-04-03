@@ -126,33 +126,116 @@ let creditCardProviderSelectInput = document.querySelector(
 let creditCardNumberInput = document.querySelector(
   ".input--credit-card-number"
 );
+let creditCardExpiryDateInput = document.querySelector(
+  ".input--credit-card-expiry-date"
+);
+let validYearsText = document.querySelector(".input-requirements__valid-years");
 
-if (creditCardProviderSelectInput && creditCardNumberInput) {
+if (
+  creditCardProviderSelectInput &&
+  creditCardNumberInput &&
+  creditCardExpiryDateInput
+) {
   // state & vars
   let currentCreditCardProvider = "";
   let currentRegex = "";
+  let currentMonth = new Date().getMonth() + 1;
+  let currentYear = new Date().getFullYear();
+  validYearsText.textContent = `(${currentYear} thru 2099).`;
 
+  // constants
   // const matchNothingRegex = "^(?!)$";
   const matchNothingRegex = "$^";
   const VISACardRegex = "^(?:4[0-9]{12}(?:[0-9]{3})?)$";
   const MASTERCARDCardRegex = "^(?:5[1-5][0-9]{14})$";
   const AMEXCardRegex = "^(?:3[47][0-9]{13})$";
 
-  console.log(`initial regex: ${currentRegex}`);
+  // console.log(`initial regex: ${currentRegex}`);
 
   // event listeners
-  creditCardProviderSelectInput.addEventListener("change", e => {
+  creditCardProviderSelectInput.addEventListener("input", e => {
+    console.log(`${e.target.value} selected`);
     // debug
-    console.log(`initial regex: ${currentRegex}`);
+    // console.log(`initial regex: ${currentRegex}`);
+    // setCreditCardProvider(currentCreditCardProvider, e.target.value);
+    // console.log(`middle regex: ${currentRegex}`);
+    // setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
+    // console.log(`final regex: ${currentRegex}`);
+  });
 
-    setCreditCardProvider(currentCreditCardProvider, e.target.value);
-    console.log(`middle regex: ${currentRegex}`);
+  creditCardNumberInput.addEventListener("input", e => {
+    // validate CC # against selected card provider's format
+    // PSEUDOCODE
+    // get input value (number)
+    // update or set current card provider regex if needed
+    // check against appropriate card provider's format regex
+    // if input value matches regex, set input's validity to true
+    // if input value fails regex, set input's valida to false
+  });
 
-    setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
-    console.log(`final regex: ${currentRegex}`);
+  // override regex pattern if expiry month and date are the same as or before the real/current month and date
+  creditCardExpiryDateInput.addEventListener("input", e => {
+    // don't check input expiry date if it's not the correct length
+    let inputExpiryDate = e.target.value;
+    let inputExpiryDateLength = inputExpiryDate.length;
+    let isValidExpiryDateLength = inputExpiryDateLength == 6 ? true : false;
+
+    // check input expiry date
+    if (isValidExpiryDateLength) {
+      // get input
+      const inputExpiryMonth = Number(inputExpiryDate.substring(0, 2));
+      const inputExpiryYear = Number(inputExpiryDate.substring(2, 6));
+
+      // vars
+      let isValidMonth = false;
+      let isValidYear = false;
+      let isValidExpiryDate = false;
+
+      let isCurrentYear = inputExpiryYear == currentYear ? true : false;
+      let isAfterCurrentYear = inputExpiryYear > currentYear ? true : false;
+      isValidYear = isCurrentYear || isAfterCurrentYear;
+
+      let isCurrentMonth = inputExpiryMonth == currentMonth ? true : false;
+      let isAfterCurrentMonth = inputExpiryMonth > currentMonth ? true : false;
+      let isValidMonthThisYear = false;
+
+      if (isCurrentYear) {
+        isValidMonthThisYear = isCurrentMonth || isAfterCurrentMonth;
+
+        if (isValidMonthThisYear) {
+          isValidMonth = true;
+        } else {
+          isValidMonth = false;
+        }
+      } else if (isAfterCurrentYear) {
+        isValidMonth = true;
+      } else {
+        // catch all for weird inputs
+        isValidMonth = false;
+      }
+
+      isValidExpiryDate = isValidYear && isValidMonth ? true : false;
+
+      if (isValidExpiryDate) {
+        setCreditCardExpiryDateValid();
+      } else {
+        setCreditCardExpiryDateInvalid();
+      }
+    }
   });
 
   // functions
+  function setCreditCardExpiryDateValid() {
+    creditCardExpiryDateInput.setAttribute(
+      "pattern",
+      "^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
+    );
+  }
+
+  function setCreditCardExpiryDateInvalid() {
+    creditCardExpiryDateInput.setAttribute("pattern", "^(?!)$");
+  }
+
   function setCreditCardProvider(oldProvider, newProvider) {
     if (newProvider != oldProvider) {
       currentCreditCardProvider = newProvider;

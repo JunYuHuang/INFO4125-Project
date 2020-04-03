@@ -23,27 +23,17 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 - Checkout Page
   - view (/views/checkout.php)
     - implement frontend (HTML/CSS/JS) validation
-    - include summary of shopping cart
   - controller (/controllers/checkoutController.php)
-    - sanitize form input from view
     - use model functions to submit data
   - model (/controllers/purchaseOrderModel.php)
-    - create controllers
-    - implement functions for INSERT SQL statements
-  - submit/INSERT new record to `ProductOrders` and `ProductOrderItem` tables in database
-- Order Receipt Page
-  - view (/views/orderReceipt.php)
-    - print summary of info entered in the checkout page
-- Database
-  - add new `ProductOrders` table
-- ProductOrders (CREATE functionality)
+    - implement functions for INSERTing data to both the `PurchaseOrder` and `PurchaseOrderItem` tables
+  - submit/INSERT new record to `PurchaseOrder` and `PurchaseOrderItem` tables in database
+- PurchaseOrderItem (INSERT functionality)
 - Frontend form validation (ProductDetail and Checkout pages)
 - Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
   - Edit files as necessary (e.g. relative and absolute path/URL links) to ensure the web app works
   - Test
-- optional
-  - backend/server-side validation
 
 ## Known Issues
 
