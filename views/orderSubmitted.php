@@ -4,10 +4,18 @@
       <section class="section section--order-submitted">
         <h1 class="h1 heading heading--main">Thank You!</h1>
         <article class="section__text section__text--order-submitted text-align-left">
-          <h2 class="h2 heading full-width">Hi John,</h2>
+          <h2 class="h2 heading full-width">Hi 
+            <span class="capitalize">
+              <?php echo htmlspecialchars($customerFirstName . ','); ?>
+            </span>
+          </h2>
           <p>Thanks for shopping at Penzaar.<p>
-          <p>We've sent you an order receipt to your email address <span class="text-color--dark text-weight--bold">john.smith@example.com</span>.</p>
-          <p>Your order ID is <span class="text-color--dark text-weight--bold">#1MG4YF0RU</span>.<p>
+          <p>We've sent you an order receipt to your email address 
+            <span class="text-color--dark text-weight--bold">
+              <?php echo htmlspecialchars($customerEmailAddress); ?>.
+            </span>
+          </p>
+          <!-- <p>Your order ID is <span class="text-color--dark text-weight--bold">#12345</span>.<p> -->
           <p>Please allow 1 to 5 business days for us to process your order before shipping.</p>
           <div class="button-container button-container--order-submitted">
             <a href="/INFO4125-Project/" class="button button--blue--ghost">

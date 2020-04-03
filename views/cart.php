@@ -25,7 +25,7 @@
                         />
                       </div>
                       <div class="cart__item__brief">
-                        <p class="cart__item__brief__product-name ellipsis">
+                        <p class="cart__item__brief__product-name cart__item__brief__product-name--cart ellipsis">
                           <a 
                             href="/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($productID); ?>" 
                             class="url-link"
@@ -57,7 +57,7 @@
                           >
                             <input type="hidden" name="action" value="deleteItemFromCart">
                             <input type="hidden" name="productID" value="<?php echo $productID; ?>">
-                            <button type="submit" class="button button--blue--ghost font-weight--normal">
+                            <button type="submit" class="button button--blue--ghost">
                               Remove
                             </button>
                           </form>
@@ -94,13 +94,13 @@
                       name="action" 
                       value="deleteAllItemsFromCart"
                     />
-                    <button type="submit" class="button button--blue--ghost button--empty-cart">
+                    <button type="submit" class="button button--red--ghost button--empty-cart">
                       Empty Cart
                     </button>
                   </form>
                   <form action="." method="POST" class="update-cart-form full-width">
                     <input type="hidden" name="action" value="updateItemsInCart">
-                    <button type="submit" class="button button--blue--ghost button full-width font-weight--normal">
+                    <button type="submit" class="button button--green--ghost button full-width">
                       Update Cart
                     </button>
                   </form>

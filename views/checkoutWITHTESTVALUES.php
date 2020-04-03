@@ -65,6 +65,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Don"
               />
               <label class="label label--validation" for="customerFirstName">
                 First Name
@@ -84,6 +85,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Cheeto"
               />
               <label class="label label--validation" for="customerLastName">
                 Last Name
@@ -103,6 +105,7 @@
                 minlength="4"
                 maxlength="1000"
                 pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                value="doncheeto@aol.net"
               />
               <label class="label label--validation" for="customerEmailAddress">
                 Email Address
@@ -123,6 +126,7 @@
                 minlength="10"
                 maxlength="19"
                 pattern="^\d{10,}$"
+                value="0123456789"
               />
               <label class="label label--validation" for="customerPhoneNumber">
                 Phone Number (no spaces, dashes, brackets, or +)
@@ -144,6 +148,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="123 Columbia Ave"
               />
               <label class="label label--validation" for="addressStreet">
                 Street Address
@@ -162,6 +167,7 @@
                 minlength="0"
                 maxlength="255"
                 pattern=".*"
+                value="4"
               />
               <label class="label label--validation" for="addressUnit">
                 Unit (if applicable)
@@ -181,6 +187,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Castlegar"
               />
               <label class="label label--validation" for="city">
                 City
@@ -200,6 +207,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="British Columbia"
               />
               <label class="label label--validation" for="addressProvince">
                 Province / State e.g. Alberta
@@ -219,6 +227,7 @@
                 minlength="6"
                 maxlength="6"
                 pattern="^([ABCEGHJKLMNPRSTVXY]|[abceghjklmnprstvxy])\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])[ ]?\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])\d$"
+                value="V1N1H1"
               />
               <label class="label label--validation" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
@@ -239,6 +248,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Canada"
               />
               <label class="label label--validation" for="addressCountry">
                 Country / Region e.g. Canada
@@ -255,7 +265,7 @@
                 name="creditCardProvider"
                 required
               >
-                <option value="">Choose Credit Card Provider</option>
+                <option value="" selected>Choose Credit Card Provider</option>
                 <option value="VISA">VISA</option>
                 <option value="MASTERCARD">MASTERCARD</option>
                 <option value="AMEX">AMEX</option>
@@ -275,9 +285,10 @@
                 name="creditCardNumber"
                 type="text"
                 placeholder="Credit Card Number (no spaces or dashes)"
-                minlength="8"
+                minlength="1"
                 maxlength="19"
-                pattern="ass"
+                pattern="(?!)"
+                value="5162382759138832"
               />
               <label class="label label--validation" for="creditCardNumber">
                 Credit Card Number (no spaces or dashes)
@@ -298,6 +309,7 @@
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Don Cheeto"
               />
               <label class="label label--validation" for="creditCardName">
               Name on Card
@@ -318,6 +330,7 @@
                 minlength="4"
                 maxlength="4"
                 pattern="^(0[1-9]|10|11|12)[0-9]{2}$"
+                value="0422"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
                 Expires (MMYY)
@@ -338,6 +351,7 @@
                 minlength="3"
                 maxlength="4"
                 pattern="^\d{3,4}$"
+                value="961"
               />
               <label class="label label--validation" for="creditCardSecurityCode">
                 3 or 4 digit Security Code
