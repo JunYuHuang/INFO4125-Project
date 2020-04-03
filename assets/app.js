@@ -1,8 +1,10 @@
+// ALL PAGES //
+
 // auto-update copyright year
 const currentYear = document.querySelector(".footer__text--currentYear");
 currentYear.innerHTML = new Date().getFullYear();
 
-// nav menu, nav menu button, and nav menu button icon (only applies when user is in mobile or tablet view)
+// nav menu, nav menu button, and nav menu button icon - only if user is on mobile or tablet
 const navMenu = document.querySelector(".nav-menu");
 const navMenuButton = document.querySelector(".nav-menu-button");
 let navMenuButtonIconHamburger = document.querySelector(
@@ -52,10 +54,7 @@ function toggleNavButton() {
 
 // PRODUCTS PAGE //
 
-// important var for products page and product-page page
-let currentProductItemID = "";
-
-// only display and filter the products if the user is on the products page
+// display and filter products - only if user is on products page
 let productSearchForm = document.querySelector(".search-form");
 let productSearchInput = document.querySelector(".input--search");
 let productCardGrid = document.querySelector(".card-grid-container");
@@ -89,7 +88,9 @@ if (isProductPage) {
   }
 }
 
-// CHECKOUT PAGE
+// CHECKOUT PAGE //
+
+// summary checkout toggle button - only if user is on checkout page
 let checkoutViewOrderSummaryButton = document.querySelector(
   ".button--toggle-order-summary"
 );
@@ -116,4 +117,70 @@ if (
       accordionStatePhrase.textContent = "Show";
     }
   });
+}
+
+// credit card validation - only if user is on checkout page
+let creditCardProviderSelectInput = document.querySelector(
+  ".input--credit-card-provider"
+);
+let creditCardNumberInput = document.querySelector(
+  ".input--credit-card-number"
+);
+
+if (creditCardProviderSelectInput && creditCardNumberInput) {
+  // state & vars
+  let currentCreditCardProvider = "";
+  let currentRegex = "";
+
+  // const matchNothingRegex = "^(?!)$";
+  const matchNothingRegex = "$^";
+  const VISACardRegex = "^(?:4[0-9]{12}(?:[0-9]{3})?)$";
+  const MASTERCARDCardRegex = "^(?:5[1-5][0-9]{14})$";
+  const AMEXCardRegex = "^(?:3[47][0-9]{13})$";
+
+  console.log(`initial regex: ${currentRegex}`);
+
+  // event listeners
+  creditCardProviderSelectInput.addEventListener("change", e => {
+    // debug
+    console.log(`initial regex: ${currentRegex}`);
+
+    setCreditCardProvider(currentCreditCardProvider, e.target.value);
+    console.log(`middle regex: ${currentRegex}`);
+
+    setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
+    console.log(`final regex: ${currentRegex}`);
+  });
+
+  // functions
+  function setCreditCardProvider(oldProvider, newProvider) {
+    if (newProvider != oldProvider) {
+      currentCreditCardProvider = newProvider;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function setCurrentCreditCardNumberInputRegex(currentCardProvider) {
+    switch (currentCardProvider) {
+      case "":
+        currentRegex = matchNothingRegex;
+        break;
+      case "VISA":
+        currentRegex = VISACardRegex;
+        break;
+      case "MASTERCARD":
+        currentRegex = MASTERCARDCardRegex;
+        break;
+      case "AMEX":
+        currentRegex = AMEXCardRegex;
+        break;
+      default:
+        console.log("something went wrong :(");
+        break;
+    }
+
+    creditCardNumberInput.setAttribute("pattern", currentRegex);
+  }
 }
