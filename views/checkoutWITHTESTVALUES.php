@@ -3,6 +3,7 @@
     <main class="main-wrapper">
       <section class="section section--checkout">
         <h1 class="h1 heading heading--main">Checkout</h1>
+        <p class="text-color--medium-dark"><span class="text-color--red font-weight--bold">NOTE: </span>At this time, we only deliver to residents in Canada.</p>
         <article class="section__text section__text--checkout">
           <!-- cart summary preview -->
           <div class="cart cart--checkout">
@@ -131,7 +132,7 @@
                 minlength="10"
                 maxlength="19"
                 pattern="^\d{10,}$"
-                autcomplete="tel"
+                autocomplete="tel"
                 value="0123456789"
               />
               <label class="label label--validation" for="customerPhoneNumber">
@@ -195,7 +196,7 @@
                 pattern=".+"
                 value="Castlegar"
               />
-              <label class="label label--validation" for="city">
+              <label class="label label--validation" for="addressCity">
                 City
               </label>
               <div class="img-wrapper--icon--validation">
@@ -272,7 +273,6 @@
                 name="creditCardProvider"
                 required
                 autocomplete="cc-type"
-                placeholder="gay"
               >
                 <option value="" selected>Choose Credit Card Provider</option>
                 <option value="AMEX">AMEX</option>
@@ -288,21 +288,20 @@
               <div class="input-requirements">Invalid credit card provider.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
-              <!-- need to debug (?!) -->
-              <!-- value="5162382759138832" -->
               <input
                 class="input input--text input--text--validation input--credit-card-number"
                 id="creditCardNumber"
                 name="creditCardNumber"
                 type="text"
+                required
                 placeholder=" "
                 minlength="13"
                 maxlength="19"
-                pattern="GAY"
+                pattern="(?!)"
                 autocomplete="cc-number"
               />
               <label class="label label--validation" for="creditCardNumber">
-                Credit Card Number (no spaces or dashes)
+                Credit Card Number (no spaces or dashes).
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
@@ -324,7 +323,7 @@
                 value="Don Cheeto"
               />
               <label class="label label--validation" for="creditCardName">
-              Name on Card
+                Name on Card
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
@@ -332,8 +331,6 @@
               <div class="input-requirements">Invalid name.</div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
-              <!-- debug ^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$ -->
-              <!-- ^(?!)$ -->
               <input
                 class="input input--text input--text--validation input--credit-card-expiry-date"
                 id="creditCardExpiryDate"
@@ -345,6 +342,7 @@
                 maxlength="6"
                 pattern="^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
                 autocomplete="cc-exp"
+                value="042020"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
                 Expires (MMYYYY)
@@ -353,7 +351,7 @@
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Your credit card's expiry date must be 6 numerical digits that represent both a valid month (01 thru 12) and a valid year
-                <span class="input-requirements__valid-years">(2020 or later)<span>
+                <span class="input-requirements__valid-years">(2020 or later)</span>
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">

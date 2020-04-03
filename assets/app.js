@@ -151,16 +151,17 @@ if (
   const AMEXCardRegex = "^(?:3[47][0-9]{13})$";
 
   // console.log(`initial regex: ${currentRegex}`);
+  creditCardNumberInput.value = "";
 
   // event listeners
   creditCardProviderSelectInput.addEventListener("input", e => {
     console.log(`${e.target.value} selected`);
-    // debug
-    // console.log(`initial regex: ${currentRegex}`);
-    // setCreditCardProvider(currentCreditCardProvider, e.target.value);
-    // console.log(`middle regex: ${currentRegex}`);
-    // setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
-    // console.log(`final regex: ${currentRegex}`);
+    // debug;
+    console.log(`initial regex: ${currentRegex}`);
+    setCreditCardProvider(currentCreditCardProvider, e.target.value);
+    console.log(`middle regex: ${currentRegex}`);
+    setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
+    console.log(`final regex: ${currentRegex}`);
   });
 
   creditCardNumberInput.addEventListener("input", e => {
@@ -170,9 +171,13 @@ if (
     // update or set current card provider regex if needed
     // check against appropriate card provider's format regex
     // if input value matches regex, set input's validity to true
-    // if input value fails regex, set input's valida to false
+    // if input value fails regex, set input's validity to false
+    let inputCreditCardNumber = e.target.value;
+    console.log(inputCreditCardNumber);
+    // set credit card input's validity to false if input is empty
   });
 
+  // additional validation for credit card expiry month and year
   // override regex pattern if expiry month and date are the same as or before the real/current month and date
   creditCardExpiryDateInput.addEventListener("input", e => {
     // don't check input expiry date if it's not the correct length

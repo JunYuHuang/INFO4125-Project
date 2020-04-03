@@ -3,7 +3,9 @@
     <main class="main-wrapper">
       <section class="section section--checkout">
         <h1 class="h1 heading heading--main">Checkout</h1>
+        <p class="text-color--medium-dark"><span class="text-color--red font-weight--bold">NOTE: </span>At this time, we only deliver to residents in Canada.</p>
         <article class="section__text section__text--checkout">
+          <!-- cart summary preview -->
           <div class="cart cart--checkout">
             <h4 class="checkout-form__sub-heading full-width hidden-in-mobile">Order Summary</h4>
             <button class="button button--dark-transparent button--toggle-order-summary ellipsis full-width hidden-in-desktop">
@@ -46,11 +48,12 @@
               <div class="cart-subtotal-container ellipsis">
                 Total: 
                 <span class="text-color--red text-align-right font-weight-bold">
-                  <?php echo 'CAD ' . sprintf('$%.2f', getCartSubtotal()); ?>
+                  <?php echo sprintf('$%.2f', getCartSubtotal()); ?>
                 </span>
               </div>
             </div>
           </div> 
+          <!-- form -->
           <form action="." method="POST" class="register-form">
             <input type="hidden" name="action" value="submitOrder">
             <h4 class="checkout-form__sub-heading full-width">Contact Info</h4>
@@ -61,10 +64,12 @@
                 name="customerFirstName"
                 type="text"
                 required
-                placeholder="First Name"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                autocomplete="given-name"
+                value="Don"
               />
               <label class="label label--validation" for="customerFirstName">
                 First Name
@@ -80,10 +85,12 @@
                 name="customerLastName"
                 type="text"
                 required
-                placeholder="Last Name"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                autocomplete="family-name"
+                value="Cheeto"
               />
               <label class="label label--validation" for="customerLastName">
                 Last Name
@@ -99,10 +106,12 @@
                 name="customerEmailAddress"
                 type="email"
                 required
-                placeholder="Email Address"
+                placeholder=" "
                 minlength="4"
                 maxlength="1000"
                 pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                autocomplete="email"
+                value="doncheeto@aol.net"
               />
               <label class="label label--validation" for="customerEmailAddress">
                 Email Address
@@ -119,10 +128,12 @@
                 name="customerPhoneNumber"
                 type="text"
                 required
-                placeholder="Phone Number (no spaces, dashes, brackets, or +)"
+                placeholder=" "
                 minlength="10"
                 maxlength="19"
                 pattern="^\d{10,}$"
+                autocomplete="tel"
+                value="0123456789"
               />
               <label class="label label--validation" for="customerPhoneNumber">
                 Phone Number (no spaces, dashes, brackets, or +)
@@ -140,10 +151,11 @@
                 name="addressStreet"
                 type="text"
                 required
-                placeholder="Street Address"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="123 Columbia Ave"
               />
               <label class="label label--validation" for="addressStreet">
                 Street Address
@@ -158,10 +170,11 @@
                 id="addressUnit"
                 name="addressUnit"
                 type="text"
-                placeholder="Unit (if applicable)"
+                placeholder=" "
                 minlength="0"
                 maxlength="255"
                 pattern=".*"
+                value="4"
               />
               <label class="label label--validation" for="addressUnit">
                 Unit (if applicable)
@@ -177,12 +190,13 @@
                 name="addressCity"
                 type="text"
                 required
-                placeholder="City"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Castlegar"
               />
-              <label class="label label--validation" for="city">
+              <label class="label label--validation" for="addressCity">
                 City
               </label>
               <div class="img-wrapper--icon--validation">
@@ -196,10 +210,11 @@
                 name="addressProvince"
                 type="text"
                 required
-                placeholder="Province / State e.g. Alberta"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="British Columbia"
               />
               <label class="label label--validation" for="addressProvince">
                 Province / State e.g. Alberta
@@ -215,10 +230,12 @@
                 name="addressPostalCode"
                 type="text"
                 required
-                placeholder="Postal Code e.g. V7X9M1"
+                placeholder=" "
                 minlength="6"
                 maxlength="6"
                 pattern="^([ABCEGHJKLMNPRSTVXY]|[abceghjklmnprstvxy])\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])[ ]?\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])\d$"
+                autocomplete="postal-code"
+                value="V1N1H1"
               />
               <label class="label label--validation" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
@@ -235,10 +252,11 @@
                 name="addressCountry"
                 type="text"
                 required
-                placeholder="Country / Region e.g. Canada"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                value="Canada"
               />
               <label class="label label--validation" for="addressCountry">
                 Country / Region e.g. Canada
@@ -254,11 +272,12 @@
                 id="creditCardProvider"
                 name="creditCardProvider"
                 required
+                autocomplete="cc-type"
               >
-                <option value="">Choose Credit Card Provider</option>
-                <option value="VISA">VISA</option>
-                <option value="MASTERCARD">MASTERCARD</option>
+                <option value="" selected>Choose Credit Card Provider</option>
                 <option value="AMEX">AMEX</option>
+                <option value="MASTERCARD">MASTERCARD</option>
+                <option value="VISA">VISA</option>
               </select>
               <label class="label label--validation" for="creditCardProvider">
                 Credit Card Provider
@@ -274,18 +293,20 @@
                 id="creditCardNumber"
                 name="creditCardNumber"
                 type="text"
-                placeholder="Credit Card Number (no spaces or dashes)"
-                minlength="8"
+                required
+                placeholder=" "
+                minlength="13"
                 maxlength="19"
-                pattern="ass"
+                pattern="(?!)"
+                autocomplete="cc-number"
               />
               <label class="label label--validation" for="creditCardNumber">
-                Credit Card Number (no spaces or dashes)
+                Credit Card Number (no spaces or dashes).
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
-              <div class="input-requirements">Invalid credit card number. Please check your card number again and/or check if you chose the correct card provider.</div>
+              <div class="input-requirements">Invalid credit card number. Please check your card number again.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
               <input
@@ -294,29 +315,34 @@
                 name="creditCardName"
                 type="text"
                 required
-                placeholder="Name on Card"
+                placeholder=" "
                 minlength="1"
                 maxlength="255"
                 pattern=".+"
+                autocomplete="cc-name"
+                value="Don Cheeto"
               />
               <label class="label label--validation" for="creditCardName">
-              Name on Card
+                Name on Card
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
+              <div class="input-requirements">Invalid name.</div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
               <input
-                class="input input--text input--text--validation"
+                class="input input--text input--text--validation input--credit-card-expiry-date"
                 id="creditCardExpiryDate"
                 name="creditCardExpiryDate"
                 type="text"
                 required
-                placeholder="Expires (MMYYYY)"
+                placeholder=" "
                 minlength="6"
                 maxlength="6"
                 pattern="^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
+                autocomplete="cc-exp"
+                value="042020"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
                 Expires (MMYYYY)
@@ -324,7 +350,9 @@
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
-              <div class="input-requirements">Your credit card's expiry date must be on a valid month (01 thru 12) and the last 2 digits of a valid year (01 thru 31).</div>
+              <div class="input-requirements">Your credit card's expiry date must be 6 numerical digits that represent both a valid month (01 thru 12) and a valid year
+                <span class="input-requirements__valid-years">(2020 or later)</span>
+              </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
               <input
@@ -333,10 +361,12 @@
                 name="creditCardSecurityCode"
                 type="text"
                 required
-                placeholder="3 or 4 digit Security Code"
+                placeholder=" "
                 minlength="3"
                 maxlength="4"
                 pattern="^\d{3,4}$"
+                autocomplete="cc-csc"
+                value="961"
               />
               <label class="label label--validation" for="creditCardSecurityCode">
                 3 or 4 digit Security Code

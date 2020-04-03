@@ -945,6 +945,7 @@ h3,
 .input-requirements {
   font-size: 0.9rem;
   font-style: italic;
+  font-weight: 500;
   color: var(--color-soft-red);
   padding: 0 0.85rem;
   overflow: hidden;
