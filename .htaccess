@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Group 6 Authentication Required"
+AuthUserFile C:\xampp\htdocs\INFO4125-Project\security\.htpass
+require valid-user
