@@ -4,14 +4,37 @@ Penzaar is the course project for the class INFO 4125: Website and Cloud Securit
 This is an ecommerce web application created with HTML, CSS, JavaScript, PHP, and MariaDB.
 On completion, it will feature the following:
 
-- Mobile-first, fully responsive web design (supports mobile, tablet, and desktop views)
-- Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
-- Basic instant search (Products page)
-- Products (READ functionality)
-- ProductOrders (CREATE functionality)
-- Frontend form validation (ProductDetail and Checkout pages)
+- retrieves data from and adds data to the database (CREATE and READ functionality)
 - 3 static pages (Home, About, and Contact pages)
 - 5 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
+- ALL pages
+  - Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
+  - Mobile-first, fully responsive web design (supports mobile, tablet, and desktop views)
+  - shows number of cart items on shopping cart icon when the user has at least 1 cart item
+- Error page
+  - shows a different error message depending on which page the user attempted to visit or add submit information to
+- Products page
+  - retrieves product data
+  - allows instant search (searchbox) function
+- ProductDetail page
+  - retrieves specific data about a specific product
+  - allows users to add a specified quantity of the product
+- Cart page
+  - allows users to view all products in their cart
+  - allows users to delete a specific product or delete all products from their cart
+  - allows user to edit and update the quantity of any products in their cart
+  - allows users to proceed to checkout
+- Checkout page
+  - live form validation
+    - shows custom invalid input messages for certain inputs e.g. credit card number
+    - shows checkmark icon besides each input when the input is valid
+    - complete frontend form validation for credit card payment info
+    - partial frontend form validation for non-credit-card related info
+  - shows summary of cart product items and other costs
+- OrderSubmitted page
+  - submits order information to the database ( tables `PurchaseOrder` and `PurchaseOrderItem` tables respectively)
+  - empties shopping cart
+  - thanks user by name and notifies them that a receipt has been sent to their email address (doesn't actually send the email)
 
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
@@ -21,27 +44,22 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 ## TODO (Incomplete features)
 
 - Checkout Page
-  - view (/views/checkout.php)
-    - implement frontend (HTML/CSS/JS) validation
-  - controller (/controllers/checkoutController.php)
-    - use model functions to submit data
-  - model (/controllers/purchaseOrderModel.php)
-    - implement functions for INSERTing data to both the `PurchaseOrder` and `PurchaseOrderItem` tables
-  - submit/INSERT new record to `PurchaseOrder` and `PurchaseOrderItem` tables in database
-- PurchaseOrderItem (INSERT functionality)
-- Frontend form validation (ProductDetail and Checkout pages)
+  - update model, view, and controller to submit order information to the `PurchaseOrder` and `PurchaseOrderItem` tables in the database correctly
 - Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
+  - Run SQL script to create tables and populate them
   - Edit files as necessary (e.g. relative and absolute path/URL links) to ensure the web app works
   - Test
 
 ## Known Issues
 
+- Submitting order information to the database does not add records/rows to the `PurchaseOrderItem` table
+- Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s or `include`'s
+- Favicon icon does not load on certain pages occasionally. May be a cache problem.
+- Form validation on checkout page is incomplete for non-payment related info e.g. name, city, etc.
 - ~~Cannot delete or update an item if it is the only item in the cart~~ FIXED
 - ~~Cannot add items to the cart with POST requests (cartController does not receive data sent in \$\_POST)~~ FIXED
 - ~~Clicking on a product link in the cart does not go to the product's product detail page~~ FIXED
-- Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s.
-- Favicon icon does not load on certain pages occasionally. May be a cache problem.
 
 ## How to install (in a local environment)
 
@@ -53,8 +71,9 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## How to run (in a local environment)
 
-1. Launch the XAMPP or LAMP control panel and start both the `Apache` and `MySQL` services.
-2. Open a new browser window or tab and go to `localhost/INFO4125-Project`.
+1. Launch the XAMPP or LAMP control panel
+2. Start both the `Apache` and `MySQL` services.
+3. Open a new browser window or tab and go to `localhost/INFO4125-Project`.
 
 ### NOTES: There is no option to add new products to the database. Also, this web app does not support Internet Explorer or Microsoft Edge; please use the latest versions of Chrome, Firefox, Safari, or any other modern web browser.
 
