@@ -2,7 +2,7 @@
 
 Penzaar is the course project for the class INFO 4125: Website and Cloud Security.
 This is an ecommerce web application created with HTML, CSS, JavaScript, PHP, and MariaDB.
-On completion, it will feature the following:
+It features the following:
 
 - Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
 - retrieves data from and adds data to the database (CREATE and READ functionality)
@@ -40,12 +40,8 @@ On completion, it will feature the following:
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
 
-### NOTE: The project is currently a WIP and is highly volatile to changes and bugs.
-
 ## TODO (Incomplete features)
 
-- Checkout Page
-  - update model, view, and controller to submit order information to the `PurchaseOrder` and `PurchaseOrderItem` tables in the database correctly
 - Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
   - Run SQL script to create tables and populate them
@@ -54,10 +50,10 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## Known Issues
 
-- Submitting order information to the database does not add records/rows to the `PurchaseOrderItem` table
 - Directly accessing view templates or pages under `/views` may not load the page due to missing `require`'s or `include`'s
 - Favicon icon does not load on certain pages occasionally. May be a cache problem.
 - Form validation on checkout page is incomplete for non-payment related info e.g. name, city, etc.
+- ~~Submitting order information to the database does not add records/rows to the `PurchaseOrderItem` table~~ FIXED
 - ~~Cannot delete or update an item if it is the only item in the cart~~ FIXED
 - ~~Cannot add items to the cart with POST requests (cartController does not receive data sent in \$\_POST)~~ FIXED
 - ~~Clicking on a product link in the cart does not go to the product's product detail page~~ FIXED

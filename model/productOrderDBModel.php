@@ -1,10 +1,10 @@
 <?php
 
-function addProductOrder($currentCart, $customerFirstName, $customerLastName, $customerEmailAddress, $customerPhoneNumber, $addressStreet, $addressUnit, $addressCity, $addressProvince, $addressPostalCode, $addressCountry, $creditCardProvider, $creditCardNumber, $creditCardName,  $creditCardExpiryDate, $creditCardSecurityCode) {
+function addProductOrder($customerFirstName, $customerLastName, $customerEmailAddress, $customerPhoneNumber, $addressStreet, $addressUnit, $addressCity, $addressProvince, $addressPostalCode, $addressCountry, $creditCardProvider, $creditCardNumber, $creditCardName,  $creditCardExpiryDate, $creditCardSecurityCode) {
     global $db;
 
     $query = 
-        'INSERT INTO PurchaseOrder (customerFirstName, customerLastName, customerEmailAddress, customerPhoneNumber, addressStreet, addressUnit, addressCity, addressProvince, addressPostalCode, addressCountry, creditCardProvider, creditCardNumber, creditCardName, creditCardExpiryDate, creditCardSecurityCode)
+        'INSERT INTO ProductOrder (customerFirstName, customerLastName, customerEmailAddress, customerPhoneNumber, addressStreet, addressUnit, addressCity, addressProvince, addressPostalCode, addressCountry, creditCardProvider, creditCardNumber, creditCardName, creditCardExpiryDate, creditCardSecurityCode)
         VALUES (:customerFirstName, :customerLastName, :customerEmailAddress, :customerPhoneNumber, :addressStreet, :addressUnit, :addressCity, :addressProvince, :addressPostalCode, :addressCountry, :creditCardProvider, :creditCardNumber, :creditCardName, :creditCardExpiryDate, :creditCardSecurityCode)
         ';
 
@@ -27,26 +27,11 @@ function addProductOrder($currentCart, $customerFirstName, $customerLastName, $c
     $preparedStatement->bindValue(':creditCardSecurityCode', $creditCardSecurityCode);
 
     $preparedStatement->execute();
-    $purchaseOrderID = $db->lastInsertId();
-
-    foreach ($currentCart as $productID => $productItem) {
-        $purchaseOrderItemQuantity = $productItem['productQuantity'];
-        $purchaseOrderItemQuery = 
-            'INSERT INTO PurchaseOrderItem (purchaseOrderID, productID, purchaseOrderItemQuantity)
-            VALUES (:purchaseOrderID, :productID, :purchaseOrderItemQuantity)
-            ';
-
-        $statement = $db->prepare($query);
-
-        $statement->bindValue(':purchaseOrderID', $purchaseOrderID);
-        $statement->bindValue(':productID', $productID);
-        $statement->bindValue(':purchaseOrderItemQuantity', $purchaseOrderItemQuantity);
-        $statement->execute();
-        $statement->closeCursor();
-    }
+    $productOrderID = $db->lastInsertId();
 
     $preparedStatement->closeCursor();
-    return $preparedStatement;
+    // return $preparedStatement;
+    return $productOrderID;
 }
 
 ?>

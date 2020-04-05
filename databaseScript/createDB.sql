@@ -13,8 +13,8 @@ CREATE TABLE Product (
     PRIMARY KEY (productID)
 );
 
-CREATE TABLE PurchaseOrder (
-    purchaseOrderID BIGINT NOT NULL AUTO_INCREMENT,
+CREATE TABLE ProductOrder (
+    productOrderID BIGINT NOT NULL AUTO_INCREMENT,
     customerFirstName VARCHAR (255) NOT NULL,
     customerLastName VARCHAR (255) NOT NULL,
     customerEmailAddress VARCHAR (255) NOT NULL,
@@ -30,16 +30,16 @@ CREATE TABLE PurchaseOrder (
     creditCardName VARCHAR (255) NOT NULL,
     creditCardExpiryDate VARCHAR(7) NOT NULL,
     creditCardSecurityCode VARCHAR(4) NOT NULL,
-    PRIMARY KEY (purchaseOrderID)
+    PRIMARY KEY (productOrderID)
 );
 
-CREATE TABLE PurchaseOrderItem (
-    purchaseOrderID BIGINT NOT NULL,
+CREATE TABLE ProductOrderItem (
+    productOrderID BIGINT NOT NULL,
     productID BIGINT NOT NULL,
-    purchaseOrderItemQuantity SMALLINT UNSIGNED NOT NULL DEFAULT 1,
-    FOREIGN KEY (purchaseOrderID) REFERENCES PurchaseOrder (purchaseOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
+    productOrderItemQuantity SMALLINT UNSIGNED NOT NULL DEFAULT 1,
+    FOREIGN KEY (productOrderID) REFERENCES productOrder (productOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (productID) REFERENCES Product (productID) ON UPDATE CASCADE ON DELETE CASCADE,
-    PRIMARY KEY (purchaseOrderID, productID)
+    PRIMARY KEY (productOrderID, productID)
 );
 
 INSERT INTO
@@ -149,16 +149,9 @@ CREATE USER 'websecgp6' @'localhost' IDENTIFIED BY 'websecgp6';
 
 GRANT
 SELECT
-    ON webdevgp6.Product TO 'websecgp6' @'localhost';
-
-GRANT
-SELECT
 ,
+    DELETE,
 INSERT
-    on webdevgp6.PurchaseOrder TO 'websecgp6' @'localhost';
-
-GRANT
-SELECT
 ,
-INSERT
-    on webdevgp6.PurchaseOrderItem TO 'websecgp6' @'localhost';
+UPDATE
+    ON webdevgp6.* TO 'websecgp6' @'localhost';
