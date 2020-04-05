@@ -40,7 +40,7 @@ It features the following:
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
 
-## TODO (Incomplete features)
+## TODO
 
 - Deploy the web app live to the professor's web server with FileZilla or Git
   - Place project folder in my Linux group account's `public_html` folder
