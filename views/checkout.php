@@ -256,9 +256,8 @@
                 placeholder=" "
                 minlength="1"
                 maxlength="255"
-                pattern=".+"
+                pattern="^[cC][aA][nN][aA][dD][aA]$"
                 value="Canada"
-                readonly
               />
               <label class="label label--validation" for="addressCountry">
                 Country / Region e.g. Canada
@@ -266,6 +265,7 @@
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
+              <div class="input-requirements">Country must be Canada.</div>
             </div>
             <h4 class="checkout-form__sub-heading full-width">Payment Info</h4>
             <div class="input-group input-group--text input-group--validation full-width">
