@@ -119,7 +119,6 @@
               <div class="input-requirements">Invalid email.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
-              <!-- maxlength="19" -->
               <input
                 class="input input--text input--text--validation input--text"
                 id="customerPhoneNumber"
@@ -276,7 +275,7 @@
                 required
                 autocomplete="cc-type"
               >
-                <option value="" selected>Choose Credit Card Provider</option>
+                <option value="">Choose Credit Card Provider</option>
                 <option value="AMEX">AMEX</option>
                 <option value="MASTERCARD">MASTERCARD</option>
                 <option value="VISA">VISA</option>
@@ -290,6 +289,7 @@
               <div class="input-requirements">Invalid credit card provider.</div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
+              <!-- test credit card number is AMEX -->
               <input
                 class="input input--text input--text--validation input--credit-card-number"
                 id="creditCardNumber"

@@ -15,7 +15,7 @@
               <?php echo htmlspecialchars($customerEmailAddress); ?>.
             </span>
           </p>
-          <!-- <p>Your order ID is <span class="text-color--dark text-weight--bold">#12345</span>.<p> -->
+          <p>Your order ID is <span class="text-color--dark text-weight--bold"><?php echo htmlspecialchars($productOrderID); ?></span>.<p>
           <p>Please allow 1 to 5 business days for us to process your order before shipping.</p>
           <div class="button-container button-container--order-submitted">
             <a href="/INFO4125-Project/" class="button button--blue--ghost">
