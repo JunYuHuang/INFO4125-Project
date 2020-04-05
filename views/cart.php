@@ -42,7 +42,8 @@
                             name="currentCartItems[<?php echo $productID?>]"
                             value="<?php echo htmlspecialchars($currentCartItem['productQuantity']); ?>"
                             min="0"
-                            max="99"
+                            max="999"
+                            pattern="^(([1-9])|([1-9][0-9])|([1-9][0-9][0-9]))$"
                             step="1"
                           />
                           <label class="label" for="currentCartItems[<?php echo $productID?>]">

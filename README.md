@@ -4,12 +4,13 @@ Penzaar is the course project for the class INFO 4125: Website and Cloud Securit
 This is an ecommerce web application created with HTML, CSS, JavaScript, PHP, and MariaDB.
 On completion, it will feature the following:
 
+- Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
 - retrieves data from and adds data to the database (CREATE and READ functionality)
 - 3 static pages (Home, About, and Contact pages)
 - 5 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
 - ALL pages
-  - Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
-  - Mobile-first, fully responsive web design (supports mobile, tablet, and desktop views)
+  - tracks number of items in the shopping cart
+  - mobile-first, fully responsive web design (supports mobile, tablet, and desktop devices)
   - shows number of cart items on shopping cart icon when the user has at least 1 cart item
 - Error page
   - shows a different error message depending on which page the user attempted to visit or add submit information to
@@ -17,7 +18,7 @@ On completion, it will feature the following:
   - retrieves product data
   - allows instant search (searchbox) function
 - ProductDetail page
-  - retrieves specific data about a specific product
+  - retrieves data about a specific product
   - allows users to add a specified quantity of the product
 - Cart page
   - allows users to view all products in their cart

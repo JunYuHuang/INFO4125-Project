@@ -27,14 +27,14 @@
 					value="<?php echo $productID;?>"
 				>
 				<div class="input-group input-group--text--no-hover full-width">
-					<!-- id="input--add-to-cart--quantity" -->
 					<input
 						class="input input--text--no-hover half-width half-max-width"
 						type="number"
 						required
 						value="1"
 						min="1"
-						max="99"
+						max="999"
+						pattern="^(([1-9])|([1-9][0-9])|([1-9][0-9][0-9]))$"
 						step="1"
 						id="productQuantity"
 						name="productQuantity"
