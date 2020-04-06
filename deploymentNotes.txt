@@ -1,0 +1,54 @@
+// GIT //
+
+// get branch in a remote repo
+git fetch origin
+git checkout --track origin/$branchName
+
+// clone with HTTPS (doesn't work on Talia's server)
+git clone --single-branch --branch production https://github.com/JunYuHuang/INFO4125-Project.git
+
+git clone https://github.com/JunYuHuang/INFO4125-Project.git
+
+// clone with SSH (doesn't work on Talia's server)
+git clone git@github.com:JunYuHuang/INFO4125-Project.git
+
+git clone --single-branch --branch production git@github.com:JunYuHuang/INFO4125-Project.git
+
+// GitHub Personal Access Token (doesn't work on Talia's server)
+d33fbe58e953fc02d8f45c257cb025b3a15cf08b
+
+
+// WHAT TO DO FOR DEPLOYMENT
+
+// edit and run the MySQL database script to create and populate the tables
+// - add "SET FOREIGN_KEY_CHECKS = 0;" before "CREATE TABLE Product..." to script
+// - remove creating and granting permission commands for "webdevgp6" account
+// - navigate to directory and create database "webdevgp6" in MySQL CLI
+// - run "mysql -u webdevgp6 -pwebdevgp6 webdevgp6 < createDB.sql"
+- /databaseScript/createDB.sql
+
+// edit database setting to use correct credentials
+// - webdevgp6
+- /model/databaseModel.php
+
+// change absolute URL links for the following 13 files
+// - absolute link should start with "/~webdevgp6/INFO4125-Project/" instead of "/INFO4125-Project/"
+// - can also use __DIR__ to prefix file paths e.g.
+// require_once __DIR__ . '/partials/header.php';
+- /views/about.php
+- /views/cart.php
+- /views/checkout.php
+- /views/contact.php
+- /views/error.php
+- /views/home.php
+- /views/index.php
+- /views/orderSubmitted.php
+- /views/productDetail.php
+- /views/products.php
+- /views/partials/footer.php
+- /views/partials/header.php
+- /views/partials/navbar.php
+
+// - relative links inside controllers can remain unchanged
+
+// - test the app 

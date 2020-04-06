@@ -4,6 +4,9 @@ CREATE DATABASE webdevgp6;
 
 USE webdevgp6;
 
+SET
+    FOREIGN_KEY_CHECKS = 0;
+
 CREATE TABLE Product (
     productID BIGINT NOT NULL AUTO_INCREMENT,
     productName VARCHAR (255) NOT NULL,
@@ -142,16 +145,3 @@ VALUES
         "Mild hues are just the right shade to stand out and add colour to your notes.",
         "mildliner.jpg"
     );
-
-DROP USER IF EXISTS 'websecgp6';
-
-CREATE USER 'websecgp6' @'localhost' IDENTIFIED BY 'websecgp6';
-
-GRANT
-SELECT
-,
-    DELETE,
-INSERT
-,
-UPDATE
-    ON webdevgp6.* TO 'websecgp6' @'localhost';

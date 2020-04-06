@@ -35,7 +35,7 @@
               >
                 <div class="card__img-container">
                   <img 
-                    src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
+                    src="../assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
                     alt="An image of a <?php echo htmlspecialchars($product['productName']); ?>" 
                   />
                 </div>

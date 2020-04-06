@@ -18,7 +18,7 @@
                   <div class="cart__item__left">
                     <div class="cart__item__img-wrapper cart__item__img-wrapper--checkout">
                       <img
-                        src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
+                        src="../assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
                         alt="An image of a(n) <?php echo htmlspecialchars($currentCartItem['productName']); ?>"
                       />
                     </div>
@@ -74,7 +74,7 @@
                 First Name
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
@@ -94,7 +94,7 @@
                 Last Name
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation full-width">
@@ -114,7 +114,7 @@
                 Email Address
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Invalid email.</div>
             </div>
@@ -135,7 +135,7 @@
                 Phone Number (no spaces, dashes, brackets, or +)
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Your mobile phone number can only contain digits 0 to 9 and must be 10 or 11 characters long.</div>
             </div>
@@ -156,7 +156,7 @@
                 Street Address
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation one-third-width">
@@ -174,7 +174,7 @@
                 Unit (if applicable)
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
@@ -193,7 +193,7 @@
                 City
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
@@ -220,7 +220,7 @@
                 Province e.g. Alberta
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Invalid province.</div>
             </div>
@@ -241,7 +241,7 @@
                 Postal Code e.g. V7X9M1
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Your postal code must be exactly 6 characters long and match the format in the example above.</div>
             </div>
@@ -262,7 +262,7 @@
                 Country / Region e.g. Canada
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Country must be Canada.</div>
             </div>
@@ -284,7 +284,7 @@
                 Credit Card Provider
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Invalid credit card provider.</div>
             </div>
@@ -306,7 +306,7 @@
                 Credit Card Number (no spaces or dashes).
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Invalid credit card number. Please check your card number again.</div>
             </div>
@@ -327,7 +327,7 @@
                 Name on Card
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Invalid name.</div>
             </div>
@@ -348,7 +348,7 @@
                 Expires (MMYYYY)
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Your credit card's expiry date must be 6 numerical digits that represent both a valid month (01 thru 12) and a valid year
                 <span class="input-requirements__valid-years">(2020 or later)</span>
@@ -371,7 +371,7 @@
                 3 or 4 digit Security Code
               </label>
               <div class="img-wrapper--icon--validation">
-                <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
+                <img src="../assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
               </div>
               <div class="input-requirements">Your security code or CVC number must be 3 or 4 characters long and only contain digits 0 thru 9.</div>
             </div>
@@ -381,7 +381,7 @@
               &nbsp;
             </h4>
             <div class="input-group input-group--submit full-width">
-              <a href="/INFO4125-Project/cart/" class="button button--blue--ghost half-width">
+              <a href="/~webdevgp6/INFO4125-Project/cart/" class="button button--blue--ghost half-width">
                 Review Cart
               </a>
               <input

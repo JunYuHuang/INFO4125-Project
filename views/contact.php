@@ -1,5 +1,5 @@
-<?php require_once './partials/header.php'; ?>
-<?php require_once './partials/navbar.php'; ?>
+<?php require_once __DIR__ . '/partials/header.php'; ?>
+<?php require_once __DIR__ . '/partials/navbar.php'; ?>
     <main class="main-wrapper">
       <section class="section section--contact">
         <h1 class="h1 heading heading--main">Contact</h1>
@@ -51,4 +51,4 @@
         </article>
       </section>
     </main>
-<?php require_once './partials/footer.php'; ?>
+<?php require_once __DIR__ . '/partials/footer.php'; ?>

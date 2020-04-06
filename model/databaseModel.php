@@ -1,8 +1,8 @@
 <?php
 
 $dsn = 'mysql:host=localhost;dbname=webdevgp6';
-$username = 'websecgp6';
-$password = 'websecgp6';
+$username = 'webdevgp6';
+$password = 'webdevgp6';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {

@@ -6,7 +6,7 @@
         <p>Something went wrong :(</p>
         <p>Error: <span class="error-message-text"><?php echo $errorMessage; ?></span></p>
         <div class="button-container button-container--error">
-            <a href="/INFO4125-Project/" class="button button--blue--ghost">
+            <a href="/~webdevgp6/INFO4125-Project/" class="button button--blue--ghost">
                 Back to Home
             </a>
         </div>

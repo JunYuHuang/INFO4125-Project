@@ -27,7 +27,8 @@ switch($action) {
             die();
         } else {
             $currentCart = getAllProductsInCart();
-            include "../views/checkout.php";
+            header("Location: ../views/checkout.php");
+            // include "../views/checkout.php";
             // include "../views/checkoutTEST.php";
         }
 
@@ -64,6 +65,8 @@ switch($action) {
                 $currentCart = getAllProductsInCart();
                 // insert a new record of the product order
                 $productOrderID = addProductOrder($customerFirstName, $customerLastName, $customerEmailAddress, $customerPhoneNumber, $addressStreet, $addressUnit, $addressCity, $addressProvince, $addressPostalCode, $addressCountry, $creditCardProvider, $creditCardNumber, $creditCardName, $creditCardExpiryDate, $creditCardSecurityCode);
+                // set delay
+                sleep(2);
                 // insert a new record of the requested quantity of each product in the customer's order
                 foreach($currentCart as $productID => $productItem) {
                     $productQuantity = $productItem['productQuantity'];
@@ -72,16 +75,19 @@ switch($action) {
                 // empty the cart and show order submitted page
                 emptyCart();
                 include "../views/orderSubmitted.php";
+                // header('Location: ../views/orderSubmitted.php');
             } catch(Exception $e) {
                 // show error page if something goes wrong
                 $errorMessage = 'Something went wrong with submitting your order. Please try again.';
-                include '../views/error/php';
+                include '../views/error.php';
+                // header('Location: ../views/error.php');
             }
         }
         break;
     default:
         $errorMessage = 'Unknown checkout action "' . $action . '"';
-        include '../views/error.php';
+        // include '../views/error.php';
+        header("Location: ../views/error.php");
         break;
 }
 

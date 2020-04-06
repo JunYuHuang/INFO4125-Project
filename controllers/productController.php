@@ -22,7 +22,7 @@ switch($action) {
         if ($productID) {
             // get the product info
             $product = getProductByID($productID);
-            $productImageURL = '/INFO4125-Project/assets/images/products/' . $product['productImageFileName'];
+            $productImageURL = '/~webdevgp6/INFO4125-Project/assets/images/products/' . $product['productImageFileName'];
             $productName = $product['productName'];
             $productPrice = $product['productPrice'];
             $productDescription = $product['productDescription'];

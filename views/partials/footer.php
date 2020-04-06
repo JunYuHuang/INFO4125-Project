@@ -6,6 +6,6 @@
         </p>
       </div>
     </footer>
-    <script src="../assets/app.js"></script>
+    <script src="/~webdevgp6/INFO4125-Project/assets/app.js"></script>
   </body>
 </html>

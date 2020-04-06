@@ -8,7 +8,7 @@
             <div class="section__text--cart__error-message full-width">
               <p class="full-width text-align-center">Your cart is currently empty.</p>
               <div class="button-container button-container--cart--error">
-                <a href="/INFO4125-Project/products" class="button button--blue--ghost">
+                <a href="/~webdevgp6/INFO4125-Project/products" class="button button--blue--ghost">
                   Continue Shopping
                 </a>
               </div>
@@ -20,14 +20,14 @@
                     <div class="cart__item__left">
                       <div class="cart__item__img-wrapper">
                         <img
-                          src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
+                          src="/~webdevgp6/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($currentCartItem['productImageFileName']); ?>"
                           alt="An image of a(n) <?php echo htmlspecialchars($currentCartItem['productName']); ?>"
                         />
                       </div>
                       <div class="cart__item__brief">
                         <p class="cart__item__brief__product-name cart__item__brief__product-name--cart ellipsis">
                           <a 
-                            href="/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($productID); ?>" 
+                            href="/~webdevgp6/INFO4125-Project/products?action=viewProduct&amp;productID=<?php echo htmlspecialchars($productID); ?>" 
                             class="url-link"
                           >
                             <?php echo htmlspecialchars($currentCartItem['productName']); ?>
@@ -86,7 +86,7 @@
                   </span>
                 </div>
                 <div class="button-container button-container--cart">
-                  <a href="/INFO4125-Project/products" class="button button--blue--ghost">
+                  <a href="/~webdevgp6/INFO4125-Project/products" class="button button--blue--ghost">
                     Continue Shopping
                   </a>
                   <form class="empty-cart-form" action="." method="POST">
@@ -106,7 +106,7 @@
                     </button>
                   </form>
                   <a 
-                    href="/INFO4125-Project/checkout" class="button button--blue button--checkout">
+                    href="/~webdevgp6/INFO4125-Project/checkout" class="button button--blue button--checkout">
                     Checkout&nbsp;&nbsp;&nbsp;&gt;
                   </a>
                 </div>

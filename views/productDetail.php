@@ -16,7 +16,7 @@
 			CAD &#36;<?php echo htmlspecialchars($productPrice); ?>
 		  </p>
 			<form 
-				action="/INFO4125-Project/cart/" 
+				action="/~webdevgp6/INFO4125-Project/cart/" 
 				method="POST"
 				class="add-to-cart-form"
 			>
@@ -56,7 +56,7 @@
 			</p>
 			</article>
 			<div class="button-container button-container--product-detail">
-				<a href="/INFO4125-Project/products" class="button button--blue--ghost">
+				<a href="/~webdevgp6/INFO4125-Project/products" class="button button--blue--ghost">
 					&lt;&nbsp;&nbsp;&nbsp;Continue Shopping
 				</a>
 			</div>
