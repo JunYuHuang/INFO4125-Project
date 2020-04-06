@@ -37,7 +37,7 @@ CREATE TABLE ProductOrderItem (
     productOrderID BIGINT NOT NULL,
     productID BIGINT NOT NULL,
     productOrderItemQuantity BIGINT UNSIGNED NOT NULL DEFAULT 1,
-    FOREIGN KEY (productOrderID) REFERENCES productOrder (productOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (productOrderID) REFERENCES ProductOrder (productOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (productID) REFERENCES Product (productID) ON UPDATE CASCADE ON DELETE RESTRICT,
     PRIMARY KEY (productOrderID, productID)
 );
