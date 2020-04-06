@@ -27,8 +27,8 @@ switch($action) {
             die();
         } else {
             $currentCart = getAllProductsInCart();
-            include "../views/checkout.php";
-            // include "../views/checkoutTEST.php";
+            // include "../views/checkout.php";
+            include "../views/checkoutTEST.php";
         }
 
         break;
@@ -74,8 +74,8 @@ switch($action) {
                 include "../views/orderSubmitted.php";
             } catch(Exception $e) {
                 // show error page if something goes wrong
-                $errorMessage = 'Something went wrong with submitting your order. Please try again.';
-                include '../views/error/php';
+                $errorMessage = 'Something went wrong with submitting your order. Please try again.' . $e;
+                include '../views/error.php';
             }
         }
         break;

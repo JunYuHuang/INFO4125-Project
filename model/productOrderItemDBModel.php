@@ -11,7 +11,7 @@ function addProductOrderItem($productOrderID, $productID, $productOrderItemQuant
     $preparedStatement->bindValue(':productOrderItemQuantity', $productOrderItemQuantity);
     $preparedStatement->execute();
     $preparedStatement->closeCursor();
-    return $productOrderID;
+    // return $productOrderID;
 }
 
 ?>
