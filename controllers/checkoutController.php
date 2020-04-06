@@ -76,7 +76,7 @@ switch($action) {
                 // header('Location: ../views/orderSubmitted.php');
             } catch(Exception $e) {
                 // show error page if something goes wrong
-                $errorMessage = 'Something went wrong with submitting your order. Please try again.';
+                $errorMessage = 'Something went wrong with submitting your order. Please try again.' . '<br>' . $e;
                 include '../views/error.php';
                 // header('Location: ../views/error.php');
             }

@@ -4,9 +4,6 @@ CREATE DATABASE webdevgp6;
 
 USE webdevgp6;
 
-SET
-    FOREIGN_KEY_CHECKS = 0;
-
 CREATE TABLE Product (
     productID BIGINT NOT NULL AUTO_INCREMENT,
     productName VARCHAR (255) NOT NULL,
@@ -37,11 +34,11 @@ CREATE TABLE ProductOrder (
 );
 
 CREATE TABLE ProductOrderItem (
-    productOrderID BIGINT NOT NULL,
     productID BIGINT NOT NULL,
+    productOrderID BIGINT NOT NULL,
     productOrderItemQuantity SMALLINT UNSIGNED NOT NULL DEFAULT 1,
-    FOREIGN KEY (productOrderID) REFERENCES productOrder (productOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (productID) REFERENCES Product (productID) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (productOrderID) REFERENCES ProductOrder (productOrderID) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (productID) REFERENCES Product (productID) ON UPDATE CASCADE ON DELETE RESTRICT,
     PRIMARY KEY (productOrderID, productID)
 );
 

@@ -26,6 +26,7 @@ d33fbe58e953fc02d8f45c257cb025b3a15cf08b
 // - navigate to directory and create database "webdevgp6" in MySQL CLI
 // - run "mysql -u webdevgp6 -pwebdevgp6 webdevgp6 < createDB.sql"
 - /databaseScript/createDB.sql
+// - "cat createDB.sql | mysql -u webdevgp6 -pwebdevgp6"
 
 // edit database setting to use correct credentials
 // - webdevgp6
