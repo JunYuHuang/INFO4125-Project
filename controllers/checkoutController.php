@@ -27,8 +27,8 @@ switch($action) {
             die();
         } else {
             $currentCart = getAllProductsInCart();
-            header("Location: ../views/checkout.php");
-            // include "../views/checkout.php";
+            // header("Location: ../views/checkout.php");
+            include "../views/checkout.php";
             // include "../views/checkoutTEST.php";
         }
 
@@ -65,8 +65,6 @@ switch($action) {
                 $currentCart = getAllProductsInCart();
                 // insert a new record of the product order
                 $productOrderID = addProductOrder($customerFirstName, $customerLastName, $customerEmailAddress, $customerPhoneNumber, $addressStreet, $addressUnit, $addressCity, $addressProvince, $addressPostalCode, $addressCountry, $creditCardProvider, $creditCardNumber, $creditCardName, $creditCardExpiryDate, $creditCardSecurityCode);
-                // set delay
-                sleep(2);
                 // insert a new record of the requested quantity of each product in the customer's order
                 foreach($currentCart as $productID => $productItem) {
                     $productQuantity = $productItem['productQuantity'];

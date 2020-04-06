@@ -49,6 +49,7 @@ CVV2 :
 
 
 American Express :
+3488 3838 9838 230
 348838389838230
 Expires :
 04-2022 (MM-YYYY)

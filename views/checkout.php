@@ -54,7 +54,7 @@
             </div>
           </div> 
           <!-- form -->
-          <form action="." method="POST" class="register-form">
+          <form action="/~webdevgp6/INFO4125-Project/controllers/checkoutController.php" method="POST" class="register-form">
             <input type="hidden" name="action" value="submitOrder">
             <h4 class="checkout-form__sub-heading full-width">Contact Info</h4>
             <div class="input-group input-group--text input-group--validation half-width">

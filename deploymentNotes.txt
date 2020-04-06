@@ -51,4 +51,7 @@ d33fbe58e953fc02d8f45c257cb025b3a15cf08b
 
 // - relative links inside controllers can remain unchanged
 
+// upload project to Talia's server with filezilla
+// - use port 22 for sftp transfer (filezilla)
+
 // - test the app 
