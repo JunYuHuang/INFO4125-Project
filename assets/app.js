@@ -26,7 +26,7 @@ navMenuButton.addEventListener("click", () => {
   toggleNavButton();
 });
 
-navMenu.addEventListener("click", e => {
+navMenu.addEventListener("click", (e) => {
   // auto-close menu if any of its links are clicked
   let isInMobile = matchMedia("only screen and (max-width: 851px)").matches;
   if (isInMobile) {
@@ -64,18 +64,18 @@ const errorMessage = "not applicable";
 let isProductPage = productSearchForm && productSearchInput && productCardGrid;
 
 if (isProductPage) {
-  productSearchForm.addEventListener("submit", e => {
+  productSearchForm.addEventListener("submit", (e) => {
     e.preventDefault(); // stop form from submitting or refreshing
   });
 
-  productSearchInput.addEventListener("keyup", e => {
+  productSearchInput.addEventListener("keyup", (e) => {
     filterProducts(e.target.value);
   });
 
   function filterProducts(searchTerm) {
     searchTerm = searchTerm.toLowerCase();
     let allProducts = document.querySelectorAll(".card");
-    allProducts.forEach(product => {
+    allProducts.forEach((product) => {
       const productName = product.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.firstChild.textContent.toLowerCase();
 
       // hide products that don't match the search term
@@ -151,14 +151,14 @@ if (
   const AMEXCardRegex = "^(?:3[47][0-9]{13})$";
 
   // event listeners
-  creditCardProviderSelectInput.addEventListener("input", e => {
+  creditCardProviderSelectInput.addEventListener("input", (e) => {
     setCreditCardProvider(currentCreditCardProvider, e.target.value);
     setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
   });
 
   // additional validation for credit card expiry month and year
   // override regex pattern if expiry month and date are the same as or before the real/current month and date
-  creditCardExpiryDateInput.addEventListener("input", e => {
+  creditCardExpiryDateInput.addEventListener("input", (e) => {
     // don't check input expiry date if it's not the correct length
     let inputExpiryDate = e.target.value;
     let inputExpiryDateLength = inputExpiryDate.length;

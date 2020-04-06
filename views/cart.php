@@ -116,13 +116,13 @@
       </section>
     </main>
     <script type="text/javascript">
-      // below code makes the "Update Cart" function work
-      // doesn't work when used put in app.js
       let productQuantityInputs = document.querySelectorAll(
         ".input--number--product-quantity"
       );
       let updateCartForm = document.querySelector(".update-cart-form");
 
+      // below code makes the "Update Cart" function work
+      // doesn't work when used put in app.js
       function cloneProductQuantityInputsAndSubmit() {
         productQuantityInputs.forEach(productQuantityInput => {
             var productQuantityInputClone = productQuantityInput.cloneNode(false);
@@ -136,6 +136,16 @@
       if (updateCartForm && productQuantityInputs) {
         updateCartForm.addEventListener("submit", () => {
           cloneProductQuantityInputsAndSubmit()
+        });
+
+        // prevent non-number input for the product quantity
+        const illegalCharactersArray = ["e", "E", "+", "-"];
+        productQuantityInputs.forEach(productQuantityInput => {
+          productQuantityInput.addEventListener("keydown", e => {
+            if (illegalCharactersArray.includes(e.key)) {
+              e.preventDefault();
+            }
+          });
         });
       }
     </script>
