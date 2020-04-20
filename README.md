@@ -1,5 +1,7 @@
 # INFO3150-Project: Penzaar
 
+<!-- ![Splash Preview](https://i.imgur.com/md60y1R.png) -->
+
 Penzaar is the course project for the class INFO 4125: Website and Cloud Security.
 This is an ecommerce web application created with vanilla HTML, CSS, JavaScript, PHP, and MariaDB.
 It features the following:
@@ -40,34 +42,22 @@ It features the following:
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
 
-<!-- ## UX/UI Suggestions
-
-- Make product page the home page. Can shink and put hero header of current home page on top of product page. ~~DONE
-- Show dropdown notification instead of redirecting to cart page when user adds item to cart
-- Show recommended products on each product's detail page
-- Allow users to add items to cart from Product page ~~ DONE
-- Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart
-- Put important contact information in footer (for SEO)
-- Remove credit card provider dropdown input on checkout page because can determine provider and security code length based on credit card number
-- slight colour contrast issues with hero header and background colour
-- overall colour palette and fonts can be improved -->
-
 ## Screenshots
 
-  <!-- ### Home Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### Products Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### About Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### Contact Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### Cart Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### Checkout Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
-  <!-- ### Order Confirmation Page -->
-  <!-- ![Profile Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Home Page -->
+<!-- ![Home Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Products Page -->
+<!-- ![Products Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### About Page -->
+<!-- ![About Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Contact Page -->
+<!-- ![Contact Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Cart Page -->
+<!-- ![Cart Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Checkout Page -->
+<!-- ![Checkout Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### Order Confirmation Page -->
+<!-- ![Order Confirmation Page](https://i.imgur.com/md60y1R.png) -->
 
 ## How to install (in a local environment)
 
@@ -88,3 +78,15 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 - There is no option to add new products to the database.
 - Internet Explorer or Microsoft Edge is not supported; please use the latest versions of Chrome, Firefox, Safari, or any other modern web browser.
 - The database script `createDB.sql` must be manually updated and run (copied and pasted to the database's "SQL" tab and then click "GO") in PHPMyAdmin to add new products.
+
+## UX/UI Suggestions
+
+- Make product page the home page. Can shink and put hero header of current home page on top of product page.
+- Show dropdown notification instead of redirecting to cart page when user adds item to cart
+- Show recommended products on each product's detail page
+- Allow users to add items to cart from Product page ~~DONE~~
+- Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart
+- Put important contact information in footer (for SEO)
+- Remove credit card provider dropdown input on checkout page because can determine card provider and security code length based on credit card number
+- slight colour contrast issues with hero header and background colour
+- improve overall colour palette and fonts

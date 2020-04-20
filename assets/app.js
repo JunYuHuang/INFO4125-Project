@@ -2,7 +2,9 @@
 
 // auto-update copyright year
 const currentYear = document.querySelector(".footer__text--currentYear");
-currentYear.innerHTML = new Date().getFullYear();
+if (currentYear) {
+  currentYear.innerHTML = new Date().getFullYear();
+}
 
 // nav menu, nav menu button, and nav menu button icon - only if user is on mobile or tablet
 const navMenu = document.querySelector(".nav-menu");
@@ -76,7 +78,7 @@ if (isProductPage) {
     searchTerm = searchTerm.toLowerCase();
     let allProducts = document.querySelectorAll(".card");
     allProducts.forEach((product) => {
-      const productName = product.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.firstChild.textContent.toLowerCase();
+      const productName = product.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.firstChild.nextSibling.textContent.toLowerCase();
 
       // hide products that don't match the search term
       if (productName.indexOf(searchTerm) !== -1) {
