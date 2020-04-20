@@ -34,13 +34,14 @@
               >
                 <a 
                   href="?action=viewProduct&amp;productID=<?php echo htmlspecialchars($product['productID']); ?>"
+                  class="card__img-container"
                 >
-                  <div class="card__img-container">
+                  <!-- <div > -->
                     <img 
                       src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
                       alt="An image of a <?php echo htmlspecialchars($product['productName']); ?>" 
                     />
-                  </div>
+                  <!-- </div> -->
                 </a>
                 <section class="card__text ellipsis">
                   <a 

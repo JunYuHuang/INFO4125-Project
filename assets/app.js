@@ -82,7 +82,9 @@ if (isProductPage) {
 
       // hide products that don't match the search term
       if (productName.indexOf(searchTerm) !== -1) {
-        product.style.display = "block";
+        let isInMobile = matchMedia("only screen and (max-width: 851px)")
+          .matches;
+        product.style.display = isInMobile ? "flex" : "block";
       } else {
         product.style.display = "none";
       }

@@ -6,8 +6,8 @@ Penzaar is the course project for the class INFO 4125: Website and Cloud Securit
 This is an ecommerce web application created with vanilla HTML, CSS, JavaScript, PHP, and MariaDB.
 It features the following:
 
-- Session-based shopping cart with full CRUD functionality (Cart, ProductDetail, and Checkout pages)
-- retrieves data from and adds data to the database (CREATE and READ functionality)
+- Session-based shopping cart with full CRUD functionality (Cart, Product, ProductDetail, and Checkout pages)
+- Retrieves data from and adds data to the database (CREATE and READ functionality)
 - 3 static pages (Home, About, and Contact pages)
 - 6 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
 - ALL pages
@@ -49,6 +49,8 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 <!-- ### Products Page -->
 <!-- ![Products Page](https://i.imgur.com/md60y1R.png) -->
 <!-- ### About Page -->
+<!-- ![ProductDetail Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ### About Page -->
 <!-- ![About Page](https://i.imgur.com/md60y1R.png) -->
 <!-- ### Contact Page -->
 <!-- ![Contact Page](https://i.imgur.com/md60y1R.png) -->
@@ -61,15 +63,15 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## How to install (in a local environment)
 
-1. Install [XAMPP](https://www.apachefriends.org/index.html) (recommended) or [LAMP](https://bitnami.com/stack/lamp/installer). If you installed LAMP, install [PHPMyAdmin](https://www.phpmyadmin.net/) as well.
+1. Install [XAMPP](https://www.apachefriends.org/index.html).
 2. If you want to download and install the project folder from a ZIP file (not recommended), skip this step and go to step 3. Use [Git Bash](https://git-scm.com/downloads) or the [GitHub Desktop client](https://desktop.github.com/) to clone the project to the `/htdocs` folder of your XAMPP or LAMP installation folder. For example, the project folder might be moved to `C:\xampp\htdocs\INFO4125-Project`. If the project folder's name is NOT `INFO4125-Project`, rename the folder to that.
-3. Download (not recommended) the [ZIP file for this repository](https://github.com/JunYuHuang/INFO4125-Project/archive/master.zip) and extract it to your desktop. Move the innermost folder `PROJECT4125-Project` to the `/htdocs` folder of your XAMPP or LAMP installation folder. For example, the project folder might be moved to `C:\xampp\htdocs\PROJECT4125-Project-master`. Rename the folder that you moved from `INFO4125-Project-master` to `PROJECT4125-Project`.
+3. Download (not recommended) the [ZIP file for this repository](https://github.com/JunYuHuang/INFO4125-Project/archive/master.zip) and extract it to your desktop. Move the innermost folder `PROJECT4125-Project` to the `/htdocs` folder of your XAMPP installation folder. For example, the project folder might be moved to `C:\xampp\htdocs\PROJECT4125-Project-master`. Rename the folder that you moved from `INFO4125-Project-master` to `PROJECT4125-Project`.
 4. Run the MySQL script `createDB.sql` inside the folder `/INFO4125-Project/databaseScript/` in PHPMyAdmin.
 5. In PHPMyAdmin, click on the `PenzaarDB` database and look at the `Privileges` tab. Check if there is a user account named `PenzaarUser` with the `SELECT` or `ALL` privileges granted. If not, create such a MySQL database account in PHPMyAdmin with the password being the same as the username and with the `ALL` privileges.
 
 ## How to run (in a local environment)
 
-1. Launch the XAMPP or LAMP control panel
+1. Launch the XAMPP control panel
 2. Start both the `Apache` and `MySQL` services.
 3. Open a new browser window or tab and go to `localhost/INFO4125-Project`.
 
@@ -81,12 +83,12 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## UX/UI Suggestions
 
-- Make product page the home page. Can shink and put hero header of current home page on top of product page.
-- Show dropdown notification instead of redirecting to cart page when user adds item to cart
-- Show recommended products on each product's detail page
-- Allow users to add items to cart from Product page ~~DONE~~
-- Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart
-- Put important contact information in footer (for SEO)
-- Remove credit card provider dropdown input on checkout page because can determine card provider and security code length based on credit card number
-- slight colour contrast issues with hero header and background colour
-- improve overall colour palette and fonts
+- ~~Allow users to add items to cart from Product page.~~ DONE
+- ~~Put important contact information in footer (for SEO).~~ DONE
+- Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart.
+- Make the Product page the home page. Can shink and put hero header of current home page on top of Product page.
+- Remove credit card provider dropdown input on checkout page because can determine card provider and security code length based on credit card number.
+- Show dropdown notification instead of redirecting to Cart page when user adds items to the cart.
+- Show recommended products on each ProductDetail page.
+- Fix slight colour contrast issues with hero header and background colour.
+- Improve overall colour palette and fonts.
