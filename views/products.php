@@ -29,25 +29,58 @@
           <?php else: ?>
           <div class="card-grid-container">
             <?php foreach ($productsArray as $product): ?>
-              <a
-                href="?action=viewProduct&amp;productID=<?php echo htmlspecialchars($product['productID']); ?>"
+              <div
                 class="card"
               >
-                <div class="card__img-container">
-                  <img 
-                    src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
-                    alt="An image of a <?php echo htmlspecialchars($product['productName']); ?>" 
-                  />
-                </div>
+                <a 
+                  href="?action=viewProduct&amp;productID=<?php echo htmlspecialchars($product['productID']); ?>"
+                >
+                  <div class="card__img-container">
+                    <img 
+                      src="/INFO4125-Project/assets/images/products/<?php echo htmlspecialchars($product['productImageFileName']); ?>" 
+                      alt="An image of a <?php echo htmlspecialchars($product['productName']); ?>" 
+                    />
+                  </div>
+                </a>
                 <section class="card__text ellipsis">
-                  <h3 class="card__text__title ellipsis">
-                    <?php echo htmlspecialchars($product['productName']); ?>
-                  </h3>
+                  <a 
+                    href="?action=viewProduct&amp;productID=<?php echo htmlspecialchars($product['productID']); ?>">
+                    <h3 class="card__text__title ellipsis">
+                      <?php echo htmlspecialchars($product['productName']); ?>
+                    </h3>
+                  </a>
                   <p class="card__text__price">
                     CAD &#36;<?php echo htmlspecialchars($product['productPrice']); ?>
                   </p>
+                  <form 
+                    action="/INFO4125-Project/cart/" 
+                    method="POST"
+                    class="add-to-cart-form"
+                  >
+                    <input type="hidden" name="action" value="addItemToCart">
+                    <input 
+                      type="hidden" 
+                      name="productID" 
+                      value="<?php echo $product['productID']; ?>"
+                    >
+                    <div class="input-group input-group--text--no-hover full-width">
+                      <input
+                        type="hidden"
+                        value="1"
+                        id="productQuantity"
+                        name="productQuantity"
+                      />
+                    </div>
+                    <div class="input-group input-group--submit full-width">
+                      <input
+                        class="input input--button button button--blue button--add-to-cart full-width"
+                        type="submit"
+                        value="Add to Cart"
+                      />
+                    </div>
+                  </form>
                 </section>
-              </a>
+              </div>
             <?php endforeach; ?>
           </div>
           <?php endif; ?>

@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS webdevgp6;
+DROP DATABASE IF EXISTS PenzaarDB;
 
-CREATE DATABASE webdevgp6;
+CREATE DATABASE PenzaarDB;
 
-USE webdevgp6;
+USE PenzaarDB;
 
 CREATE TABLE Product (
     productID BIGINT NOT NULL AUTO_INCREMENT,
@@ -143,9 +143,9 @@ VALUES
         "mildliner.jpg"
     );
 
-DROP USER IF EXISTS 'websecgp6';
+DROP USER IF EXISTS 'PenzaarUser';
 
-CREATE USER 'websecgp6' @'localhost' IDENTIFIED BY 'websecgp6';
+CREATE USER 'PenzaarUser' @'localhost' IDENTIFIED BY 'PenzaarUser';
 
 GRANT
 SELECT
@@ -154,4 +154,4 @@ SELECT
 INSERT
 ,
 UPDATE
-    ON webdevgp6.* TO 'websecgp6' @'localhost';
+    ON PenzaarDB.* TO 'PenzaarUser' @'localhost';
