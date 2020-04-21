@@ -8,7 +8,7 @@ It features the following:
 
 - Session-based shopping cart with full CRUD functionality (Cart, Product, ProductDetail, and Checkout pages)
 - Retrieves data from and adds data to the database (CREATE and READ functionality)
-- 3 static pages (Home, About, and Contact pages)
+- 2 static pages (About and Contact pages)
 - 6 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
 - ALL pages
   - tracks number of items in the shopping cart
@@ -44,9 +44,7 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## Screenshots
 
-<!-- ### Home Page -->
-<!-- ![Home Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### Products Page -->
+<!-- ### Home / Products Page -->
 <!-- ![Products Page](https://i.imgur.com/md60y1R.png) -->
 <!-- ### About Page -->
 <!-- ![ProductDetail Page](https://i.imgur.com/md60y1R.png) -->
@@ -85,8 +83,8 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 - ~~Allow users to add items to cart from Product page.~~ DONE
 - ~~Put important contact information in footer (for SEO).~~ DONE
+- ~~Make the Product page the home page. Can shink and put hero header of current home page on top of Product page.~~ DONE
 - Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart.
-- Make the Product page the home page. Can shink and put hero header of current home page on top of Product page.
 - Remove credit card provider dropdown input on checkout page because can determine card provider and security code length based on credit card number.
 - Show dropdown notification instead of redirecting to Cart page when user adds items to the cart.
 - Show recommended products on each ProductDetail page.

@@ -1,6 +1,12 @@
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/header.php'; ?>
 <?php require_once PROJECT_DIR_ROOT . '/views/partials/navbar.php'; ?>
     <main class="main-wrapper">
+      <div class="hero-splash">
+        <h1 class="hero-splash__heading text all-caps font-weight--bold text-align-left">
+          Great Pens for Great People
+        </h1>
+        <p class="hero-splash__subtitle text-align-left">Join the glorious pen master race today.</p>
+      </div>
       <section class="section section--products">
         <h1 class="h1 heading heading--main heading--main--products">Products</h1>
         <article class="section__text section__text--products">

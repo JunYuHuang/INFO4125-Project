@@ -72,9 +72,10 @@ h6,
 }
 
 .heading--main {
-  padding: 2.75rem 0;
+  padding: 2rem 0;
   text-align: center;
   font-weight: 500;
+  margin-bottom: 0 !important;
 }
 
 h1,
@@ -545,6 +546,7 @@ h3,
 .section--contact {
   padding-top: 0;
 }
+
 .contact-group {
   display: flex;
   flex-direction: row;
@@ -581,8 +583,43 @@ h3,
 
 /* products page */
 
+.hero-splash {
+  width: 100%;
+  min-height: 33vh;
+  padding: 2rem 8.5% 2rem 8.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-splash::before {
+  background-image: url("../assets/images/home-splash-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* filter: opacity(0.15); */
+  filter: brightness(0.15);
+  z-index: -1;
+}
+
+.hero-splash__heading {
+  font-size: 2.5rem;
+  color: var(--color-light);
+}
+
+.hero-splash__subtitle {
+  font-size: 1rem;
+  color: var(--color-light);
+}
+
 .heading--main--products {
-  display: none;
+  /* display: none; */
 }
 
 .input-group {
@@ -1361,7 +1398,7 @@ h3,
   }
 
   .heading--main {
-    padding: 5.5rem 0;
+    padding: 3.3rem 0;
   }
 
   .section {
@@ -1455,6 +1492,15 @@ h3,
   }
 
   /* products page */
+
+  .hero-splash {
+    padding: 90px 16% 90px 16%;
+  }
+
+  .hero-splash__heading {
+    font-size: 4.125rem;
+    line-height: 4.125rem;
+  }
 
   .card-grid-container {
     margin: 2rem 0 28px 0;
@@ -1740,21 +1786,21 @@ h3,
 
   /* contact page */
   .section--contact {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .section__text--contact {
-    width: 33%;
+    /* width: 33%; */
   }
 
   .embedded-google-maps-container {
-    width: calc(66% - 2rem);
-    padding-left: 2rem;
-    margin-top: 0;
-    padding-bottom: 50%;
+    /* width: calc(66% - 2rem); */
+    /* padding-left: 2rem; */
+    /* margin-top: 0; */
+    /* padding-bottom: 50%; */
   }
 
   /* product-detail page */

@@ -22,12 +22,18 @@ switch($action) {
         if ($productID) {
             // get the product info
             $product = getProductByID($productID);
-            $productImageURL = '/INFO4125-Project/assets/images/products/' . $product['productImageFileName'];
-            $productName = $product['productName'];
-            $productPrice = $product['productPrice'];
-            $productDescription = $product['productDescription'];
-            // display the product detail page
-            include "../views/productDetail.php";
+            if ($product == null || $product == "") {
+                $errorMessage = 'Product was not found.';
+                include "../views/error.php";
+            } else {
+                // test
+                $productImageURL = '/INFO4125-Project/assets/images/products/' . $product['productImageFileName'];
+                $productName = $product['productName'];
+                $productPrice = $product['productPrice'];
+                $productDescription = $product['productDescription'];
+                // display the product detail page
+                include "../views/productDetail.php";
+            }
         } else {
             // display error page
             $errorMessage = 'The product was not found.';

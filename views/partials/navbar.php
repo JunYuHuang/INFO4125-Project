@@ -10,7 +10,7 @@
     <header class="header">
       <nav role="navigation" class="navbar">
         <div class="logo-wrapper">
-          <a href="/INFO4125-Project/" class="logo__link">
+          <a href="/INFO4125-Project/products" class="logo__link">
             <img class="logo-icon" src="/INFO4125-Project/assets/images/favicon.png" alt="An thumbnail image of the Penzaar brand.">
             <h1 class="logo uppercase">Penzaar</h1>
           </a>
