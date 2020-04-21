@@ -1500,6 +1500,10 @@ h3,
     line-height: 4.125rem;
   }
 
+  .heros-splash__subtitle {
+    font-size: 1.2rem;
+  }
+
   .card-grid-container {
     margin: 2rem 0 2rem 0;
     display: grid;
