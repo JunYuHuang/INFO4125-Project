@@ -27,8 +27,8 @@ switch($action) {
             die();
         } else {
             $currentCart = getAllProductsInCart();
-            // include "../views/checkout.php";
-            include "../views/checkoutTEST.php";
+            include "../views/checkout.php";
+            // include "../views/checkoutTEST.php";
         }
 
         break;

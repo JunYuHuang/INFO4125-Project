@@ -134,11 +134,15 @@ let creditCardExpiryDateInput = document.querySelector(
   ".input--credit-card-expiry-date"
 );
 let validYearsText = document.querySelector(".input-requirements__valid-years");
+let creditCardSecurityCodeInput = document.querySelector(
+  ".input--credit-card-security-code"
+);
 
 if (
   creditCardProviderSelectInput &&
   creditCardNumberInput &&
-  creditCardExpiryDateInput
+  creditCardExpiryDateInput &&
+  creditCardSecurityCodeInput
 ) {
   // state & vars
   let currentCreditCardProvider = "";
@@ -158,6 +162,7 @@ if (
   creditCardProviderSelectInput.addEventListener("input", (e) => {
     setCreditCardProvider(currentCreditCardProvider, e.target.value);
     setCurrentCreditCardNumberInputRegex(currentCreditCardProvider);
+    setCreditCardSecurityCodeValid(currentCreditCardProvider);
   });
 
   // additional validation for credit card expiry month and year
@@ -166,13 +171,13 @@ if (
     // don't check input expiry date if it's not the correct length
     let inputExpiryDate = e.target.value;
     let inputExpiryDateLength = inputExpiryDate.length;
-    let isValidExpiryDateLength = inputExpiryDateLength == 6 ? true : false;
+    let isValidExpiryDateLength = inputExpiryDateLength == 7 ? true : false;
 
     // check input expiry date
     if (isValidExpiryDateLength) {
       // get input
       const inputExpiryMonth = Number(inputExpiryDate.substring(0, 2));
-      const inputExpiryYear = Number(inputExpiryDate.substring(2, 6));
+      const inputExpiryYear = Number(inputExpiryDate.substring(3, 7));
 
       // vars
       let isValidMonth = false;
@@ -213,17 +218,6 @@ if (
   });
 
   // functions
-  function setCreditCardExpiryDateValid() {
-    creditCardExpiryDateInput.setAttribute(
-      "pattern",
-      "^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
-    );
-  }
-
-  function setCreditCardExpiryDateInvalid() {
-    creditCardExpiryDateInput.setAttribute("pattern", "^(?!)$");
-  }
-
   function setCreditCardProvider(oldProvider, newProvider) {
     if (newProvider != oldProvider) {
       currentCreditCardProvider = newProvider;
@@ -253,5 +247,30 @@ if (
     }
 
     creditCardNumberInput.setAttribute("pattern", currentRegex);
+  }
+
+  function setCreditCardExpiryDateValid() {
+    creditCardExpiryDateInput.setAttribute(
+      "pattern",
+      "^(0[1-9]|(1[0-2]))/(20)[2-9][0-9]$"
+    );
+  }
+
+  function setCreditCardExpiryDateInvalid() {
+    creditCardExpiryDateInput.setAttribute("pattern", "^(?!)$");
+  }
+
+  function setCreditCardSecurityCodeValid(currentCardProvider) {
+    if (currentCardProvider == "AMEX") {
+      creditCardSecurityCodeInput.setAttribute(
+        "pattern",
+        "^([0-9])([0-9])([0-9])([0-9])$"
+      );
+    } else {
+      creditCardSecurityCodeInput.setAttribute(
+        "pattern",
+        "^([0-9])([0-9])([0-9])$"
+      );
+    }
   }
 }

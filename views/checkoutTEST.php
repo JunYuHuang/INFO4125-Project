@@ -135,8 +135,8 @@
                 autocomplete="tel"
                 value="6041231234"
               />
-              <label class="label label--validation" for="customerPhoneNumber">
-                Phone Number (no spaces, dashes, brackets, or +)
+              <label class="label label--validation ellipsis" for="customerPhoneNumber">
+                Phone Number (no spaces, -, (), ., +, etc.)
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
@@ -211,7 +211,7 @@
                 required
                 autocomplete="cc-type"
               >
-                <option value="" selected>Choose a province</option>
+                <option value="">Choose a province</option>
                 <option value="ALBERTA">ALBERTA</option>
                 <option selected value="BRITISH COLUMBIA">BRITISH COLUMBIA</option>
                 <option value="MANITOBA">MANITOBA</option>
@@ -302,7 +302,7 @@
                 class="input input--text input--text--validation input--credit-card-number"
                 id="creditCardNumber"
                 name="creditCardNumber"
-                type="text"
+                type="tel"
                 required
                 placeholder=" "
                 minlength="13"
@@ -311,8 +311,8 @@
                 autocomplete="cc-number"
                 value="348838389838230"
               />
-              <label class="label label--validation" for="creditCardNumber">
-                Credit Card Number (no spaces or dashes).
+              <label class="label label--validation ellipsis" for="creditCardNumber">
+                Credit Card Number (no spaces or -).
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
@@ -349,14 +349,14 @@
                 type="text"
                 required
                 placeholder=" "
-                minlength="6"
-                maxlength="6"
-                pattern="^(0[1-9]|(1[0-2]))(20)[2-9][0-9]$"
+                minlength="7"
+                maxlength="7"
+                pattern="^(0[1-9]|(1[0-2]))\/(20)[2-9][0-9]$"
                 autocomplete="cc-exp"
-                value="042020"
+                value="04/2020"
               />
               <label class="label label--validation" for="creditCardExpiryDate">
-                Expires (MMYYYY)
+                Expires (MM/YYYY)
               </label>
               <div class="img-wrapper--icon--validation">
                 <img src="/INFO4125-Project/assets/images/checkmark-circle.svg" alt="An icon of a checkmark">
@@ -367,17 +367,17 @@
             </div>
             <div class="input-group input-group--text input-group--validation half-width">
               <input
-                class="input input--text input--text--validation"
+                class="input input--text input--text--validation input--credit-card-security-code"
                 id="creditCardSecurityCode"
                 name="creditCardSecurityCode"
-                type="text"
+                type="tel"
                 required
                 placeholder=" "
                 minlength="3"
                 maxlength="4"
                 pattern="^\d{3,4}$"
                 autocomplete="cc-csc"
-                value="123"
+                value="1234"
               />
               <label class="label label--validation" for="creditCardSecurityCode">
                 3 or 4 digit Security Code
@@ -397,7 +397,7 @@
                 Review Cart
               </a>
               <input
-                class="input input--button button button--blue half-width"
+                class="input input--button button button--blue half-width font-weight--bold"
                 id="input--checkout__submit"
                 type="submit"
                 value="Submit Order&nbsp;&nbsp;&nbsp;&gt;"
