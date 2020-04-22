@@ -17,13 +17,14 @@ It features the following:
 - Home / Products page
   - retrieves product data
   - allows instant search (searchbox) function
+  - allows users to add product to their cart
 - ProductDetail page
   - retrieves data about a specific product
-  - allows users to add a specified quantity of the product
+  - allows users to add a specified quantity of the product to their cart
 - Cart page
   - allows users to view all products in their cart
   - allows users to delete a specific product or delete all products from their cart
-  - allows user to edit and update the quantity of any products in their cart
+  - allows users to edit and update the quantity of any products in their cart
   - allows users to proceed to checkout
 - Checkout page
   - live form validation
@@ -42,7 +43,35 @@ It features the following:
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
 
-## Screenshots
+<!-- ## UX Demos (Desktop)
+
+### Instant product search functionality.
+
+![Instant product search functionality](assets/images/UXDemos/.gif)
+
+### Cart CRUD functionality.
+
+![Cart CRUD functionality](assets/images/UXDemos/.gif)
+
+### Credit card live validation functionality.
+
+![Credit card live validation functionality](assets/images/UXDemos/.gif) -->
+
+<!-- ## UX Demo (Pseudo Mobile)
+
+### Instant product search functionality.
+
+### Cart CRUD functionality.
+
+### Credit card live validation functionality.
+
+### Mobile Demo
+
+## UI Screenshots
+
+### Home / Products (Full) Page -->
+
+## UI Screenshots
 
 ### Home / Products (Full) Page
 
@@ -60,9 +89,9 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ![Checkout Page](assets/images/screenshots/checkout-incomplete-desktop.png)
 
-<!-- ### Order Submitted Page -->
+### Order Submitted Page
 
-<!-- ![Order Submitted Page](assets/images/screenshots/orderSubmitted-desktop.png) -->
+![Order Submitted Page](assets/images/screenshots/orderSubmitted-desktop.png)
 
 ### About Page
 
@@ -71,6 +100,10 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 ### Contact Page
 
 ![Contact Page](assets/images/screenshots/contact-desktop.png)
+
+### Error Page
+
+![Error Page](assets/images/screenshots/error-desktop.png)
 
 ## How to Install (in a local environment)
 
