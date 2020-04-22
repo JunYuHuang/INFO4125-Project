@@ -14,8 +14,6 @@ It features the following:
   - tracks number of items in the shopping cart
   - mobile-first, fully responsive web design (supports mobile, tablet, and desktop devices)
   - shows number of cart items on shopping cart icon when the user has at least 1 cart item
-- Error page
-  - shows a different error message depending on which page the user attempted to visit or add submit information to
 - Home / Products page
   - retrieves product data
   - allows instant search (searchbox) function
@@ -38,39 +36,41 @@ It features the following:
   - submits order information to the database ( tables `PurchaseOrder` and `PurchaseOrderItem` tables respectively)
   - empties shopping cart
   - thanks user by name and notifies them that a receipt has been sent to their email address (doesn't actually send the email)
+- Error page
+  - shows a different error message depending on which page the user attempted to visit or add submit information to
 
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
 No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## Screenshots
 
-### Home / Products Page
+### Home / Products (Full) Page
 
-<!-- ![Home / Products Page](https://i.imgur.com/md60y1R.png) -->
+![Home / Products Page](assets/images/screenshots/products-desktop.png)
 
-### ProductDetail Page
+### Product Detail Page
 
-<!-- ![ProductDetail Page](https://i.imgur.com/md60y1R.png) -->
+![Product Detail Page](assets/images/screenshots/productDetail-desktop.png)
 
 ### Cart Page
 
-<!-- ![Cart Page](https://i.imgur.com/md60y1R.png) -->
+![Cart Page](assets/images/screenshots/cart-desktop.png)
 
 ### Checkout Page
 
-<!-- ![Checkout Page](https://i.imgur.com/md60y1R.png) -->
+![Checkout Page](assets/images/screenshots/checkout-incomplete-desktop.png)
 
-### Order Confirmation Page
+<!-- ### Order Submitted Page -->
 
-<!-- ![Order Confirmation Page](https://i.imgur.com/md60y1R.png) -->
+<!-- ![Order Submitted Page](assets/images/screenshots/orderSubmitted-desktop.png) -->
 
 ### About Page
 
-<!-- ![About Page](https://i.imgur.com/md60y1R.png) -->
+![About Page](assets/images/screenshots/about-desktop.png)
 
 ### Contact Page
 
-<!-- ![Contact Page](https://i.imgur.com/md60y1R.png) -->
+![Contact Page](assets/images/screenshots/contact-desktop.png)
 
 ## How to Install (in a local environment)
 
