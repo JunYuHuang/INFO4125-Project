@@ -56,22 +56,6 @@ It features the following:
 
 ![Home / Products Page](assets/images/screenshots/products-desktop.png)
 
-### Product Detail Page
-
-![Product Detail Page](assets/images/screenshots/productDetail-desktop.png)
-
-### Cart Page
-
-![Cart Page](assets/images/screenshots/cart-desktop.png)
-
-### Checkout Page
-
-![Checkout Page](assets/images/screenshots/checkout-incomplete-desktop.png)
-
-### Order Submitted Page
-
-![Order Submitted Page](assets/images/screenshots/orderSubmitted-desktop.png)
-
 ### About Page
 
 ![About Page](assets/images/screenshots/about-desktop.png)
@@ -80,35 +64,11 @@ It features the following:
 
 ![Contact Page](assets/images/screenshots/contact-desktop.png)
 
-### Error Page
-
-![Error Page](assets/images/screenshots/error-desktop.png)
-
 ## UI Screenshots (Pseudo Mobile)
 
 ### Home / Products (Full) Page
 
 ![Home / Products Page](assets/images/screenshots/products-mobile.png)
-
-### Product Detail Page
-
-![Product Detail Page](assets/images/screenshots/productDetail-mobile.png)
-
-### Cart Page
-
-![Cart Page](assets/images/screenshots/cart-mobile.png)
-
-### Checkout Page (Hidden Cart)
-
-![Checkout Page](assets/images/screenshots/checkout-incomplete-hidden-cart-mobile.png)
-
-### Checkout Page (Visible Cart)
-
-![Checkout Page](assets/images/screenshots/checkout-incomplete-visible-cart-mobile.png)
-
-### Order Submitted Page
-
-![Order Submitted Page](assets/images/screenshots/orderSubmitted-mobile.png)
 
 ### About Page
 
@@ -117,10 +77,6 @@ It features the following:
 ### Contact Page
 
 ![Contact Page](assets/images/screenshots/contact-mobile.png)
-
-### Error Page
-
-![Error Page](assets/images/screenshots/error-mobile.png)
 
 ## How to Install (in a local environment)
 
