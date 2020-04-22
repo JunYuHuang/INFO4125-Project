@@ -1,6 +1,6 @@
 # INFO3150-Project: Penzaar
 
-<!-- ![Splash Preview](https://i.imgur.com/md60y1R.png) -->
+![Penzaar Splash Preview](assets/images/screenshots/penzaar-hero-preview.jpg)
 
 Penzaar is the course project for the class INFO 4125: Website and Cloud Security.
 This is an ecommerce web application created with vanilla HTML, CSS, JavaScript, PHP, and MariaDB.
@@ -16,7 +16,7 @@ It features the following:
   - shows number of cart items on shopping cart icon when the user has at least 1 cart item
 - Error page
   - shows a different error message depending on which page the user attempted to visit or add submit information to
-- Products page
+- Home / Products page
   - retrieves product data
   - allows instant search (searchbox) function
 - ProductDetail page
@@ -44,30 +44,43 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 
 ## Screenshots
 
-<!-- ### Home / Products Page -->
-<!-- ![Products Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### About Page -->
+### Home / Products Page
+
+<!-- ![Home / Products Page](https://i.imgur.com/md60y1R.png) -->
+
+### ProductDetail Page
+
 <!-- ![ProductDetail Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### About Page -->
-<!-- ![About Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### Contact Page -->
-<!-- ![Contact Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### Cart Page -->
+
+### Cart Page
+
 <!-- ![Cart Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### Checkout Page -->
+
+### Checkout Page
+
 <!-- ![Checkout Page](https://i.imgur.com/md60y1R.png) -->
-<!-- ### Order Confirmation Page -->
+
+### Order Confirmation Page
+
 <!-- ![Order Confirmation Page](https://i.imgur.com/md60y1R.png) -->
 
-## How to install (in a local environment)
+### About Page
+
+<!-- ![About Page](https://i.imgur.com/md60y1R.png) -->
+
+### Contact Page
+
+<!-- ![Contact Page](https://i.imgur.com/md60y1R.png) -->
+
+## How to Install (in a local environment)
 
 1. Install [XAMPP](https://www.apachefriends.org/index.html).
 2. If you want to download and install the project folder from a ZIP file (not recommended), skip this step and go to step 3. Use [Git Bash](https://git-scm.com/downloads) or the [GitHub Desktop client](https://desktop.github.com/) to clone the project to the `/htdocs` folder of your XAMPP or LAMP installation folder. For example, the project folder might be moved to `C:\xampp\htdocs\INFO4125-Project`. If the project folder's name is NOT `INFO4125-Project`, rename the folder to that.
 3. Download (not recommended) the [ZIP file for this repository](https://github.com/JunYuHuang/INFO4125-Project/archive/master.zip) and extract it to your desktop. Move the innermost folder `PROJECT4125-Project` to the `/htdocs` folder of your XAMPP installation folder. For example, the project folder might be moved to `C:\xampp\htdocs\PROJECT4125-Project-master`. Rename the folder that you moved from `INFO4125-Project-master` to `PROJECT4125-Project`.
 4. Run the MySQL script `createDB.sql` inside the folder `/INFO4125-Project/databaseScript/` in PHPMyAdmin.
-5. In PHPMyAdmin, click on the `PenzaarDB` database and look at the `Privileges` tab. Check if there is a user account named `PenzaarUser` with the `SELECT` or `ALL` privileges granted. If not, create such a MySQL database account in PHPMyAdmin with the password being the same as the username and with the `ALL` privileges.
+5. In PHPMyAdmin, click on the `PenzaarDB` database and look at the `Privileges` tab. Check if there is a user account named `PenzaarUser` with `ALL` privileges on the `PenzaarDB` database. If not, create such a MySQL database account in PHPMyAdmin with the password being the same as the username and with the `ALL` privileges.
 
-## How to run (in a local environment)
+## How to Run (in a local environment)
 
 1. Launch the XAMPP control panel
 2. Start both the `Apache` and `MySQL` services.
