@@ -80,7 +80,7 @@
                     </div>
                     <div class="input-group input-group--submit full-width">
                       <input
-                        class="input input--button button button--blue button--add-to-cart full-width"
+                        class="input input--button button button--blue button--add-to-cart button--add-to-cart--products-page"
                         type="submit"
                         value="Add to Cart"
                       />

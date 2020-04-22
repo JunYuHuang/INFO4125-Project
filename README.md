@@ -3,75 +3,54 @@
 ![Penzaar Splash Preview](assets/images/screenshots/penzaar-hero-preview.jpg)
 
 Penzaar is the course project for the class INFO 4125: Website and Cloud Security.
-This is an ecommerce web application created with vanilla HTML, CSS, JavaScript, PHP, and MariaDB.
-It features the following:
 
-- Session-based shopping cart with full CRUD functionality (Cart, Product, ProductDetail, and Checkout pages)
-- Retrieves data from and adds data to the database (CREATE and READ functionality)
-- 2 static pages (About and Contact pages)
-- 6 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
-- ALL pages
-  - tracks number of items in the shopping cart
-  - mobile-first, fully responsive web design (supports mobile, tablet, and desktop devices)
-  - shows number of cart items on shopping cart icon when the user has at least 1 cart item
-- Home / Products page
-  - retrieves product data
-  - allows instant search (searchbox) function
-  - allows users to add product to their cart
-- ProductDetail page
-  - retrieves data about a specific product
-  - allows users to add a specified quantity of the product to their cart
-- Cart page
-  - allows users to view all products in their cart
-  - allows users to delete a specific product or delete all products from their cart
-  - allows users to edit and update the quantity of any products in their cart
-  - allows users to proceed to checkout
-- Checkout page
-  - live form validation
-    - shows custom invalid input messages for certain inputs e.g. credit card number
-    - shows checkmark icon besides each input when the input is valid
-    - complete frontend form validation for credit card payment info
-    - partial frontend form validation for non-credit-card related info
-  - shows summary of cart product items and other costs
-- OrderSubmitted page
-  - submits order information to the database ( tables `PurchaseOrder` and `PurchaseOrderItem` tables respectively)
-  - empties shopping cart
-  - thanks user by name and notifies them that a receipt has been sent to their email address (doesn't actually send the email)
-- Error page
-  - shows a different error message depending on which page the user attempted to visit or add submit information to
+This is an ecommerce web application created with vanilla HTML, CSS, JavaScript, PHP, and MariaDB.
 
 SVGs graphics from the [Ionicons icon library](https://ionicons.com/) were used.
+
 No other third party libraries, frameworks, templating engines, etc. were used.
 
-<!-- ## UX Demos (Desktop)
+It features the following:
+
+- Mobile-first, fully responsive web design for all pages (supports mobile, tablet, and desktop devices)
+- 2 static pages (About and Contact pages)
+- 6 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
+- Session-based shopping cart with full CRUD functionality
+- Retrieves data from and inserts data to the database (CREATE and READ functionality)
+- Shows number of cart items on shopping cart icon when the user has at least 1 cart item
+- Instant search (searchbox) function on Products page
+- Complete, live (frontend) credit card validation on Checkout page
+- Error page shows an message depending on the error e.g. product not found, database issue, etc.
+
+## UX Demo (Desktop)
 
 ### Instant product search functionality.
 
-![Instant product search functionality](assets/images/UXDemos/.gif)
+![Instant product search functionality](assets/images/UXDemos/instantSearch--desktop.gif)
 
 ### Cart CRUD functionality.
 
-![Cart CRUD functionality](assets/images/UXDemos/.gif)
+![Cart CRUD functionality](assets/images/UXDemos/cartCRUD--desktop.gif)
 
 ### Credit card live validation functionality.
 
-![Credit card live validation functionality](assets/images/UXDemos/.gif) -->
+![Credit card live validation functionality](assets/images/UXDemos/creditCardLiveValidation--desktop.gif)
 
-<!-- ## UX Demo (Pseudo Mobile)
+## UX Demo (Pseudo Mobile)
 
 ### Instant product search functionality.
 
+![Instant product search functionality](assets/images/UXDemos/instantSearch--mobile.gif)
+
 ### Cart CRUD functionality.
+
+![Cart CRUD functionality](assets/images/UXDemos/cartCRUD--mobile.gif)
 
 ### Credit card live validation functionality.
 
-### Mobile Demo
+![Credit card live validation functionality](assets/images/UXDemos/creditCardLiveValidation--mobile.gif)
 
-## UI Screenshots
-
-### Home / Products (Full) Page -->
-
-## UI Screenshots
+## UI Screenshots (Desktop)
 
 ### Home / Products (Full) Page
 
@@ -104,6 +83,44 @@ No other third party libraries, frameworks, templating engines, etc. were used.
 ### Error Page
 
 ![Error Page](assets/images/screenshots/error-desktop.png)
+
+## UI Screenshots (Pseudo Mobile)
+
+### Home / Products (Full) Page
+
+![Home / Products Page](assets/images/screenshots/products-mobile.png)
+
+### Product Detail Page
+
+![Product Detail Page](assets/images/screenshots/productDetail-mobile.png)
+
+### Cart Page
+
+![Cart Page](assets/images/screenshots/cart-mobile.png)
+
+### Checkout Page (Hidden Cart)
+
+![Checkout Page](assets/images/screenshots/checkout-incomplete-hidden-cart-mobile.png)
+
+### Checkout Page (Visible Cart)
+
+![Checkout Page](assets/images/screenshots/checkout-incomplete-visible-cart-mobile.png)
+
+### Order Submitted Page
+
+![Order Submitted Page](assets/images/screenshots/orderSubmitted-mobile.png)
+
+### About Page
+
+![About Page](assets/images/screenshots/about-mobile.png)
+
+### Contact Page
+
+![Contact Page](assets/images/screenshots/contact-mobile.png)
+
+### Error Page
+
+![Error Page](assets/images/screenshots/error-mobile.png)
 
 ## How to Install (in a local environment)
 

@@ -71,7 +71,7 @@
                 autocomplete="given-name"
                 value="Don"
               />
-              <label class="label label--validation" for="customerFirstName">
+              <label class="label label--validation ellipsis" for="customerFirstName">
                 First Name
               </label>
               <div class="img-wrapper--icon--validation">
@@ -92,7 +92,7 @@
                 autocomplete="family-name"
                 value="Cheeto"
               />
-              <label class="label label--validation" for="customerLastName">
+              <label class="label label--validation ellipsis" for="customerLastName">
                 Last Name
               </label>
               <div class="img-wrapper--icon--validation">
@@ -113,7 +113,7 @@
                 autocomplete="email"
                 value="doncheeto@aol.net"
               />
-              <label class="label label--validation" for="customerEmailAddress">
+              <label class="label label--validation ellipsis" for="customerEmailAddress">
                 Email Address
               </label>
               <div class="img-wrapper--icon--validation">
@@ -157,7 +157,7 @@
                 pattern=".+"
                 value="123 Columbia Ave"
               />
-              <label class="label label--validation" for="addressStreet">
+              <label class="label label--validation ellipsis" for="addressStreet">
                 Street Address
               </label>
               <div class="img-wrapper--icon--validation">
@@ -176,7 +176,7 @@
                 pattern=".*"
                 value="3"
               />
-              <label class="label label--validation" for="addressUnit">
+              <label class="label label--validation ellipsis" for="addressUnit">
                 Unit (if applicable)
               </label>
               <div class="img-wrapper--icon--validation">
@@ -196,7 +196,7 @@
                 pattern=".+"
                 value="Castlegar"
               />
-              <label class="label label--validation" for="addressCity">
+              <label class="label label--validation ellipsis" for="addressCity">
                 City
               </label>
               <div class="img-wrapper--icon--validation">
@@ -223,7 +223,7 @@
                 <option value="QUEBEC">QUEBEC</option>
                 <option value="SASKATCHEWAN">SASKATCHEWAN</option>
               </select>
-              <label class="label label--validation" for="addressProvince">
+              <label class="label label--validation ellipsis" for="addressProvince">
                 Province e.g. Alberta
               </label>
               <div class="img-wrapper--icon--validation">
@@ -245,7 +245,7 @@
                 autocomplete="postal-code"
                 value="V1H1N1"
               />
-              <label class="label label--validation" for="addressPostalCode">
+              <label class="label label--validation ellipsis" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
               </label>
               <div class="img-wrapper--icon--validation">
@@ -266,7 +266,7 @@
                 pattern="^[cC][aA][nN][aA][dD][aA]$"
                 value="Canada"
               />
-              <label class="label label--validation" for="addressCountry">
+              <label class="label label--validation ellipsis" for="addressCountry">
                 Country / Region e.g. Canada
               </label>
               <div class="img-wrapper--icon--validation">
@@ -288,7 +288,7 @@
                 <option value="MASTERCARD">MASTERCARD</option>
                 <option value="VISA">VISA</option>
               </select>
-              <label class="label label--validation" for="creditCardProvider">
+              <label class="label label--validation ellipsis" for="creditCardProvider">
                 Credit Card Provider
               </label>
               <div class="img-wrapper--icon--validation">
@@ -333,7 +333,7 @@
                 autocomplete="cc-name"
                 value="Don Cheeto"
               />
-              <label class="label label--validation" for="creditCardName">
+              <label class="label label--validation ellipsis" for="creditCardName">
                 Name on Card
               </label>
               <div class="img-wrapper--icon--validation">
@@ -355,7 +355,7 @@
                 autocomplete="cc-exp"
                 value="04/2020"
               />
-              <label class="label label--validation" for="creditCardExpiryDate">
+              <label class="label label--validation ellipsis" for="creditCardExpiryDate">
                 Expires (MM/YYYY)
               </label>
               <div class="img-wrapper--icon--validation">
@@ -379,7 +379,7 @@
                 autocomplete="cc-csc"
                 value="1234"
               />
-              <label class="label label--validation" for="creditCardSecurityCode">
+              <label class="label label--validation ellipsis" for="creditCardSecurityCode">
                 3 or 4 digit Security Code
               </label>
               <div class="img-wrapper--icon--validation">

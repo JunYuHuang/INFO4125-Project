@@ -70,7 +70,7 @@
                 pattern=".+"
                 autocomplete="given-name"
               />
-              <label class="label label--validation" for="customerFirstName">
+              <label class="label label--validation ellipsis" for="customerFirstName">
                 First Name
               </label>
               <div class="img-wrapper--icon--validation">
@@ -90,7 +90,7 @@
                 pattern=".+"
                 autocomplete="family-name"
               />
-              <label class="label label--validation" for="customerLastName">
+              <label class="label label--validation ellipsis" for="customerLastName">
                 Last Name
               </label>
               <div class="img-wrapper--icon--validation">
@@ -110,7 +110,7 @@
                 pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                 autocomplete="email"
               />
-              <label class="label label--validation" for="customerEmailAddress">
+              <label class="label label--validation ellipsis" for="customerEmailAddress">
                 Email Address
               </label>
               <div class="img-wrapper--icon--validation">
@@ -152,7 +152,7 @@
                 maxlength="255"
                 pattern=".+"
               />
-              <label class="label label--validation" for="addressStreet">
+              <label class="label label--validation ellipsis" for="addressStreet">
                 Street Address
               </label>
               <div class="img-wrapper--icon--validation">
@@ -170,7 +170,7 @@
                 maxlength="255"
                 pattern=".*"
               />
-              <label class="label label--validation" for="addressUnit">
+              <label class="label label--validation ellipsis" for="addressUnit">
                 Unit (if applicable)
               </label>
               <div class="img-wrapper--icon--validation">
@@ -189,7 +189,7 @@
                 maxlength="255"
                 pattern=".+"
               />
-              <label class="label label--validation" for="addressCity">
+              <label class="label label--validation ellipsis" for="addressCity">
                 City
               </label>
               <div class="img-wrapper--icon--validation">
@@ -216,7 +216,7 @@
                 <option value="QUEBEC">QUEBEC</option>
                 <option value="SASKATCHEWAN">SASKATCHEWAN</option>
               </select>
-              <label class="label label--validation" for="addressProvince">
+              <label class="label label--validation ellipsis" for="addressProvince">
                 Province e.g. Alberta
               </label>
               <div class="img-wrapper--icon--validation">
@@ -237,7 +237,7 @@
                 pattern="^([ABCEGHJKLMNPRSTVXY]|[abceghjklmnprstvxy])\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])[ ]?\d([ABCEGHJ-NPRSTV-Z]|[abceghj-nprstv-z])\d$"
                 autocomplete="postal-code"
               />
-              <label class="label label--validation" for="addressPostalCode">
+              <label class="label label--validation ellipsis" for="addressPostalCode">
                 Postal Code e.g. V7X9M1
               </label>
               <div class="img-wrapper--icon--validation">
@@ -258,7 +258,7 @@
                 pattern="^[cC][aA][nN][aA][dD][aA]$"
                 value="Canada"
               />
-              <label class="label label--validation" for="addressCountry">
+              <label class="label label--validation ellipsis" for="addressCountry">
                 Country / Region e.g. Canada
               </label>
               <div class="img-wrapper--icon--validation">
@@ -280,7 +280,7 @@
                 <option value="MASTERCARD">MASTERCARD</option>
                 <option value="VISA">VISA</option>
               </select>
-              <label class="label label--validation" for="creditCardProvider">
+              <label class="label label--validation ellipsis" for="creditCardProvider">
                 Credit Card Provider
               </label>
               <div class="img-wrapper--icon--validation">
@@ -322,7 +322,7 @@
                 pattern=".+"
                 autocomplete="cc-name"
               />
-              <label class="label label--validation" for="creditCardName">
+              <label class="label label--validation ellipsis" for="creditCardName">
                 Name on Card
               </label>
               <div class="img-wrapper--icon--validation">
@@ -343,7 +343,7 @@
                 pattern="^(0[1-9]|(1[0-2]))\/(20)[2-9][0-9]$"
                 autocomplete="cc-exp"
               />
-              <label class="label label--validation" for="creditCardExpiryDate">
+              <label class="label label--validation ellipsis" for="creditCardExpiryDate">
                 Expires (MM/YYYY)
               </label>
               <div class="img-wrapper--icon--validation">
@@ -366,7 +366,7 @@
                 pattern="^\d{3,4}$"
                 autocomplete="cc-csc"
               />
-              <label class="label label--validation" for="creditCardSecurityCode">
+              <label class="label label--validation ellipsis" for="creditCardSecurityCode">
                 3 or 4 digit Security Code
               </label>
               <div class="img-wrapper--icon--validation">
