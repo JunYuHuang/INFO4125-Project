@@ -1,4 +1,4 @@
-# INFO3150-Project: Penzaar
+# INFO4125-Project: Penzaar
 
 ![Penzaar Splash Preview](assets/images/screenshots/penzaar-hero-preview.jpg)
 
@@ -88,7 +88,7 @@ It features the following:
 
 ## How to Run (in a local environment)
 
-1. Launch the XAMPP control panel
+1. Launch the XAMPP control panel.
 2. Start both the `Apache` and `MySQL` services.
 3. Open a new browser window or tab and go to `localhost/INFO4125-Project`.
 
@@ -103,7 +103,7 @@ It features the following:
 - ~~Allow users to add items to cart from Product page.~~ DONE
 - ~~Put important contact information in footer (for SEO).~~ DONE
 - ~~Make the Product page the home page. Can shink and put hero header of current home page on top of Product page.~~ DONE
-- Auto-update cart when a user updates and leaves (onblur) the quantity of a cart item instead of forcing users to manually click Update button to update the cart.
+- Auto-update cart when a user updates and leaves the input quantity of a cart item (blur event) instead of forcing users to manually click Update button to update the cart.
 - Remove credit card provider dropdown input on checkout page because can determine card provider and security code length based on credit card number.
 - Show dropdown notification instead of redirecting to Cart page when user adds items to the cart.
 - Show recommended products on each ProductDetail page.
