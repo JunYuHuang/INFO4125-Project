@@ -16,6 +16,7 @@ It features the following:
 - 2 static pages (About and Contact pages)
 - 6 dynamic pages (Error, Products, ProductDetail, Cart, Checkout, and OrderSubmited pages)
 - Session-based shopping cart with full CRUD functionality
+- Responsive mobile and tablet navigation menu
 - Retrieves data from and inserts data to the database (CREATE and READ functionality)
 - Shows number of cart items on shopping cart icon when the user has at least 1 cart item
 - Instant search (searchbox) function on Products page
@@ -37,6 +38,10 @@ It features the following:
 ![Credit card live validation functionality](assets/images/UXDemos/creditCardLiveValidation--desktop.gif)
 
 ## UX Demo (Pseudo Mobile)
+
+### Responsive mobile and tablet navigation.
+
+![Responsive mobile and tablet](assets/images/UXDemos/navigation--mobile.gif)
 
 ### Instant product search functionality.
 
